@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/style.css"/>       
+        <link rel="stylesheet" href="css/style.css"/>
         <link href="assets/css/codemirror.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/ace.min.css" />
         <link rel="stylesheet" href="font/css/font-awesome.min.css" />
@@ -15,18 +15,18 @@
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
 		<script src="js/jquery-1.9.1.min.js"></script>
-		<script src="assets/js/typeahead-bs2.min.js"></script>   
-        <script src="js/lrtk.js" type="text/javascript" ></script>		
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+        <script src="js/lrtk.js" type="text/javascript" ></script>
 		<script src="assets/js/jquery.dataTables.min.js"></script>
 		<script src="assets/js/jquery.dataTables.bootstrap.js"></script>
-        <script src="assets/layer/layer.js" type="text/javascript" ></script>          
+        <script src="assets/layer/layer.js" type="text/javascript" ></script>
         <script src="assets/dist/echarts.js"></script>
-      
+
 <title>会员等级</title>
 </head>
 
 <body>
-<div class="grading_style"> 
+<div class="grading_style">
 <div id="category">
     <div id="scrollsidebar" class="left_Treeview">
     <div class="show_btn" id="rightArrow"><span></span></div>
@@ -51,16 +51,16 @@
             </ul>
   </div>
   </div>
-  </div>  
+  </div>
   </div>
   <!--右侧样式-->
    <div class="page_right_style right_grading">
    <div class="Statistics_style" id="Statistic_pie">
-     <div class="type_title">等级统计 
-     <span class="top_show_btn Statistic_btn">显示</span> 
+     <div class="type_title">等级统计
+     <span class="top_show_btn Statistic_btn">显示</span>
      <span class="Statistic_title Statistic_btn"><a title="隐藏" class="top_close_btn">隐藏</a></span>
-     </div> 
-      <div id="Statistics" class="Statistics"></div> 
+     </div>
+      <div id="Statistics" class="Statistics"></div>
       </div>
       <!--列表样式-->
       <div class="grading_list">
@@ -75,11 +75,11 @@
 				<th width="80">性别</th>
 				<th width="120">手机</th>
 				<th width="150">邮箱</th>
-				
+
 				<th width="180">加入时间</th>
                 <th width="100">等级</th>
                 <th width="100">积分</th>
-				<th width="70">状态</th>                
+				<th width="70">状态</th>
 				<th width="250">操作</th>
 			</tr>
 		</thead>
@@ -90,13 +90,13 @@
           <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张三','member-show.html','10001','500','400')">张三</u></td>
           <td>男</td>
           <td>13000000000</td>
-          <td>admin@mail.com</td>         
+          <td>admin@mail.com</td>
           <td>2014-6-11 11:11:42</td>
           <td>普通用户</td>
           <td class="text-l">345</td>
           <td class="td-status"><span class="label label-success radius">已启用</span></td>
           <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a> 
+          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
           <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
           </td>
 		</tr>
@@ -112,7 +112,7 @@
            <td class="text-l">1345</td>
           <td class="td-status"><span class="label label-success radius">已启用</span></td>
           <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>       
+          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
           <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
           </td>
 		</tr>
@@ -128,7 +128,7 @@
            <td class="text-l">645</td>
           <td class="td-status"><span class="label label-success radius">已启用</span></td>
           <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>         
+          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
           <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
           </td>
 		</tr>
@@ -144,7 +144,7 @@
            <td class="text-l">645</td>
           <td class="td-status"><span class="label label-success radius">已启用</span></td>
           <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>       
+          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
           <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
           </td>
 		</tr>
@@ -160,7 +160,7 @@
            <td class="text-l">345</td>
           <td class="td-status"><span class="label label-success radius">已启用</span></td>
           <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check  bigger-120"></i></a>        
+          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check  bigger-120"></i></a>
           <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
           </td>
 		</tr>
@@ -168,28 +168,28 @@
 	</table>
    </div>
       </div>
-   </div> 
+   </div>
   </div>
 </div>
 </body>
 </html>
-<script type="text/javascript"> 
-$(function() { 
+<script type="text/javascript">
+$(function() {
 	$("#category").fix({
 		float : 'left',
 		//minStatue : true,
-		skin : 'green',	
+		skin : 'green',
 		durationTime :false,
 		spacingw:20,
 		spacingh:240,
 		set_scrollsidebar:'.right_grading',
 	});
 });
-$(function() { 
+$(function() {
 	$("#Statistic_pie").fix({
 		float : 'top',
 		//minStatue : true,
-		skin : 'green',	
+		skin : 'green',
 		durationTime :false,
 		spacingw:0,
 		spacingh:0,
@@ -224,16 +224,16 @@ function member_start(obj,id){
 }
 </script>
 <script type="text/javascript">
-//初始化宽度、高度  
- $(".widget-box").height($(window).height()); 
+//初始化宽度、高度
+ $(".widget-box").height($(window).height());
  $(".page_right_style").width($(window).width()-220);
  //$(".table_menu_list").width($(window).width()-240);
-  //当文档窗口发生改变时 触发  
+  //当文档窗口发生改变时 触发
     $(window).resize(function(){
 	$(".widget-box").height($(window).height());
 	 $(".page_right_style").width($(window).width()-220);
 	 //$(".table_menu_list").width($(window).width()-240);
-	}) 
+	})
 /**************/
      require.config({
             paths: {
@@ -249,7 +249,7 @@ function member_start(obj,id){
             ],
             function (ec,theme) {
                 var myChart = ec.init(document.getElementById('Statistics'),theme);
-			
+
 			option = {
     title : {
         text: '用户等级统计',
@@ -261,7 +261,7 @@ function member_start(obj,id){
         formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
     legend: {
-        
+
         x : 'center',
         y : 'bottom',
         data:['普通用户','铁牌用户','铜牌用户','银牌用户','金牌用户','钻石用户','蓝钻用户','红钻用户']
@@ -272,7 +272,7 @@ function member_start(obj,id){
             mark : {show: false},
             dataView : {show: false, readOnly: true},
             magicType : {
-                show: true, 
+                show: true,
                 type: ['pie', 'funnel'],
                 option: {
                     funnel: {
@@ -321,8 +321,8 @@ $(function($) {
 		  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
 		  {"orderable":false,"aTargets":[0,2,3,4,5,6,7,9]}// 制定列不参与排序
 		] } );
-				
-				
+
+
 				$('table th input:checkbox').on('click' , function(){
 					var that = this;
 					$(this).closest('table').find('tr > td:first-child input:checkbox')
@@ -330,20 +330,20 @@ $(function($) {
 						this.checked = that.checked;
 						$(this).closest('tr').toggleClass('selected');
 					});
-						
+
 				});
-			
-			
+
+
 				$('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
 				function tooltip_placement(context, source) {
 					var $source = $(source);
 					var $parent = $source.closest('table')
 					var off1 = $parent.offset();
 					var w1 = $parent.width();
-			
+
 					var off2 = $source.offset();
 					var w2 = $source.width();
-			
+
 					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
 					return 'left';
 				}

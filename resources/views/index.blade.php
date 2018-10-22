@@ -225,7 +225,7 @@
             <div class="navbar-header pull-left">
                 <a href="#" class="navbar-brand">
                     <small>
-                        <img src="/images/logo.png" width="470px">
+                        <img src="/images/logo3.png" width="200px" height="80px">
                     </small>
                 </a><!-- /.brand -->
             </div><!-- /.navbar-header -->
@@ -367,7 +367,7 @@
                             <a href="#" class="dropdown-toggle"><i class="icon-user"></i><span class="menu-text"> 会员管理
                                 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="user_list.html" title="会员列表" class="iframeurl"><i
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('member_index') }}" title="会员列表" class="iframeurl"><i
                                             class="icon-double-angle-right"></i>会员列表</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="member-Grading.html" title="等级管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>等级管理</a></li>
