@@ -34,4 +34,16 @@ Route::post('add','MemberController@doadd')->name('memberdoadd');
 Route::get('/member/edit/{id}','MemberController@edit')->name('memberedit');
 Route::post('/member/edit/{id}','MemberController@doedit')->name('memberdoedit');
 // 删
-Route::get('member/delete/{id}','MemberController@delete')->name('memberdelete');
+Route::get('/member/delete/{id}','MemberController@delete')->name('memberdelete');
+/**
+ * 会员等级
+ */
+Route::get('/memberlevel','MemberlevelController@index')->name('member_level');
+// 增
+Route::get('/memberlevel/add','MemberlevelController@add')->name('memberleveladd');
+Route::post('/memberlevel/add','MemberlevelController@doadd')->name('memberleveldoadd');
+//改
+Route::get('/memberlevel/edit/{id}','MemberlevelController@edit')->name('memberleveledit');
+Route::post('/memberlevel/edit/{id}','MemberlevelController@doedit')->name('memberleveldoedit');
+// 删
+Route::get('/memberlevel/delete/{id}','MemberlevelController@delete')->name('memberleveldelete');

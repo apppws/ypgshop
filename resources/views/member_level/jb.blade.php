@@ -6,21 +6,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
- <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/style.css"/>
-        <link href="assets/css/codemirror.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/ace.min.css" />
-        <link rel="stylesheet" href="font/css/font-awesome.min.css" />
+ <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/style.css"/>
+        <link href="/assets/css/codemirror.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/ace.min.css" />
+        <link rel="stylesheet" href="/font/css/font-awesome.min.css" />
         <!--[if lte IE 8]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
-		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="/js/jquery-1.9.1.min.js"></script>
 		<script src="assets/js/typeahead-bs2.min.js"></script>
-        <script src="js/lrtk.js" type="text/javascript" ></script>
-		<script src="assets/js/jquery.dataTables.min.js"></script>
-		<script src="assets/js/jquery.dataTables.bootstrap.js"></script>
-        <script src="assets/layer/layer.js" type="text/javascript" ></script>
-        <script src="assets/dist/echarts.js"></script>
+        <script src="/js/lrtk.js" type="text/javascript" ></script>
+		<script src="/assets/js/jquery.dataTables.min.js"></script>
+		<script src="/assets/js/jquery.dataTables.bootstrap.js"></script>
+        <script src="/assets/layer/layer.js" type="text/javascript" ></script>
+        <script src="/assets/dist/echarts.js"></script>
 
 <title>会员等级</title>
 </head>
@@ -55,118 +55,118 @@
   </div>
   <!--右侧样式-->
    <div class="page_right_style right_grading">
-   <div class="Statistics_style" id="Statistic_pie">
-     <div class="type_title">等级统计
-     <span class="top_show_btn Statistic_btn">显示</span>
-     <span class="Statistic_title Statistic_btn"><a title="隐藏" class="top_close_btn">隐藏</a></span>
-     </div>
-      <div id="Statistics" class="Statistics"></div>
-      </div>
-      <!--列表样式-->
-      <div class="grading_list">
-       <div class="type_title">全部会员等级列表</div>
-         <div class="table_menu_list">
-       <table class="table table-striped table-bordered table-hover" id="sample-table">
-		<thead>
-		 <tr>
-				<th width="25"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></th>
-				<th width="80">ID</th>
-				<th width="100">用户名</th>
-				<th width="80">性别</th>
-				<th width="120">手机</th>
-				<th width="150">邮箱</th>
+        <div class="Statistics_style" id="Statistic_pie">
+            <div class="type_title">等级统计
+            <span class="top_show_btn Statistic_btn">显示</span>
+            <span class="Statistic_title Statistic_btn"><a title="隐藏" class="top_close_btn">隐藏</a></span>
+            </div>
+            <div id="Statistics" class="Statistics"></div>
+            </div>
+            <!--列表样式-->
+            <div class="grading_list">
+            <div class="type_title">全部会员等级列表</div>
+                <div class="table_menu_list">
+            <table class="table table-striped table-bordered table-hover" id="sample-table">
+                <thead>
+                <tr>
+                        <th width="25"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></th>
+                        <th width="80">ID</th>
+                        <th width="100">用户名</th>
+                        <th width="80">性别</th>
+                        <th width="120">手机</th>
+                        <th width="150">邮箱</th>
 
-				<th width="180">加入时间</th>
-                <th width="100">等级</th>
-                <th width="100">积分</th>
-				<th width="70">状态</th>
-				<th width="250">操作</th>
-			</tr>
-		</thead>
-	<tbody>
-		<tr>
-          <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-          <td>1</td>
-          <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张三','member-show.html','10001','500','400')">张三</u></td>
-          <td>男</td>
-          <td>13000000000</td>
-          <td>admin@mail.com</td>
-          <td>2014-6-11 11:11:42</td>
-          <td>普通用户</td>
-          <td class="text-l">345</td>
-          <td class="td-status"><span class="label label-success radius">已启用</span></td>
-          <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
-          <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
-          </td>
-		</tr>
-        <tr>
-          <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-          <td>2</td>
-          <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张小泉','member-show.html','1031','500','400')">张小泉</u></td>
-          <td>男</td>
-          <td>13000000000</td>
-          <td>admin@mail.com</td>
-          <td>2014-6-11 11:11:42</td>
-          <td>普通用户</td>
-           <td class="text-l">1345</td>
-          <td class="td-status"><span class="label label-success radius">已启用</span></td>
-          <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
-          <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
-          </td>
-		</tr>
-         <tr>
-          <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-          <td>3</td>
-          <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张小泉','member-show.html','10301','500','400')">张小泉</u></td>
-          <td>男</td>
-          <td>13000000000</td>
-          <td>admin@mail.com</td>
-          <td>2014-6-11 11:11:42</td>
-          <td>银牌用户</td>
-           <td class="text-l">645</td>
-          <td class="td-status"><span class="label label-success radius">已启用</span></td>
-          <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
-          <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
-          </td>
-		</tr>
-         <tr>
-          <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-          <td>4</td>
-          <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张小泉','member-show.html','10001','500','400')">张小泉</u></td>
-          <td>男</td>
-          <td>13000000000</td>
-          <td>admin@mail.com</td>
-          <td>2014-6-11 11:11:42</td>
-          <td>银牌用户</td>
-           <td class="text-l">645</td>
-          <td class="td-status"><span class="label label-success radius">已启用</span></td>
-          <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
-          <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
-          </td>
-		</tr>
-         <tr>
-          <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-          <td>5</td>
-          <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张小泉','member-show.html','10001','500','400')">张小泉</u></td>
-          <td>男</td>
-          <td>13000000000</td>
-          <td>admin@mail.com</td>
-          <td>2014-6-11 11:11:42</td>
-          <td>银牌用户</td>
-           <td class="text-l">345</td>
-          <td class="td-status"><span class="label label-success radius">已启用</span></td>
-          <td class="td-manage">
-          <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check  bigger-120"></i></a>
-          <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
-          </td>
-		</tr>
-      </tbody>
-	</table>
-   </div>
+                        <th width="180">加入时间</th>
+                        <th width="100">等级</th>
+                        <th width="100">积分</th>
+                        <th width="70">状态</th>
+                        <th width="250">操作</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
+                <td>1</td>
+                <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张三','member-show.html','10001','500','400')">张三</u></td>
+                <td>男</td>
+                <td>13000000000</td>
+                <td>admin@mail.com</td>
+                <td>2014-6-11 11:11:42</td>
+                <td>普通用户</td>
+                <td class="text-l">345</td>
+                <td class="td-status"><span class="label label-success radius">已启用</span></td>
+                <td class="td-manage">
+                <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
+                <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
+                </td>
+                </tr>
+                <tr>
+                <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
+                <td>2</td>
+                <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张小泉','member-show.html','1031','500','400')">张小泉</u></td>
+                <td>男</td>
+                <td>13000000000</td>
+                <td>admin@mail.com</td>
+                <td>2014-6-11 11:11:42</td>
+                <td>普通用户</td>
+                <td class="text-l">1345</td>
+                <td class="td-status"><span class="label label-success radius">已启用</span></td>
+                <td class="td-manage">
+                <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
+                <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
+                </td>
+                </tr>
+                <tr>
+                <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
+                <td>3</td>
+                <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张小泉','member-show.html','10301','500','400')">张小泉</u></td>
+                <td>男</td>
+                <td>13000000000</td>
+                <td>admin@mail.com</td>
+                <td>2014-6-11 11:11:42</td>
+                <td>银牌用户</td>
+                <td class="text-l">645</td>
+                <td class="td-status"><span class="label label-success radius">已启用</span></td>
+                <td class="td-manage">
+                <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
+                <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
+                </td>
+                </tr>
+                <tr>
+                <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
+                <td>4</td>
+                <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张小泉','member-show.html','10001','500','400')">张小泉</u></td>
+                <td>男</td>
+                <td>13000000000</td>
+                <td>admin@mail.com</td>
+                <td>2014-6-11 11:11:42</td>
+                <td>银牌用户</td>
+                <td class="text-l">645</td>
+                <td class="td-status"><span class="label label-success radius">已启用</span></td>
+                <td class="td-manage">
+                <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check bigger-120"></i></a>
+                <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
+                </td>
+                </tr>
+                <tr>
+                <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
+                <td>5</td>
+                <td><u style="cursor:pointer" class="text-primary" onclick="member_show('张小泉','member-show.html','10001','500','400')">张小泉</u></td>
+                <td>男</td>
+                <td>13000000000</td>
+                <td>admin@mail.com</td>
+                <td>2014-6-11 11:11:42</td>
+                <td>银牌用户</td>
+                <td class="text-l">345</td>
+                <td class="td-status"><span class="label label-success radius">已启用</span></td>
+                <td class="td-manage">
+                <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"><i class="fa fa-check  bigger-120"></i></a>
+                <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="fa fa-trash  bigger-120"></i></a>
+                </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
       </div>
    </div>
   </div>
