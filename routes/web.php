@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+// 显示登录页面
+Route::get('/login','LoginController@login');
+// 处理登陆页面
+Route::post('/login','LoginController@dologin')->name('dologin');
+// 显示后台页面
+Route::get('/admin/index','IndexController@index')->name('adindex');
+Route::get('/admin/home','IndexController@home')->name('home');
