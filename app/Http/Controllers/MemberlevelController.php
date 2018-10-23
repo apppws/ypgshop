@@ -12,10 +12,7 @@ class MemberlevelController extends Controller
     public function index(Request $req){
         $data = Memberlevel::orderBy('id','desc');
         if($req->keyword){
-            $data->where('username','like',"%$req->keyword%");
-        }
-        if($req->from){
-            $data->where('created_at','==',$req->from);
+            $data->where('level_name','like',"%$req->keyword%");
         }
         $data = $data->paginate(10);
          return view('member_level/list',[

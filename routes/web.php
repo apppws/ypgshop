@@ -28,8 +28,8 @@ Route::get('/admin/home','IndexController@home')->name('home');
 // 列表(查)
 Route::get('/member','MemberController@index')->name('member_index');
 // 增
-Route::get('add','MemberController@add')->name('memberadd');
-Route::post('add','MemberController@doadd')->name('memberdoadd');
+Route::get('/member/add','MemberController@add')->name('memberadd');
+Route::post('/member/add','MemberController@doadd')->name('memberdoadd');
 //改
 Route::get('/member/edit/{id}','MemberController@edit')->name('memberedit');
 Route::post('/member/edit/{id}','MemberController@doedit')->name('memberdoedit');
@@ -47,3 +47,19 @@ Route::get('/memberlevel/edit/{id}','MemberlevelController@edit')->name('memberl
 Route::post('/memberlevel/edit/{id}','MemberlevelController@doedit')->name('memberleveldoedit');
 // 删
 Route::get('/memberlevel/delete/{id}','MemberlevelController@delete')->name('memberleveldelete');
+/**
+ * 商品分类
+ */
+Route::get('/category','CategoryController@list')->name('category');
+// 增
+Route::get('/add','CategoryController@add')->name('categoryadd');
+Route::post('/add','CategoryController@doadd')->name('categorydoadd');
+// 获取二级分类
+Route::get('/subcat/{parent1_id}','CategoryController@subcat')->name('subcat');
+// 获取三级分类
+Route::get('/subcat1/{parent2_id}','CategoryController@subcat1');
+// 修改页面
+Route::get('/category/edit/{id}','CategoryController@edit')->name('categoryedit');
+Route::post('/category/edit/{id}','CategoryController@doedit')->name('categorydoedit');
+//删除
+Route::get('/category/delete/{id}','CategoryController@delete')->name('categorydelete');

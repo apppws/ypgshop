@@ -8469,7 +8469,7 @@ th .lbl:only-child,td .lbl:only-child
 .widget-box
 {
   padding: 0;
-  width:220px;
+  width:300px;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-right: 1px solid #CCC;
