@@ -306,7 +306,7 @@
 
 
                 </ul>
-                <!-- <div class="right_info">
+                <div class="right_info">
 
                    <div class="get_time" ><span id="time" class="time"></span>欢迎光临,管理员</span></div>
 					<ul class="nav ace-nav">
@@ -314,7 +314,7 @@
                         <li><a href="javascript:ovid(0)" id="Exit_system">退出系统</a></li>
 
 					</ul>
-				</div>-->
+				</div>
             </div>
         </div>
     </div>
@@ -384,7 +384,7 @@
                         <li><a href="#" class="dropdown-toggle"><i class="icon-desktop"></i><span class="menu-text">
                                     产品管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="Products_List.html" title="产品类表"
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('goods') }}" title="产品类表"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>产品类表</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="Brand_Manage.html" title="品牌管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>品牌管理</a></li>

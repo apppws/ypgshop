@@ -63,3 +63,16 @@ Route::get('/category/edit/{id}','CategoryController@edit')->name('categoryedit'
 Route::post('/category/edit/{id}','CategoryController@doedit')->name('categorydoedit');
 //删除
 Route::get('/category/delete/{id}','CategoryController@delete')->name('categorydelete');
+
+/**
+ * 商品模块
+ */
+Route::get('/goods','GoodsController@list')->name('goods');
+// 增
+Route::get('/goods/add','GoodsController@add')->name('goods_add');
+Route::post('/goods/add','GoodsController@doadd')->name('goods_doadd');
+// 修改
+Route::get('/goods/edit/{id}','GoodsController@edit')->name('goods_edit');
+Route::post('/goods/edit/{id}','GoodsController@doedit')->name('goods_doedit');
+// 删除
+Route::get('/goods/delete/{id}','GoodsController@delete')->name('goods_delete');
