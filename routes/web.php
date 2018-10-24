@@ -76,3 +76,15 @@ Route::get('/goods/edit/{id}','GoodsController@edit')->name('goods_edit');
 Route::post('/goods/edit/{id}','GoodsController@doedit')->name('goods_doedit');
 // 删除
 Route::get('/goods/delete/{id}','GoodsController@delete')->name('goods_delete');
+/**
+ * 商品品牌
+ */
+Route::get('/brand','BrandController@list')->name('brand');
+// 增
+Route::get('/brand/add','BrandController@add')->name('brand_add');
+Route::post('/brand/add','BrandController@doadd')->name('brand_doadd');
+// 修改
+Route::get('/brand/edit/{id}','BrandController@edit')->name('brand_edit');
+Route::post('/brand/edit/{id}','BrandController@doedit')->name('brand_doedit');
+// 删除
+Route::get('/brand/delete/{id}','BrandController@delete')->name('brand_delete');

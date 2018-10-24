@@ -13,7 +13,7 @@ The FileProgress class is not part of SWFUpload.
    ********************** */
 function preLoad() {
 	if (!this.support.loading) {
-		alert("你需要安装Flash Player 9.028或者更高版本，才能使用上传功能。");
+		// alert("你需要安装Flash Player 9.028或者更高版本，才能使用上传功能。");
 		return false;
 	}
 }
@@ -46,7 +46,7 @@ function uploadStart(file) {
 	catch (ex) {
 		this.debug(ex);
 	}
-	
+
 }
 
 function uploadProgress(file, bytesLoaded, bytesTotal) {
@@ -58,7 +58,7 @@ function uploadProgress(file, bytesLoaded, bytesTotal) {
 	} catch (ex) {
 		this.debug(ex);
 	}
-	
+
 }
 
 function uploadSuccess(file, serverData) {

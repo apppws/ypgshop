@@ -306,7 +306,7 @@
 
 
                 </ul>
-                <div class="right_info">
+                {{-- <div class="right_info">
 
                    <div class="get_time" ><span id="time" class="time"></span>欢迎光临,管理员</span></div>
 					<ul class="nav ace-nav">
@@ -314,7 +314,7 @@
                         <li><a href="javascript:ovid(0)" id="Exit_system">退出系统</a></li>
 
 					</ul>
-				</div>
+				</div> --}}
             </div>
         </div>
     </div>
@@ -386,7 +386,7 @@
                             <ul class="submenu">
                                 <li class="home"><a href="javascript:void(0)" name="{{ route('goods') }}" title="产品类表"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>产品类表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="Brand_Manage.html" title="品牌管理"
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('brand') }}" title="品牌管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>品牌管理</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="{{ route('category') }}" title="分类管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>分类管理</a></li>
@@ -575,13 +575,13 @@
         <p class="r_f">地址：南京市鼓楼区阅江楼街道公共路64号 邮编：210011 技术支持：XXXX</p>
     </div>
     <!--修改密码样式-->
-    <div class="change_Pass_style" id="change_Pass">
+    {{-- <div class="change_Pass_style" id="change_Pass">
         <ul class="xg_style">
             <li><label class="label_name">原&nbsp;&nbsp;密&nbsp;码</label><input name="原密码" type="password" class="" id="password"></li>
             <li><label class="label_name">新&nbsp;&nbsp;密&nbsp;码</label><input name="新密码" type="password" class="" id="Nes_pas"></li>
             <li><label class="label_name">确认密码</label><input name="再次确认密码" type="password" class="" id="c_mew_pas"></li>
         </ul>
-    </div>
+    </div> --}}
     <!-- /.main-container -->
     <!-- basic scripts -->
 

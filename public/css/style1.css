@@ -1,0 +1,303 @@
+
+/*工具提示*/
+.tooltip-inner {
+	max-width: 200px;
+	padding: 3px 8px;
+	color: #FFF;
+	text-align: center;
+	background-color: #3399CC;
+	border-radius: 4px;/*opacity:.7;*/
+}
+.tooltip.top .tooltip-arrow {
+	bottom: 0;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px 5px 0;
+	border-top-color: #3399CC;
+}
+.tooltip.top-left .tooltip-arrow {
+	right: 5px;
+	bottom: 0;
+	margin-bottom: -5px;
+	border-width: 5px 5px 0;
+	border-top-color: #3399CC;
+}
+.tooltip.top-right .tooltip-arrow {
+	bottom: 0;
+	left: 5px;
+	margin-bottom: -5px;
+	border-width: 5px 5px 0;
+	border-top-color: #3399CC;
+}
+.tooltip.right .tooltip-arrow {
+	top: 50%;
+	left: 0;
+	margin-top: -5px;
+	border-width: 5px 5px 5px 0;
+	border-right-color: #3399CC;
+}
+.tooltip.left .tooltip-arrow {
+	top: 50%;
+	right: 0;
+	margin-top: -5px;
+	border-width: 5px 0 5px 5px;
+	border-left-color: #3399CC;
+}
+.tooltip.bottom .tooltip-arrow {
+	top: 0;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 0 5px 5px;
+	border-bottom-color: #3399CC;
+}
+.tooltip.bottom-left .tooltip-arrow {
+	top: 0;
+	right: 5px;
+	margin-top: -5px;
+	border-width: 0 5px 5px;
+	border-bottom-color: #3399CC;
+}
+.tooltip.bottom-right .tooltip-arrow {
+	top: 0;
+	left: 5px;
+	margin-top: -5px;
+	border-width: 0 5px 5px;
+	border-bottom-color: #3399CC;
+}
+/*右键菜单*/
+#rightClickMenu {
+	display: none;
+	position: fixed;
+	z-index: 99999;
+}
+#rightClickMenu>ul>li {
+	cursor: pointer;
+}
+#rightClickMenu>ul>li>span {
+	width: 65px;
+	display: inline-block;
+}
+#rightClickMenu>ul>li.rightClickMenuActive {
+	color: #3399CC;
+}
+#rightClickMenu>ul>li.disabled {
+	cursor: no-drop;
+	color: #666;
+}
+/*将表单边框阴影设置为空*/
+.form-control {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.form-control:focus {
+	border: #CCC solid 1px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.input-control {
+	display: block;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.input-control:focus {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+textarea {
+	resize: none;
+}
+.table td {
+	cursor: pointer;
+}
+/*个人信息模态框*/
+#seeUserInfo .modal-dialog {
+	max-width: 450px;
+}
+.modal-title {
+	color: #3399CC;
+}
+#seeUserInfo .modal-body tr td {
+	vertical-align: inherit;
+}
+@media (min-width: 1200px){
+th span.visible-lg {
+    display: inline-block !important;
+}
+}
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+    display: inline-block;
+    line-height: 0;
+    height: 16px;
+    margin: -4px 4px 0 0;
+    outline: 0;
+    padding: 0!important;
+    vertical-align: middle;
+    width: 16px;
+    min-width: 16px;
+}
+/*summernote富文本编辑器样式*/
+.note-editor.note-frame {
+    border:none !important;
+}
+.note-editable{
+	min-height:400px;
+	max-height:500px;
+}
+.note-editable::-webkit-scrollbar {
+ width:3px;
+ height:3px;
+ border-radius:20px;
+}
+.note-editable::-webkit-scrollbar-button {
+ display:none;
+}
+.note-editable::-webkit-scrollbar-track-piece {
+ display:none;
+}
+.note-editable::-webkit-scrollbar-thumb {
+ background:#CCC;
+ border-radius:20px;
+}
+/*ueditor富文本编辑器样式*/
+.edui-editor-iframeholder{
+	min-height:350px;
+}
+/*增加文章功能盒子*/
+.add-article-box{
+	background:#FFF;
+	margin-bottom:20px;
+	-moz-box-shadow: 0px 1px 5px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0px 1px 5px rgba(0,0,0,.1);
+	box-shadow: 0px 1px 5px rgba(0,0,0,.1);
+}
+.add-article-box-title{
+    font-size: 16px;
+    padding: 8px 10px;
+    margin: 0;
+	border-bottom:#EEE solid 1px;
+}
+.add-article-box-content{
+	padding:10px 15px;
+}
+.add-article-box-content input{
+	margin-bottom:5px;
+}
+.add-article-box-footer{
+	border-top:#EEE solid 1px;
+	padding:5px 10px;
+	background:#F8F8F8;
+	height:45px;
+	clear: both;
+}
+.add-article-box-footer button{
+	float:right;
+}
+/*增加文章栏目选择*/
+
+.add-article-box-content label{
+	font-weight:500;
+	cursor:pointer;
+}
+.add-article-box-content input[type=radio]{
+    vertical-align: sub;
+}
+.add-article-box-content .category-list label em{
+	font-size:12px;
+}
+.add-article-box-content .category-list label:hover{
+	color:#3399CC;
+}
+.add-article-box-content .category-list label:hover span{
+	color:#000;
+}
+.form-group label{
+	font-weight:500;
+}
+#main .prompt-text{
+	display:inline-block;
+	color:#888;
+	font-size:12px;
+	margin: 2px;
+}
+
+/* 自定义样式 */
+
+/* 后台相册列表样式 */
+.manager-album-list li{
+	margin-bottom: 20px;
+	position: relative;
+}
+.manager-album-list img{
+	width: 100%;
+	height: 100%;
+}
+.manager-album-list span{
+	position: absolute;
+	width: 1.5em;
+	height:1.5em;
+	background-color: red;
+	color:#fff;
+	text-align: center;
+	line-height:1.5em;
+	border-radius:50%;
+	cursor: pointer;
+	top:0;
+	right:0;
+	transform:translateY(-50%);
+	display:none;
+}
+.manager-album-list li:hover span{
+	display:block;
+}
+.manager-album-list li:hover{
+	box-shadow: 0px 0px 20px #999;
+	top:-10px;
+}
+button a{
+	color:#fff;
+}
+button:hover a{
+	color:#000;
+}
+/* 图片裁切样式 */
+.cut-img-container{
+	position: fixed;
+	width:66.66%;
+	height:80%;
+	top:10%;
+	right: 27%;
+	z-index:100000;
+	display: none;
+}
+.cut-img-container img{
+	width: 100%;
+}
+.img-preview{
+	width: 150px;
+	height: 121px;
+	overflow:hidden;
+	display:none;
+}
+.common-text {
+    height: 35px;
+    line-height: 23px;
+    padding: 2px 9px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+}
