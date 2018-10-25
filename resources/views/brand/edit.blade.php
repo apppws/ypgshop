@@ -38,6 +38,27 @@
             <div class="left_add">
                 <div class="title_name">修改品牌</div>
                 <ul class="add_conent">
+                        <li class=" clearfix"><label class="label_name"><i>*</i>选择分类：</label>
+                            <select name="cat_id1" size="10">
+                                <option value="" selected="selected">==一级分类==</option>
+                                @foreach($topCat as $v)
+                                <option value="{{$v->id}}">{{$v->name}}</option>
+                                @endforeach
+                            </select>
+                            <select name="cat_id2" size="10">
+                                <option value="" selected="selected">==二级分类==</option>
+                            </select>
+                            <select name="cat_id3" size="10">
+                                <option value="" selected="selected">==三级分类==</option>
+                            </select>
+                            单击三级分类添加/移除
+                            <select id="category_id" name="category_id[]" size="10" multiple="multiple">
+                                {{-- 取出的 catbrand 这个对应的 id  并把名字输出 --}}
+                                    @foreach ($data->category as $v)
+                                    <option value="{{ $v->id }}" selected="selected">{{ $v->name }}</option>
+                                    @endforeach
+                            </select>
+                    </li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>品牌名称：</label>
                         <input name="name" type="text" value="{{ $data->name }}" class="add_text" required / >
                     </li>
@@ -153,6 +174,66 @@
     return url
   }
 </script>
+ <script>
+        // 三级联动
+        $('select[name=cat_id1]').change(function(){
+            var s2 = $('select[name=cat_id2]');
+            var html = '<option value="" selected="selected">==二级分类==</option>';
+            // 如果这个值为空就在就获取显示二级分类
+            if($(this).val()==''){
+                s2.html(html);
+            }else{
+                    $.ajax({
+                        type:"GET",
+                        url:"/subcat/"+$(this).val(),
+                        dataType:"json",
+                        contentType:"application/json",
+                        success:function(data)
+                        {
+                            $(data).each(function(k,v){
+                                html += '<option value="'+v.id+'">'+v.name+'</option>';
+                            });
+                            s2.html(html);
+                        }
+                    });
+            }
+        });
+        $('select[name=cat_id2]').change(function(){
+            var s3 = $('select[name=cat_id3]');
+            var html = '<option value="" selected="selected">==三级分类==</option>';
+            // 如果这个值为空就在就获取显示二级分类
+            if($(this).val()==''){
+                s3.html(html);
+            }else{
+                    $.ajax({
+                        type:"GET",
+                        url:"/subcat1/"+$(this).val(),
+                        dataType:"json",
+                        contentType:"application/json",
+                        success:function(data)
+                        {
+                            $(data).each(function(k,v){
+                                html += '<option value="'+v.id+'">'+v.name+'</option>';
+                            });
+                            s3.html(html);
+                        }
+                    });
+            }
+        });
+
+        // 实现双击选中的公
+        $("select[name=cat_id3]").click(function(){
+            var s = $("#category_id");
+            if($(this).val()>0)
+            {
+                s.append($(this).find(":selected").clone().prop('selected',true));
+            }
+        });
+        $("#category_id").click(function(){
+            $(this).find(":selected").remove();
+            $("#category_id option").prop('selected',true);
+        })
+    </script>
 <script type="text/javascript">
     $(document).ready(function () {
         $(".left_add").height($(window).height() - 60);
