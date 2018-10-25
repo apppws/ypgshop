@@ -80,7 +80,7 @@ Route::post('/goods/edit/{id}','GoodsController@doedit')->name('goods_doedit');
 Route::get('/goods/delete/{id}','GoodsController@delete')->name('goods_delete');
 // 属性
 Route::get('/goods/attr/{id}','GoodsController@attr')->name('goods_attr');
-
+Route::post('/goods/attr/{id}','GoodsController@doattr')->name('goods_doattr');
 /**
  * 商品品牌
  */

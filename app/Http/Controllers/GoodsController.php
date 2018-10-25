@@ -81,4 +81,59 @@ class GoodsController extends Controller
         $goods->delete();
         return redirect()->route('goods');
     }
+    // 显示属性
+    public function attr(Request $req,$id){
+        $goods = Goods::find($id);
+        // 取出一级分类下的挂载的数据
+        $attr1 = Attr::where('cat_id1',$goods->cat_id1)
+                        ->where('attr_type','<>','规格')
+                        ->get();
+        // 取出二级
+        $attr2 = Attr::where('cat_id2',$goods->cat_id2)
+                        ->where('attr_type','<>','规格')
+                        ->get();
+        // 取出三级
+        $attr3 = Attr::where('cat_id3',$goods->cat_id3)
+                        ->where('attr_type','<>','规格')
+                        ->get();
+        // dd($attr1);
+
+        // 商品下的数据
+        $gadata = GoodsAttr::where('goods_id',$id)->get();
+        // dd($gadata);
+        $ga = [];
+        foreach($gadata as $v){
+            $ga[$v->attr_id] = $v->attr_id;
+        }
+        // dd($ga);
+        return view('goods/attr',[
+            'data'=>$goods,
+            'attr1'=>$attr1,
+            'attr2'=>$attr2,
+            'attr3'=>$attr3,
+            'gaData'=>$ga
+        ]);
+    }
+    // 处理属性
+    public function doattr(Request $req,$id){
+        $data = $req->all();
+        // dd($data);
+        // 先删除原来的值
+        GoodsAttr::where('goods_id',$id)->delete();
+        // 循环你得到的值
+        foreach($data['attr_value'] as $k=>$v){
+            // var_dump($v);
+            if($v){
+                $goodsAttr = new GoodsAttr;
+                $goodsAttr->fill([
+                    'attr_id'=>$data['attr_id'][$k],
+                    'attr_value'=>$v,
+                    'goods_id'=>$id
+                ]);
+                $goodsAttr->save();
+            }
+        }
+
+        return redirect()->route('goods');
+    }
 }
