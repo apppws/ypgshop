@@ -63,6 +63,8 @@ Route::get('/category/edit/{id}','CategoryController@edit')->name('categoryedit'
 Route::post('/category/edit/{id}','CategoryController@doedit')->name('categorydoedit');
 //删除
 Route::get('/category/delete/{id}','CategoryController@delete')->name('categorydelete');
+// 商品品牌分类
+Route::get('/category/brand/{id}','CategoryController@brand');
 
 /**
  * 商品模块
@@ -76,6 +78,9 @@ Route::get('/goods/edit/{id}','GoodsController@edit')->name('goods_edit');
 Route::post('/goods/edit/{id}','GoodsController@doedit')->name('goods_doedit');
 // 删除
 Route::get('/goods/delete/{id}','GoodsController@delete')->name('goods_delete');
+// 属性
+Route::get('/goods/attr/{id}','GoodsController@attr')->name('goods_attr');
+
 /**
  * 商品品牌
  */

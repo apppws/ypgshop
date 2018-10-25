@@ -87,7 +87,6 @@
                                     <th width="25px"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></th>
                                     <th width="50px">产品编号</th>
                                     <th width="150px">产品名称</th>
-                                    <th width="50px">品牌id</th>
                                     <th width="50px">一级分类id</th>
                                     <th width="50px">二级分类id</th>
                                     <th width="50px">三级分类id</th>
@@ -106,7 +105,6 @@
                                     <td width="25px"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
                                     <td width="50px">{{$v->id}}</td>
                                     <td width="150px"><u style="cursor:pointer" class="text-primary" onclick="">{{ $v->goods_name }}</u></td>
-                                    <th width="50px">{{ $v->brand_id }}</th>
                                     <th width="50px">{{ $v->cat_id1 }}</th>
                                     <th width="50px">{{ $v->cat_id2 }}</th>
                                     <th width="50px">{{ $v->cat_id3 }}</th>
@@ -117,12 +115,18 @@
                                     <th width="80px">{{ $v->created_at }}</th>
                                     <td class="td-status"><span class="label label-success radius">已启用</span></td>
                                     <td class="td-manage">
-                                        <a onClick="member_stop(this,'10001')" href="javascript:;" title="停用" class="btn btn-xs btn-success"><i
-                                                class="icon-ok bigger-120"></i></a>
-                                        <a title="编辑"  href="/goods/edit/{{$v->id}}" class="btn btn-xs btn-info"><i
-                                                    class="icon-edit bigger-120"></i></a>
-                                        <a title="删除" onclick="confirm('你确定要删除吗？')" href="/goods/delete/{{$v->id}}" class="btn btn-xs btn-warning"><i
-                                                    class="icon-trash  bigger-120"></i></a>
+                                        <a onClick="member_stop(this,'10001')" href="javascript:;" title="停用" class="btn btn-xs btn-success">
+                                            <i class="icon-ok bigger-120"></i>
+                                        </a>
+                                        <a title="编辑"  href="/goods/edit/{{$v->id}}" class="btn btn-xs btn-info">
+                                            <i class="icon-edit bigger-120"></i>
+                                        </a>
+                                        <a title="删除" onclick="confirm('你确定要删除吗？')" href="/goods/delete/{{$v->id}}" class="btn btn-xs btn-warning">
+                                            <i class="icon-trash  bigger-120"> </i>
+                                        </a>
+                                        <a title="属性" href="/goods/attr/{{$v->id}}" class="btn btn-xs btn-danger">
+                                            <i class="glyphicon glyphicon-eye-open"> </i>
+                                        </a>
                                     </td>
                                 </tr>
                                 @endforeach

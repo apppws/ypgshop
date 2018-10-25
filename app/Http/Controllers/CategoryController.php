@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\models\Category;
-
+use \App\Models\BrandCategory;
 class CategoryController extends Controller
 {
     //显示分类的页面
@@ -112,5 +112,12 @@ class CategoryController extends Controller
             $category->delete();
         }
         return redirect()->route('category');
+    }
+
+    // 商品品牌分类
+    public function brand($id3){
+        $data = BrandCategory::where('category_id',$id3)->with('brands')->get();
+        // 返回json 格式
+        return response()->json($data);
     }
 }

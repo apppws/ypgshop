@@ -86,8 +86,11 @@
                                         <th width="120px">属性名</th>
                                         <th width="250px">分组名</th>
                                         <th width="130px">属性值</th>
-                                        <th width="400px">价钱</th>
-                                        <th width="180px">库存</th>
+                                        <th width="200px">价钱</th>
+                                        <th width="100px">规格</th>
+                                        <th width="100px">显示类型</th>
+                                        <th width="100px">库存</th>
+                                        <th width="100px">可选值</th>
                                         <th width="70px" >状态</th>
                                         <th width="450px">操作</th>
                                     </tr>
@@ -100,8 +103,11 @@
                                   <td width="120px">{{ $v->attr_name }}</td>
                                   <td width="250px">{{ $v->group_name }}</td>
                                   <th width="130px">{{ $v->attrval }}</th>
-                                  <td width="400px">{{ $v->attrprice }}</td>
-                                  <td width="180px">{{ $v->attrstock }}</td>
+                                  <td width="200px">{{ $v->attrprice }}</td>
+                                  <th width="100px">{{ $v->attr_type }}</th>
+                                  <th width="100px">{{ $v->show_type }}</th>
+                                  <td width="100px">{{ $v->attrstock }}</td>
+                                  <td width="100px">{{ $v->attr_options }}</td>
                                   <td width="70px" class="td-status"><span class="label label-success radius">已启用</span></td>
                                   <td width="450px"  class="td-manage">
                                     <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success">

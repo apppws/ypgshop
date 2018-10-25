@@ -70,6 +70,16 @@
                     <li class=" clearfix"><label class="label_name"><i>*</i>属性分组：</label>
                         <input name="group_name" value="{{ $data->group_name }}" type="text" class="add_text" required / >
                     </li>
+                    <li class=" clearfix"><label class="label_name"><i>*</i>属性类型：</label>
+                        <input type='radio' value="关键" @if($data->attr_type=='关键') checked @endif name='attr_type'> 关键属性
+                        <input type='radio' value="规格" @if($data->attr_type=='规格') checked @endif name='attr_type'> 规格属性
+                        <input type='radio' value="普通" @if($data->attr_type=='普通') checked @endif name='attr_type'> 普通属性
+                    </li>
+                    <li class=" clearfix"><label class="label_name"><i>*</i>显示类型：</label>
+                        <input type='radio' value="单选" @if($data->show_type=='单选') checked @endif name='show_type'> 单选
+                        <input type='radio' value="多选" @if($data->show_type=='多选') checked @endif name='show_type'> 多选
+                        <input type='radio' value="自定义" @if($data->show_type=='自定义') checked @endif name='show_type'> 自定义
+                    </li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>属性值：</label>
                         <input name="attrval" type="text" value="{{ $data->attrval }}" class="add_text" style="width:120px" /></li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>价钱：</label>
@@ -77,6 +87,9 @@
                     </li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>库存：</label>
                         <input name="attrstock" value="{{ $data->attrstock }}" type="text" class="add_text" style="width:120px" />
+                    </li>
+                    <li class=" clearfix"><label class="label_name"><i>*</i>可选值：</label>
+                        <textarea name="attr_options" id="" cols="30" rows="10">{{ $data->attr_options }}</textarea>
                     </li>
                 </ul>
             </div>

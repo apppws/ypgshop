@@ -61,6 +61,16 @@
                     <li class=" clearfix"><label class="label_name"><i>*</i>属性分组：</label>
                         <input name="group_name" type="text" class="add_text" required / >
                     </li>
+                    <li class=" clearfix"><label class="label_name"><i>*</i>属性类型：</label>
+                        <input type="radio" name="attr_type" id="" checked="checked" value="普通"> 普通
+                        <input type="radio" name="attr_type" id="" value="规格"> 规格
+                        <input type="radio" name="attr_type" id="" value="关键"> 关键
+                    </li>
+                    <li class=" clearfix"><label class="label_name"><i>*</i>显示类型：</label>
+                        <input type="radio" name="show_type" id="" checked="checked" value="单选"> 单选
+                        <input type="radio" name="show_type" id="" value="多选"> 多选
+                        <input type="radio" name="show_type" id="" value="自定义"> 自定义
+                    </li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>属性值：</label>
                         <input name="attrval" type="text" class="add_text" style="width:120px" /></li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>价钱：</label>
@@ -68,6 +78,9 @@
                     </li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>库存：</label>
                         <input name="attrstock" type="text" class="add_text" style="width:120px" />
+                    </li>
+                    <li class=" clearfix"><label class="label_name"><i>*</i>可选值：</label>
+                        <textarea name="attr_options" id="" cols="30" rows="10"></textarea>
                     </li>
                 </ul>
             </div>

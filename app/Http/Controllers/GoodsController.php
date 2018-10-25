@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Goods;
 use App\Models\Category;
+use App\Models\Attr;
+use App\Models\GoodsAttr;
 class GoodsController extends Controller
 {
     //显示商品页面

@@ -66,11 +66,6 @@
                                 id="" name="caizhi"></div>
                     </div>
                     <div class="Add_p_s">
-                        <label class="form-label col-2">品&nbsp;&nbsp;&nbsp;&nbsp;牌：</label>
-                        <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
-                                id="" name="brand_id"></div>
-                    </div>
-                    <div class="Add_p_s">
                         <label class="form-label col-2">产品重量：</label>
                         <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
                                 id="" name="weight">kg</div>
@@ -107,6 +102,14 @@
                             </select>
                             <select name="cat_id3" size="10">
                                 <option value="" selected="selected">==三级分类==</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="clearfix cl">
+                        <label class="form-label col-2">品牌：</label>
+                        <div class="formControls col-10">
+                            <select name="brand_id">
+                                <option value="" selected="selected">==选择品牌==</option>
                             </select>
                         </div>
                 </div>
@@ -191,6 +194,33 @@
                     });
             }
         });
+
+        // 品牌
+        $("select[name=cat_id3]").change(function(){
+            var s2 = $("select[name=brand_id]");
+            console.log(s2);
+            var html = '<option value="" selected="selected">==选择品牌==</option>';
+            if($(this).val()=='')
+            {
+                s2.html(html);
+            }
+            else
+            {
+                $.ajax({
+                    type:"GET",
+                    url:"/category/brand/"+$(this).val(),
+                    dataType:"json",
+                    success:function(data)
+                    {
+                        $(data).each(function(k,v){
+                            html += '<option value="'+v.brands.id+'">'+v.brands.name+'</option>';
+                        });
+                        s2.html(html);
+                    }
+                });
+            }
+        });
+
     </script>
      <script>
             var editor = new Simditor({
@@ -235,13 +265,13 @@
 
             $(".widget-box").height($(window).height());
             $(".page_right_style").height($(window).height());
-            $(".page_right_style").width($(window).width() - 180);
+            $(".page_right_style").width($(window).width() - 70);
             //当文档窗口发生改变时 触发
             $(window).resize(function () {
 
                 $(".widget-box").height($(window).height());
                 $(".page_right_style").height($(window).height());
-                $(".page_right_style").width($(window).width() - 180);
+                $(".page_right_style").width($(window).width() - 70);
             });
         });
         $(function () {
