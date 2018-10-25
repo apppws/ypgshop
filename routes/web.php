@@ -88,3 +88,15 @@ Route::get('/brand/edit/{id}','BrandController@edit')->name('brand_edit');
 Route::post('/brand/edit/{id}','BrandController@doedit')->name('brand_doedit');
 // 删除
 Route::get('/brand/delete/{id}','BrandController@delete')->name('brand_delete');
+/**
+ * 商品属性
+ */
+Route::get('/attr','AttrController@list')->name('attr');
+// 增
+Route::get('/attr/add','AttrController@add')->name('attr_add');
+Route::post('/attr/add','AttrController@doadd')->name('attr_doadd');
+// 修改
+Route::get('/attr/edit/{id}','AttrController@edit')->name('attr_edit');
+Route::post('/attr/edit/{id}','AttrController@doedit')->name('brand_doedit');
+// 删除
+Route::get('/attr/delete/{id}','AttrController@delete')->name('attr_delete');

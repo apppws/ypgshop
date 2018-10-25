@@ -390,6 +390,8 @@
                                         class="iframeurl"><i class="icon-double-angle-right"></i>品牌管理</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="{{ route('category') }}" title="分类管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>分类管理</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('attr') }}" title="属性管理"
+                                            class="iframeurl"><i class="icon-double-angle-right"></i>属性管理</a></li>
 
                             </ul>
                         </li>
