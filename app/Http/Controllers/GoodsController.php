@@ -7,6 +7,10 @@ use App\Models\Goods;
 use App\Models\Category;
 use App\Models\Attr;
 use App\Models\GoodsAttr;
+use App\Models\GoodsStock;
+use App\Models\GoodsSpec;
+use App\Models\Pic;
+use Image;
 class GoodsController extends Controller
 {
     //显示商品页面
@@ -135,5 +139,100 @@ class GoodsController extends Controller
         }
 
         return redirect()->route('goods');
+    }
+
+    // 规格
+    public function spec(Request $req,$id){
+        $goods = Goods::find($id);
+        // 取出一级分类下的挂载的数据
+        $attr1 = Attr::where('cat_id1',$goods->cat_id1)
+                        ->where('attr_type','<>','规格')
+                        ->get();
+        // 取出二级
+        $attr2 = Attr::where('cat_id2',$goods->cat_id2)
+                        ->where('attr_type','<>','规格')
+                        ->get();
+        // 取出三级
+        $attr3 = Attr::where('cat_id3',$goods->cat_id3)
+                        ->where('attr_type','<>','规格')
+                        ->get();
+        // dd($attr1);
+
+        // 规格数据
+        $spdata = GoodsSpec::where('goods_id',$id)->get();
+        // 取出库存
+        $stockData = Goodsstock::where('goods_id',$id)->get();
+        return view('goods/spec',[
+            'data'=>$goods,
+            'attr1'=>$attr1,
+            'attr2'=>$attr2,
+            'attr3'=>$attr3,
+            'spData'=>$spdata,
+            'stockData'=>$stockData
+        ]);
+    }
+     // 相册管理的列表页面
+    public function pic(Request $req,$id){
+        $data = Pic::where('goods_id',$id)->select('id','mid_pic')->get();
+        return view('goods/pic',[
+                'goods_id'=>$id,
+                'data' => $data,
+            ]);
+    }
+    // 弹出框的页面w
+    public function uploader(){
+        return view('goods/uploader');
+    }
+     // 上传图片
+     public function upload(Request $req, $id)
+     {
+        $goods = Goods::find($id);
+         $pics = new Pic;
+        //  dd($req->hasFile('fileList'));
+         if($req->hasFile('fileList') && $req->file('fileList')->isValid())
+         {
+             $date = date('Ymd');
+             $dir = 'goods/'.$date;
+             $pic = $req->fileList->store($dir);
+            //  dd($pic);
+             // 生成缩略图
+             $img = Image::make('./upload/'.$pic);
+                // dd($img);
+             // 大缩略图
+             $bigPic = $img->resize(750, 750);
+             $bigPic = str_replace($date.'/', $date.'/big_', $pic);
+             $img->save('./upload/'.$bigPic);
+            // dd($bigPic);
+             // 中缩略图
+             $midPic = $img->resize(400, 400);
+             $midPic = str_replace($date.'/', $date.'/mid_', $pic);
+             $img->save('./upload/'.$midPic);
+
+             // 小缩略图
+             $img->resize(100, 100);
+             $smPic = str_replace($date.'/', $date.'/sm_', $pic);
+             $img->save('./upload/'.$smPic);
+
+             $pics->fill([
+                 'goods_id' => $id,
+                 'pic' => $pic,
+                 'sm_pic' => $smPic,
+                 'mid_pic' => $midPic,
+                 'big_pic' => $bigPic,
+             ]);
+                // dd($pics);
+             $pics->save();
+
+             return back();
+         }
+     }
+     // 删除图片
+    public function del_pic(Request $req,$id)
+    {
+        $pics = Pic::find($id);
+        // dd($pics);
+        // Storage::delete([$pics->pic,$pics->sm_pic,$pics->mid_pic,$pics->big_pic]);
+        $pics->delete();
+        return 1;
     }
 }

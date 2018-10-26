@@ -103,7 +103,7 @@
                 <li>
                     <div class="layui-layer-btn">
                         <input class="btn btn-primary" type="submit" value="提交">
-                        <input class="btn btn-warning" type="submit" value="取消">
+                        <input onclick="history.go(-1)" type="button" value="取消">
                     </div>
                 </li>
             </ul>

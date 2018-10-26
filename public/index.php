@@ -48,8 +48,15 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 | and wonderful application we have prepared for them.
 |
 */
+$compiledPath = __DIR__.'/../vendor/compiled.php';
+
+if (file_exists($compiledPath))
+{
+    require $compiledPath;
+}
 
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+// $kernel = $app->make('Illuminate\Contracts\Http\Kernel')
 
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()

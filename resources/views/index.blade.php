@@ -397,9 +397,9 @@
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-picture "></i><span class="menu-text">
-                                    图片管理 </span><b class="arrow icon-angle-down"></b></a>
+                                    相册管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="advertising.html" title="广告管理"
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('pic') }}" title="广告管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>广告管理</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="Sort_ads.html" title="分类管理" class="iframeurl"><i
                                             class="icon-double-angle-right"></i>分类管理</a></li>

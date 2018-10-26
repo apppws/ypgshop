@@ -81,6 +81,14 @@ Route::get('/goods/delete/{id}','GoodsController@delete')->name('goods_delete');
 // 属性
 Route::get('/goods/attr/{id}','GoodsController@attr')->name('goods_attr');
 Route::post('/goods/attr/{id}','GoodsController@doattr')->name('goods_doattr');
+// 规格
+Route::get('/goods/spec/{id}','GoodsController@spec')->name('goods_spec');
+Route::post('/goods/spec/{id}','GoodsController@dospec')->name('goods_dospec');
+// 商品相册
+Route::get('/goods/pic/{id}','GoodsController@pic')->name('pic');
+Route::get('/goods/uploader','GoodsController@uploader')->name('pic');
+Route::post('/goods/pic/{goods_id}','GoodsController@upload');
+Route::get('/goods/del_pic/{goods_pic}','GoodsController@del_pic');
 /**
  * 商品品牌
  */
@@ -105,3 +113,4 @@ Route::get('/attr/edit/{id}','AttrController@edit')->name('attr_edit');
 Route::post('/attr/edit/{id}','AttrController@doedit')->name('brand_doedit');
 // 删除
 Route::get('/attr/delete/{id}','AttrController@delete')->name('attr_delete');
+
