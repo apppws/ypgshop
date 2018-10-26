@@ -308,13 +308,13 @@
                 </ul>
                 {{-- <div class="right_info">
 
-                   <div class="get_time" ><span id="time" class="time"></span>欢迎光临,管理员</span></div>
-					<ul class="nav ace-nav">
-						<li><a href="javascript:ovid(0)" class="change_Password">修改密码</a></li>
+                    <div class="get_time"><span id="time" class="time"></span>欢迎光临,管理员</span></div>
+                    <ul class="nav ace-nav">
+                        <li><a href="javascript:ovid(0)" class="change_Password">修改密码</a></li>
                         <li><a href="javascript:ovid(0)" id="Exit_system">退出系统</a></li>
 
-					</ul>
-				</div> --}}
+                    </ul>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -361,15 +361,15 @@
                 </div><!-- #sidebar-shortcuts -->
                 <div id="menu_style" class="menu_style">
                     <ul class="nav nav-list" id="nav_list">
-                        <li class="home"><a href="javascript:void(0)" name="{{ route('home') }}" class="iframeurl" title=""><i
-                                    class="icon-home"></i><span class="menu-text"> 系统首页 </span></a></li>
+                        <li class="home"><a href="javascript:void(0)" name="{{ route('home') }}" class="iframeurl"
+                                title=""><i class="icon-home"></i><span class="menu-text"> 系统首页 </span></a></li>
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-user"></i><span class="menu-text"> 会员管理
                                 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
                                 <li class="home">
                                     <a href="javascript:void(0)" name="{{ route('member_index') }}" title="会员列表" class="iframeurl">
-                                    <i class="icon-double-angle-right"></i>会员列表</a>
+                                        <i class="icon-double-angle-right"></i>会员列表</a>
                                 </li>
                                 <li class="home">
                                     <a href="javascript:void(0)" name="{{ route('member_level') }}" title="等级管理" class="iframeurl">
@@ -377,7 +377,7 @@
                                 </li>
                                 <li class="home">
                                     <a href="javascript:void(0)" name="integration.html" title="会员记录管理" class="iframeurl">
-                                    <i class="icon-double-angle-right"></i>会员记录管理</a>
+                                        <i class="icon-double-angle-right"></i>会员记录管理</a>
                                 </li>
                             </ul>
                         </li>
@@ -391,8 +391,18 @@
                                 <li class="home"><a href="javascript:void(0)" name="{{ route('category') }}" title="分类管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>分类管理</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="{{ route('attr') }}" title="属性管理"
-                                            class="iframeurl"><i class="icon-double-angle-right"></i>属性管理</a></li>
+                                        class="iframeurl"><i class="icon-double-angle-right"></i>属性管理</a></li>
 
+                            </ul>
+                        </li>
+
+                        <li><a href="#" class="dropdown-toggle"><i class="icon-comments-alt"></i><span class="menu-text">
+                                    评论管理 </span><b class="arrow icon-angle-down"></b></a>
+                            <ul class="submenu">
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('comment') }}" title="留言列表"
+                                        class="iframeurl"><i class="icon-double-angle-right"></i>评论列表</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="Feedback.html" title="意见反馈" class="iframeurl"><i
+                                            class="icon-double-angle-right"></i>意见反馈</a></li>
                             </ul>
                         </li>
                         <li>
@@ -442,15 +452,6 @@
                                             class="icon-double-angle-right"></i>店铺列表</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="Shops_Audit.html" title="店铺审核"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>店铺审核<span class="badge badge-danger">5</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="dropdown-toggle"><i class="icon-comments-alt"></i><span class="menu-text">
-                                    消息管理 </span><b class="arrow icon-angle-down"></b></a>
-                            <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="Guestbook.html" title="留言列表" class="iframeurl"><i
-                                            class="icon-double-angle-right"></i>留言列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="Feedback.html" title="意见反馈" class="iframeurl"><i
-                                            class="icon-double-angle-right"></i>意见反馈</a></li>
                             </ul>
                         </li>
                         <li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text">

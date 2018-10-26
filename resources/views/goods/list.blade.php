@@ -126,12 +126,15 @@
                                         </a>
                                         <a title="删除" onclick="confirm('你确定要删除吗？')" href="/goods/delete/{{$v->id}}" class="btn btn-xs btn-warning">
                                             <i class="icon-trash  bigger-120"> </i>
-                                        </a>
+                                        </a><br>
                                         <a title="属性" href="/goods/attr/{{$v->id}}" class="btn btn-xs btn-danger">
                                             <i class="glyphicon glyphicon-eye-open"> </i>
                                         </a>
                                         <a title="规格" href="/goods/spec/{{$v->id}}" class="btn btn-inverser">
                                             <i class="	glyphicon glyphicon-briefcase"> </i>
+                                        </a>
+                                        <a title="评论" href="/comment/add/{{$v->id}}" class="btn btn-info">
+                                            <i class="glyphicon glyphicon-comment"> </i>
                                         </a>
                                     </td>
                                 </tr>

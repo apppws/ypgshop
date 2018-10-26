@@ -113,4 +113,16 @@ Route::get('/attr/edit/{id}','AttrController@edit')->name('attr_edit');
 Route::post('/attr/edit/{id}','AttrController@doedit')->name('brand_doedit');
 // 删除
 Route::get('/attr/delete/{id}','AttrController@delete')->name('attr_delete');
+/**
+ * 商品评论
+ */
+Route::get('/comment','CommentController@list')->name('comment');
+// 增
+Route::get('/comment/add/{goods_id}','CommentController@add')->name('comment_add');
+Route::post('/comment/add/{goods_id}','CommentController@doadd')->name('comment_doadd');
+// 修改
+Route::get('/comment/edit/{id}/{goodsid?}','CommentController@edit')->name('comment_edit');
+Route::post('/comment/edit/{id}/{goodsid?}','CommentController@doedit')->name('comment_doedit');
+// 删除
+Route::get('/comment/delete/{id}','CommentController@delete')->name('comment_delete');
 
