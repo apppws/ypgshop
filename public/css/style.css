@@ -420,7 +420,7 @@ body
 .page_right_style .type_title,
 .admin_info_style .type_title,
 .Competence_add_style .title_name{
-	padding-left:20px;
+	padding-left:155px;
 	font-size:18px;
 	border-bottom:1px solid #dddddd;
     background: #2a8bcc!important;
@@ -684,7 +684,7 @@ body
 .state-overview .Info .Quantity{ font-size:18px; margin-top:5px; }
 .state-overview .Info .color_red{color:#F33}
 .Competence_add_style .form-group{ line-height:28px;}
-.Competence_add_style .left_Competence_add{ width:500px; border-right:1px solid #ddd; float:left; position:relative}
+.Competence_add_style .left_Competence_add{ width:100%; border-right:1px solid #ddd; float:left; position:relative}
 .Competence_add_style .left_Competence_add .Competence_add{ padding:15px;}
 .Competence_add_style textarea.form-control{ width:350px;height:100px; resize:none;}
 .Competence_add_style .left_Competence_add .Competence_add .middle{ display:block; float:left; width:150px; margin-right:10px; margin-bottom:10px;}

@@ -125,4 +125,18 @@ Route::get('/comment/edit/{id}/{goodsid?}','CommentController@edit')->name('comm
 Route::post('/comment/edit/{id}/{goodsid?}','CommentController@doedit')->name('comment_doedit');
 // 删除
 Route::get('/comment/delete/{id}','CommentController@delete')->name('comment_delete');
-
+/**
+ * 权限管理
+ */
+Route::get('/privilege','PrivilegeController@list')->name('privilege');
+// 增
+Route::get('/privilege/add','PrivilegeController@add')->name('privilege_add');
+Route::post('/privilege/add','PrivilegeController@doadd')->name('privilege_doadd');
+// 修改
+Route::get('/privilege/edit/{id}','PrivilegeController@edit')->name('privilege_edit');
+Route::post('/privilege/edit/{id}','PrivilegeController@doedit')->name('privilege_doedit');
+// 删除
+Route::get('/privilege/delete/{id}','PrivilegeController@delete')->name('privilege_delete');
+/**
+ * 角色管理
+ */

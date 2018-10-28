@@ -225,7 +225,7 @@
             <div class="navbar-header pull-left">
                 <a href="#" class="navbar-brand">
                     <small>
-                        <img src="/images/logo3.png" width="200px" height="80px">
+                        <img src="/images/cart3_logo.png" width="70px" height="70px">
                     </small>
                 </a><!-- /.brand -->
             </div><!-- /.navbar-header -->
@@ -401,8 +401,19 @@
                             <ul class="submenu">
                                 <li class="home"><a href="javascript:void(0)" name="{{ route('comment') }}" title="留言列表"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>评论列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="Feedback.html" title="意见反馈" class="iframeurl"><i
-                                            class="icon-double-angle-right"></i>意见反馈</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#" class="dropdown-toggle"><i class="icon-group"></i><span class="menu-text">
+                            管理员管理 </span><b class="arrow icon-angle-down"></b></a>
+                            <ul class="submenu">
+
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('privilege') }}" title="权限管理"
+                                        class="iframeurl"><i class="icon-double-angle-right"></i>权限管理</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="administrator.html" title="管理员列表"
+                                        class="iframeurl"><i class="icon-double-angle-right"></i>管理员列表</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="admin_info.html" title="个人信息" class="iframeurl"><i
+                                            class="icon-double-angle-right"></i>个人信息</a></li>
                             </ul>
                         </li>
                         <li>
@@ -437,7 +448,7 @@
                             <a href="#" class="dropdown-toggle"><i class="icon-credit-card"></i><span class="menu-text">
                                     支付管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="Cover_management.html" title="账户管理"
+                                <li class="homae"><a href="javascript:void(0)" name="Cover_management.html" title="账户管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>账户管理</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="payment_method.html" title="支付方式"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>支付方式</a></li>
@@ -473,18 +484,6 @@
 
                                 <li class="home"><a href="javascript:void(0)" name="System_Logs.html" title="系统日志"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>系统日志</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="dropdown-toggle"><i class="icon-group"></i><span class="menu-text">
-                                    管理员管理 </span><b class="arrow icon-angle-down"></b></a>
-                            <ul class="submenu">
-
-                                <li class="home"><a href="javascript:void(0)" name="admin_Competence.html" title="权限管理"
-                                        class="iframeurl"><i class="icon-double-angle-right"></i>权限管理</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="administrator.html" title="管理员列表"
-                                        class="iframeurl"><i class="icon-double-angle-right"></i>管理员列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="admin_info.html" title="个人信息" class="iframeurl"><i
-                                            class="icon-double-angle-right"></i>个人信息</a></li>
                             </ul>
                         </li>
                     </ul>
