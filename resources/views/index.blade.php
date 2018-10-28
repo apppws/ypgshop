@@ -410,10 +410,11 @@
 
                                 <li class="home"><a href="javascript:void(0)" name="{{ route('privilege') }}" title="权限管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>权限管理</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('role') }}" title="个人信息" class="iframeurl"><i
+                                            class="icon-double-angle-right"></i>角色管理</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="administrator.html" title="管理员列表"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>管理员列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="admin_info.html" title="个人信息" class="iframeurl"><i
-                                            class="icon-double-angle-right"></i>个人信息</a></li>
+
                             </ul>
                         </li>
                         <li>

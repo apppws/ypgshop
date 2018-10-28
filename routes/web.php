@@ -140,3 +140,12 @@ Route::get('/privilege/delete/{id}','PrivilegeController@delete')->name('privile
 /**
  * 角色管理
  */
+Route::get('/role','RoleController@list')->name('role');
+// 增
+Route::get('/role/add','RoleController@add')->name('role_add');
+Route::post('/role/add','RoleController@doadd')->name('role_doadd');
+// 修改
+Route::get('/role/edit/{id}','RoleController@edit')->name('role_edit');
+Route::post('/role/edit/{id}','RoleController@doedit')->name('role_doedit');
+// 删除
+Route::get('/role/delete/{id}','RoleController@delete')->name('role_delete');
