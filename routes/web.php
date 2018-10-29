@@ -168,5 +168,29 @@ Route::get('/admins/edit/{id}','AdminController@edit')->name('admin_edit');
 Route::post('/admins/edit/{id}','AdminController@doedit')->name('admin_doedit');
 // 删除
 Route::get('/admins/delete/{id}','AdminController@delete')->name('admin_delete');
+/**
+ * 广告管理
+ */
+Route::get('/ad','AdController@list')->name('ad');
+// 增
+Route::get('/ad/add','AdController@add')->name('ad_add');
+Route::post('/ad/add','AdController@doadd')->name('ad_doadd');
+// 修改
+Route::get('/ad/edit/{id}','AdController@edit')->name('ad_edit');
+Route::post('/ad/edit/{id}','AdController@doedit')->name('ad_doedit');
+// 删除
+Route::get('/ad/delete/{id}','AdController@delete')->name('ad_delete');
 
+/**
+ * 广告管理位置
+ */
+Route::get('/adpos','AdPosController@list')->name('adpos');
+// 增
+Route::get('/adpos/add','AdPosController@add')->name('adpos_add');
+Route::post('/adpos/add','AdPosController@doadd')->name('adpos_doadd');
+// 修改
+Route::get('/adpos/edit/{id}','AdPosController@edit')->name('adpos_edit');
+Route::post('/adpos/edit/{id}','AdPosController@doedit')->name('adpos_doedit');
+// 删除
+Route::get('/adpos/delete/{id}','AdPosController@delete')->name('adpos_delete');
 });

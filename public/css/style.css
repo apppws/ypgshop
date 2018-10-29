@@ -36,7 +36,6 @@ a:hover{ color:#F90}
 .margin{ margin:15px;}
 .border{ border:1px solid #ddd; padding:5px; height:50px; line-height:36px; margin-bottom:20px; }
 .border  span{ display:block; height:100%;}
-.table_menu_list{}
 .alert { margin-top:20px;}
 body
 {
@@ -70,8 +69,8 @@ body
 	border-right:1px solid #ffffff;
 	text-align:center;
 	display: inline-block;
-	overflow:
-	hidden;float:left
+    overflow:hidden;
+    float:left;
 }
 .Manager_style,
 .search_style{ position:relative; margin-top:20px; }
@@ -236,11 +235,8 @@ body
 .footer_style{ width:100%; border-top:1px solid #ddd; padding:2px 0px; color:#666666; background-color:#f2f2f2; font-family:"新宋体"; position: fixed; bottom:0px; z-index:1111; text-align:center;}
 .footer_style p{ padding:0px 20px;}
 /*************************************************************待确认订单样式属性**********************************************************/
-.d_Confirm_Order_style{}
 .d_Confirm_Order_style .title_name{ font-size:14px; padding:10px 0px ; border-bottom:1px solid #ddd; margin-bottom:20px;}
 /********************************菜单管理样式属性*************************/
-.Menu_Manager{}
-.Menu_Manager .add_menu tr{ }
 .Manager_style .Role_xinxi td,
 .Menu_Manager .add_menu td{ height:50px; line-height:50px; padding:5px 0px;}
 .Menu_Manager .add_menu td .btn-primary,
@@ -655,7 +651,7 @@ body
 .grading_style .table_menu_list{ width:100%}
 /********************************广告界面样式属性*************************/
 .Ads_list,
-.order_list_style{ padding:15px;margin-left:220px; float:right; position: absolute; overflow:auto;}
+.order_list_style{ padding:15px;margin-left:80px; float:right; position: absolute; overflow:auto;}
 .Ads_list .ad_img{ overflow:hidden; height:80px; display:block}
 .Ads_list.Widescreen,
 .order_list_style.Widescreen { margin-left:0px;}
