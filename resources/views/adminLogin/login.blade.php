@@ -46,15 +46,20 @@
                             </h4>
 
                             <div class="login_icon"><img src="/images/login.png" /></div>
-                            <form action="{{ route('dologin') }}" method="post">
-                                {{ csrf_field() }}
+                            <form action="{{ route('dologin') }}" method="post" name="form">
+                                @csrf
                                 <fieldset>
                                     <ul>
                                         <li class="frame_style form_error"><label class="user_icon"></label>
                                             <input name="username" type="text" id="username" /><i>用户名</i></li>
                                         <li class="frame_style form_error"><label class="password_icon"></label>
                                             <input name="password" type="password" id="userpwd" /><i>密码</i></li>
-
+                                        <li class="frame_style form_error"><label class="Codes_icon"></label>
+                                                <input name="验证码" type="text" id="Codes_text">
+                                                <i>验证码</i><div class="Codes_region">
+                                                        <img src="{{captcha_src()}}" id="captcha" onclick="this.src='{{captcha_src()}}&'+Math.random();" style="cursor: pointer;" width="80" height="37" />
+                                                </div>
+                                            </li>
                                     </ul>
                                     <div class="space"></div>
 
@@ -144,4 +149,46 @@
         });
     })
 
+// 验证
+$("form[name=form]").validate({
+    rules:{
+        username:{
+            required:true
+        },
+        password:{
+            required:true
+        },
+        captcha:{
+            required:true
+        }
+    },
+    submitHandler: function(form)
+    {
+      $.ajax({
+        type:"POST",
+        url:"/login",
+        data:$("form[name=form]").serialize(),
+        success:function(ret)
+        {
+          if(ret=='ok')
+          {
+            location.href='/admin/index';
+          }
+          else
+          {
+            alert('用户名或者密码错误!');
+            $("#captcha").trigger("click");
+            $("input[name=captcha]").val('');
+          }
+        },
+        error:function()
+        {
+          alert('验证码不正确!');
+          $("#captcha").trigger("click");
+          $("input[name=captcha]").val('');
+        }
+      });
+      return false;
+    }
+});
 </script>

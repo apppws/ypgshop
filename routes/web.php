@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 // 显示登录页面
-Route::get('/login','LoginController@login');
+Route::get('/login','AdminLoginController@login')->name('login');
 // 处理登陆页面
-Route::post('/login','LoginController@dologin')->name('dologin');
+Route::post('/login','AdminLoginController@dologin')->name('dologin');
+// 处理退出页面
+Route::get('/logout','AdminLoginController@logout')->name('logout');
 // 显示后台页面
 Route::get('/admin/index','IndexController@index')->name('adindex');
 Route::get('/admin/home','IndexController@home')->name('home');

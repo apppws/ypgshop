@@ -189,16 +189,16 @@
                     }
                 });
             });
-            $('#Exit_system').on('click', function () {
-                layer.confirm('是否确定退出系统？', {
-                    btn: ['是', '否'],//按钮
-                    icon: 2,
-                },
-                    function () {
-                        location.href = "login.html";
+            // $('#Exit_system').on('click', function () {
+            //     layer.confirm('是否确定退出系统？', {
+            //         btn: ['是', '否'],//按钮
+            //         icon: 2,
+            //     },
+            //         function () {
+            //             location.href = "/login";
 
-                    });
-            });
+            //         });
+            // });
         });
         function link_operating(name, title) {
             var cid = $(this).name;
@@ -244,7 +244,7 @@
                             <li><a href="javascript:void(0)" name="admin_info.html" title="个人信息" class="iframeurl"><i
                                         class="icon-user"></i>个人资料</a></li>
                             <li class="divider"></li>
-                            <li><a href="javascript:ovid(0)" id="Exit_system"><i class="icon-off"></i>退出</a></li>
+                            <li><a href="{{ route('logout') }}" onclick="layer.confirm('是否确定退出系统？')" ><i class="icon-off"></i>退出</a></li>
                         </ul>
                     </li>
                     <li class="purple">
