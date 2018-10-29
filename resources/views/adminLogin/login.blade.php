@@ -172,7 +172,7 @@ $("form[name=form]").validate({
         {
           if(ret=='ok')
           {
-            location.href='/admin/index';
+            location.href='/login';
           }
           else
           {

@@ -18,7 +18,11 @@ Route::get('/', function () {
 Route::get('/login','AdminLoginController@login')->name('login');
 // 处理登陆页面
 Route::post('/login','AdminLoginController@dologin')->name('dologin');
-// 处理退出页面
+
+
+// 必须登录之后才能访问
+Route::middleware(['login'])->group(function(){
+    // 处理退出页面
 Route::get('/logout','AdminLoginController@logout')->name('logout');
 // 显示后台页面
 Route::get('/admin/index','IndexController@index')->name('adindex');
@@ -164,3 +168,5 @@ Route::get('/admins/edit/{id}','AdminController@edit')->name('admin_edit');
 Route::post('/admins/edit/{id}','AdminController@doedit')->name('admin_doedit');
 // 删除
 Route::get('/admins/delete/{id}','AdminController@delete')->name('admin_delete');
+
+});
