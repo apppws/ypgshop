@@ -149,3 +149,16 @@ Route::get('/role/edit/{id}','RoleController@edit')->name('role_edit');
 Route::post('/role/edit/{id}','RoleController@doedit')->name('role_doedit');
 // 删除
 Route::get('/role/delete/{id}','RoleController@delete')->name('role_delete');
+
+/**
+ * 管理员管理
+ */
+Route::get('/admins','AdminController@list')->name('admins');
+// 增
+Route::get('/admins/add','AdminController@add')->name('admin_add');
+Route::post('/admins/add','AdminController@doadd')->name('admin_doadd');
+// 修改
+Route::get('/admins/edit/{id}','AdminController@edit')->name('admin_edit');
+Route::post('/admins/edit/{id}','AdminController@doedit')->name('admin_doedit');
+// 删除
+Route::get('/admins/delete/{id}','AdminController@delete')->name('admin_delete');
