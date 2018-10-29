@@ -360,9 +360,33 @@
                     </div>
                 </div><!-- #sidebar-shortcuts -->
                 <div id="menu_style" class="menu_style">
+                    {{-- *****************权限页面  S*********************** --}}
+                    {{-- <ul class="nav nav-list" id="nav_list">
+                            <li class="home">
+                                <a href="javascript:void(0)" name="{{ route('home') }}" class="iframeurl"  title="">
+                                    <i class="icon-home"></i><span class="menu-text"> 系统首页 </span>
+                                </a>
+                            </li>
+                            @foreach ($ins as $v)
+                                <li class="home">
+                                    {{ $v->pri_name }}
+                                    <ul class="submenu">
+                                        @foreach ($v->childen as $v1)
+                                            <li class="home">
+                                                <a href="/{{ $v1->url_path  }}" name="" title="会员列表" class="iframeurl">
+                                                    <i class="icon-double-angle-right"></i>{{ $v1->pri_name }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @endforeach
+                    </ul> --}}
+                    {{-- ****************** 权限页面  E  ********************* --}}
                     <ul class="nav nav-list" id="nav_list">
-                        <li class="home"><a href="javascript:void(0)" name="{{ route('home') }}" class="iframeurl"
-                                title=""><i class="icon-home"></i><span class="menu-text"> 系统首页 </span></a></li>
+                        <li class="home">
+                            <a href="javascript:void(0)" name="{{ route('home') }}" class="iframeurl"
+                                title=""><i class="icon-home"></i><span class="menu-text"> 系统首页 </span></a>
+                        </li>
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-user"></i><span class="menu-text"> 会员管理
                                 </span><b class="arrow icon-angle-down"></b></a>
