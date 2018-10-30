@@ -651,7 +651,7 @@ body
 .grading_style .table_menu_list{ width:100%}
 /********************************广告界面样式属性*************************/
 .Ads_list,
-.order_list_style{ padding:15px;margin-left:80px; float:right; position: absolute; overflow:auto;}
+.order_list_style{ padding:15px;margin-left:35px; position: absolute; overflow:auto;}
 .Ads_list .ad_img{ overflow:hidden; height:80px; display:block}
 .Ads_list.Widescreen,
 .order_list_style.Widescreen { margin-left:0px;}

@@ -30,13 +30,13 @@
 
 <body>
     <div class=" clearfix" id="advertising">
-        <div class="Ads_list">
+        <div class="Ads_list" style="width: 1073px;">
             <div class="border clearfix">
                 <span class="l_f">
                     <a href="{{ route('ad_add') }}" id="ads_add" class="btn btn-warning"><i class="fa fa-plus"></i> 添加广告</a>
                     <a href="javascript:ovid()" class="btn btn-danger"><i class="fa fa-trash"></i> 批量删除</a>
                 </span>
-                <span class="r_f">共：<b>45</b>条广告</span>
+                <span class="r_f">共：<b>{{ $data->count() }}</b>条广告</span>
             </div>
             <div class="Ads_lists">
                 <table class="table table-striped table-bordered table-hover" id="sample-table">
@@ -44,113 +44,46 @@
                         <tr>
                             <th width="25"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></th>
                             <th width="80">ID</th>
-                            <th>排序</th>
-                            <th width="100">分类</th>
-                            <th width="220px">图片</th>
-                            <th width="150px">尺寸（大小）</th>
+                            <th width="200">广告名称</th>
+                            <th width="100">位置id</th>
+                            <th width="130px">图片</th>
                             <th width="250px">链接地址</th>
-                            <th width="180px">加入时间</th>
+                            <th width="100px">是否启用</th>
+                            <th width="180px">广告类型</th>
+                            <th width="180px">广告文字</th>
                             <th width="70px">状态</th>
                             <th width="250px">操作</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($data as $v)
                         <tr>
                             <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-                            <td>1</td>
-                            <td><input name="" type="text" style=" width:50px" placeholder="1" /></td>
-                            <td>幻灯片</td>
-                            <td><span class="ad_img"><img src="products/ad.jpg" width="100%" height="100%" /></span></td>
-                            <td>1890x1080</td>
-                            <td><a href="#" target="_blank">http://item.jd.com/10443270082.html</a></td>
-                            <td>2016-6-29 12:34</td>
+                            <td>{{ $v->id }}</td>
+                            <td>{{ $v->adname }}</td>
+                            <td>{{ $v->po_id }}</td>
+                            <td><span class="ad_img"><img src="{{ $v->img }}" width="100%" height="100%" /></span></td>
+                            <td><a href="#" target="_blank">{{ $v->url }}</a></td>
+                            <td>{{ $v->is_on }}</td>
+                            <td>{{ $v->ad_type }}</td>
+                            <td>{{ $v->code }}</td>
                             <td class="td-status"><span class="label label-success radius">显示</span></td>
                             <td class="td-manage">
                                 <a onClick="member_stop(this,'10001')" href="javascript:;" title="停用" class="btn btn-xs btn-success"><i
                                         class="fa fa-check  bigger-120"></i></a>
-                                <a title="编辑" onclick="member_edit('编辑','member-add.html','4','','510')" href="javascript:;"
-                                    class="btn btn-xs btn-info"><i class="fa fa-edit bigger-120"></i></a>
-                                <a title="删除" href="javascript:;" onclick="member_del(this,'1')" class="btn btn-xs btn-warning"><i
+                                <a title="编辑" href="{{ route('ad_edit',['id'=>$v->id]) }}"  class="btn btn-xs btn-info"><i class="fa fa-edit bigger-120"></i></a>
+                                <a title="删除" onclick="confirm('你确定要删除吗？')" href="{{ route('ad_delete',['id'=>$v->id]) }}" class="btn btn-xs btn-warning"><i
                                         class="fa fa-trash  bigger-120"></i></a>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                {{ $data->links() }}
             </div>
         </div>
     </div>
-    <!--添加广告样式-->
-    {{-- <div id="add_ads_style" style="display:none">
-        <form action="{{ route('ad_doadd') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-        <div class="add_adverts">
-            <ul>
-                <li>
-                    <!-- 照片裁切显示原图 -->
-                    <div class="cut-img-container" width="0px" height="100px">
-                        <img id="image" src="" alt="Picture">
-                    </div>
-                </li>
-                <li>
-                    <label class="label_name">所属分类</label>
-                    <span class="cont_style">
-                        <select class="form-control" id="form-field-select-1">
-                            <option value="">选择分类</option>
-                            <option value="AL">首页大幻灯片</option>
-                            <option value="AK">首页小幻灯片</option>
-                            <option value="AZ">单广告图</option>
-                            <option value="AR">其他广告</option>
-                            <option value="CA">板块栏目广告</option>
-                        </select></span>
-                </li>
-                <li><label class="label_name">图片尺寸</label><span class="cont_style">
-                        <input name="长" type="text" id="form-field-1" placeholder="0" class="col-xs-10 col-sm-5" style="width:80px">
-                        <span class="l_f" style="margin-left:10px;">x</span><input name="宽" type="text" id="form-field-1"
-                            placeholder="0" class="col-xs-10 col-sm-5" style="width:80px"></span></li>
-                <li><label class="label_name">显示排序</label><span class="cont_style"><input name="排序" type="text" id="form-field-1"
-                            placeholder="0" class="col-xs-10 col-sm-5" style="width:50px"></span></li>
-                <li><label class="label_name">链接地址</label><span class="cont_style"><input name="地址" type="text" id="form-field-1"
-                            placeholder="地址" class="col-xs-10 col-sm-5" style="width:450px"></span></li>
-                <li><label class="label_name">状&nbsp;&nbsp;态：</label>
-                    <span class="cont_style">
-                        &nbsp;&nbsp;<label><input name="form-field-radio1" type="radio" checked="checked" class="ace"><span
-                                class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
-                        <label><input name="form-field-radio1" type="radio" class="ace"><span class="lbl">隐藏</span></label></span>
-                    <div class="prompt r_f"></div>
-                </li>
-                <li><label class="label_name">图片</label><span class="cont_style">
-                        <div class="demo">
-                                <!-- 预览图片 -->
-                                <div class="add-article-box-content">
-                                    <div class="img-preview" style="display: block; width: 126px; height: 90px;z-index:10"><img src="/images/image.png" width="100px" alt="" height="100px" /></div>
-                                </div>
-                                <div class="demo l_f">
-                                    <div class="add-article-box-content">
-                                        <!-- 保存裁切时的区域信息 -->
-                                        <input type="hidden" name="x" id="x">
-                                        <input type="hidden" name="y" id="y">
-                                        <input type="hidden" name="w" id="w">
-                                        <input type="hidden" name="h" id="h">
-                                        <!-- 选择图片 -->
-                                        <input type="file" class="fdorm-control" placeholder="点击按钮选择图片" id="logo" name="logo" autocomplete="off"
-                                        required>
-                                    </div>
-                                </div>
-                                <div class="prompt">
-                                    <p>图片大小<b>120px*60px</b>图片大小小于5MB,</p>
-                                    <p>支持.jpg;.gif;.png;.jpeg格式的图片</p>
-                                </div>
 
-
-                        </div>
-                    </span>
-                </li>
-
-
-            </ul>
-        </div>
-    </form>
-    </div> --}}
 </body>
 
 </html>
@@ -383,7 +316,7 @@
         swfImageUpload = new SWFUpload(settings);
     });
 </script>
-<script>
+{{-- <script>
     jQuery(function ($) {
         var oTable1 = $('#sample-table').dataTable({
             "aaSorting": [[1, "desc"]],//默认第几个排序
@@ -420,4 +353,4 @@
             return 'left';
         }
     })
-</script>
+</script> --}}

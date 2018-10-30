@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -31,8 +31,8 @@
 </head>
 
 <body>
-    <div class=" clearfix" style="width:1200px">
-    <form action="{{ route('ad_doadd') }}" method="POST" enctype="multipart/form-data">
+    <div class=" clearfix">
+    <form action="{{ route('ad_doedit',['id'=>$ad->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
         <div id="add_brand" class="clearfix">
             <div class="left_add">
@@ -45,17 +45,17 @@
                             <select name="po_id">
                                 <option value="">==选择广告位==</option>
                                 @foreach ($adpos as $v )
-                                <option value="{{ $v->id }}">{{ $v->po_name }}</option>
+                                <option @if($v->id==$ad->po_id) selected @endif value="{{ $v->id }}">{{ $v->po_name }}</option>
                                 @endforeach
                             </select>
                     </li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>广告名称：</label>
-                        <input name="adname" type="text" class="add_text"/ >
+                        <input name="adname" type="text" value="{{ $ad->adname }}" class="add_text" required / >
                     </li>
-                    <li class=" clearfix img"><label class="label_name">广告图片：</label>
+                    <li class=" clearfix"><label class="label_name">广告图片：</label>
                         <!-- 预览图片 -->
                         <div class="add-article-box-content">
-                            <div class="img-preview" style="display: block; width: 150px; height: 121px;z-index:10"><img src="/images/image.png" width="100px" alt="" height="100px" /></div>
+                            <div class="img-preview" style="display: block; width: 150px; height: 121px;z-index:10"><img src="{{ $ad->img }}" width="100px" alt="" height="100px" /></div>
                         </div>
                         <div class="demo l_f">
                             <div class="add-article-box-content">
@@ -65,7 +65,8 @@
                                 <input type="hidden" name="w" id="w">
                                 <input type="hidden" name="h" id="h">
                                 <!-- 选择图片 -->
-                                <input type="file" id="img" class="form-control" placeholder="点击按钮选择图片"  name="img" autocomplete="off" multiple>
+                                <input type="file" class="form-control" placeholder="点击按钮选择图片" id="logo" name="img" autocomplete="off"
+                                required>
                             </div>
                         </div>
                         <div class="prompt">
@@ -74,26 +75,22 @@
                         </div>
                     </li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>广告类型：</label>
-                        <input name="ad_type" type="radio" class="add_text" style="width:10px" checked value="图片"/> 图片
-                        <input name="ad_type" type="radio" class="add_text" style="width:10px" value="轮播图"/> 轮播图
-                        <input name="ad_type" type="radio" class="add_text" style="width:10px" value="文字"/> 文字
+                        <input name="ad_type" type="radio" class="add_text" style="width:10px" @if($ad->ad_type=='图片') checked @endif value="图片"/> 图片
+                        <input name="ad_type" type="radio" class="add_text" style="width:10px" @if($ad->ad_type=='轮播图') checked @endif value="轮播图"/> 轮播图
+                        <input name="ad_type" type="radio" class="add_text" style="width:10px" @if($ad->ad_type=='文字') checked @endif value="文字"/> 文字
                     </li>
-                    <li class=" clearfix url"><label class="label_name"><i>*</i>广告链接：</label>
-                        <input name="url" id="url" type="text" class="add_text"  / >
+                    <li class=" clearfix"><label class="label_name"><i>*</i>广告链接：</label>
+                        <input name="url" type="text" value="{{ $ad->url }}" class="add_text" required / >
                     </li>
-                    <li class=" clearfix code"><label class="label_name">广告文字：</label>
-                        <textarea name="code" id="code" cols="" rows="" class="textarea" onkeyup="checkLength(this);"></textarea>
+                    <li class=" clearfix"><label class="label_name">广告文字：</label>
+                        <textarea name="code" cols="" rows="" class="textarea" onkeyup="checkLength(this);">{{ $ad->code }}</textarea>
                         <span class="wordage">广告描述：
                             <span id="sy" style="color:Red;">500</span>字
                         </span>
                     </li>
-                    <li class=" clearfix move"><label class="label_name">轮播图片</label>
-                        <div><input type="button" value="添加一张" class="btn-add"></div>
-                        <ul class="move-list"></ul>
-                    </li>
                     <li class=" clearfix"><label class="label_name"><i>*</i>是否启用：</label>
-                        <input name="is_on" type="radio" class="add_text" style="width:10px" checked="checked" value="y"/> 启用
-                        <input name="is_on" type="radio" class="add_text" style="width:10px" value="n"/> 不启用
+                        <input name="is_on" type="radio" class="add_text" style="width:10px" @if($ad->is_on=='y') checked="checked" @endif value="y"/> 启用
+                        <input name="is_on" type="radio" class="add_text" style="width:10px" @if($ad->is_on=='n') checked="checked" @endif value="n"/> 不启用
                     </li>
                 </ul>
             </div>
@@ -101,7 +98,7 @@
         </div>
         <div class="button_brand">
             <input name="" type="submit" class="btn btn-warning" value="保存" />
-            <input name="" type="reset" value="取消" class="btn btn-warning" />
+            <input name="" onclick="history.go(-1)" type="reset" value="取消" class="btn btn-warning" />
         </div>
         </form>
     </div>
@@ -111,35 +108,7 @@
         <img id="image" src="" alt="Picture">
       </div>
 </body>
-<script>
-        $(".btn-add").click(function(){
-            $(".move-list").append('<li><a onclick="move_del(this);" href="javascript:">[删除]</a><br> 图片: <input type="file" name="move_img[]"><br> 链接: <input type="text" name="move_url[]"><br> 标题: <input type="text" name="move_name[]"> </li>'); });
 
-        function move_del(a)
-        {
-            if(confirm('确定要删除吗?'))
-                $(a).parent().remove();
-        }
-        $("input[name=ad_type]").click(function(){
-            var v = $(this).val();
-            $(".img,.url,.move,.code").hide();
-            if(v=='图片')
-            {
-                $(".img,.url").show();
-            }
-            else if(v=='轮播图')
-            {
-                $(".move").show();
-            }
-            else if(v=='文字')
-            {
-                $(".code").show();
-            }
-        });
-        $("select[name=po_id]").change(function(){
-            $("input[name=adname]").val($("select[name=po_id]").find("option:selected").text());
-        });
-</script>
 </html>
 <!-- 裁切图片 -->
 <link rel="stylesheet" href="/cropper/cropper.css">
@@ -203,10 +172,70 @@
     return url
   }
 </script>
+ <script>
+        // 三级联动
+        $('select[name=cat_id1]').change(function(){
+            var s2 = $('select[name=cat_id2]');
+            var html = '<option value="" selected="selected">==二级分类==</option>';
+            // 如果这个值为空就在就获取显示二级分类
+            if($(this).val()==''){
+                s2.html(html);
+            }else{
+                    $.ajax({
+                        type:"GET",
+                        url:"/subcat/"+$(this).val(),
+                        dataType:"json",
+                        contentType:"application/json",
+                        success:function(data)
+                        {
+                            $(data).each(function(k,v){
+                                html += '<option value="'+v.id+'">'+v.name+'</option>';
+                            });
+                            s2.html(html);
+                        }
+                    });
+            }
+        });
+        $('select[name=cat_id2]').change(function(){
+            var s3 = $('select[name=cat_id3]');
+            var html = '<option value="" selected="selected">==三级分类==</option>';
+            // 如果这个值为空就在就获取显示二级分类
+            if($(this).val()==''){
+                s3.html(html);
+            }else{
+                    $.ajax({
+                        type:"GET",
+                        url:"/subcat1/"+$(this).val(),
+                        dataType:"json",
+                        contentType:"application/json",
+                        success:function(data)
+                        {
+                            $(data).each(function(k,v){
+                                html += '<option value="'+v.id+'">'+v.name+'</option>';
+                            });
+                            s3.html(html);
+                        }
+                    });
+            }
+        });
+
+        // 实现双击选中的公
+        $("select[name=cat_id3]").click(function(){
+            var s = $("#category_id");
+            if($(this).val()>0)
+            {
+                s.append($(this).find(":selected").clone().prop('selected',true));
+            }
+        });
+        $("#category_id").click(function(){
+            $(this).find(":selected").remove();
+            $("#category_id option").prop('selected',true);
+        })
+    </script>
 <script type="text/javascript">
     $(document).ready(function () {
         $(".left_add").height($(window).height() - 60);
-        // $(".right_add").width($(window).width() - 600);
+        $(".right_add").width($(window).width() - 600);
         $(".right_add").height($(window).height() - 60);
         $(".select").height($(window).height() - 195);
         $("#select_style").height($(window).height() - 220);
