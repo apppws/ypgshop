@@ -193,4 +193,19 @@ Route::get('/adpos/edit/{id}','AdPosController@edit')->name('adpos_edit');
 Route::post('/adpos/edit/{id}','AdPosController@doedit')->name('adpos_doedit');
 // 删除
 Route::get('/adpos/delete/{id}','AdPosController@delete')->name('adpos_delete');
+
+
+
+/**
+ * 日志分类管理
+ */
+Route::get('/blogcat','BlogCatController@list')->name('blogcat');
+// 增
+Route::get('/blogcat/add','BlogCatController@add')->name('blogcat_add');
+Route::post('/blogcat/add','BlogCatController@doadd')->name('blogcat_doadd');
+// 修改
+Route::get('/blogcat/edit/{id}','BlogCatController@edit')->name('blogcat_edit');
+Route::post('/blogcat/edit/{id}','BlogCatController@doedit')->name('blogcat_doedit');
+// 删除
+Route::get('/blogcat/delete/{id}','BlogCatController@delete')->name('blogcat_delete');
 });

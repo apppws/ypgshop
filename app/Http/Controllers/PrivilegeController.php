@@ -46,6 +46,15 @@ class PrivilegeController extends Controller
             'parent'=>$parent
             ]);
     }
+
+    public function doedit(Request $req,$id){
+        $data = Privilege::find($id);
+        $data->fill($req->all());
+        $privilege->save();
+        // 跳转
+        return redirect()->route('privilege');
+
+    }
     // 删除
     public function delete($id)
     {

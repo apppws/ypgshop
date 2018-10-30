@@ -35,9 +35,16 @@
             <div class="col-sm-9">
                 <select name="parent_id" id="form-field-1">
                     <option value="0">顶级权限</option>
-                    @foreach ($parent as $v )
-                        @if($v->id==$data->id)
-                        <option value="{{$v->id}}">{{ str_repeat('-',8*$v->level).$v->pri_name }}</option>
+                    @foreach($parent as $v)
+                        @if($v->id == $data->id || in_array($v->id, $childen))
+                            @php continue ; @endphp
+                        @endif
+                        @if($v['id'] == $data['parent_id'])
+                            @php $select = 'selected="selected"'; @endphp
+                        @else
+                            @php $select = ''; @endphp
+                        @endif
+                        <option {{$select}} value="{{$v->id}}">{{str_repeat('-',8*$v->level).$v->pri_name}}</option>
                     @endforeach
                 </select>
             </div>

@@ -495,7 +495,7 @@
                             <ul class="submenu">
                                 <li class="home"><a href="javascript:void(0)" name="article_list.html" title="文章列表"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>文章列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="article_Sort.html" title="分类管理"
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('blogcat') }}" title="分类管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>分类管理</a></li>
                             </ul>
                         </li>
