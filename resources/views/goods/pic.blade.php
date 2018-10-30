@@ -30,11 +30,11 @@
 <body>
         <div class="clearfix" id="add_picture">
                 <div class="page_right_style">
-                    <div class="type_title">商品规格</div>
+                    <div class="type_title">商品图片</div>
                     <form action="" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
                         @csrf
                         <div class=" clearfix cl">
-                            <label class="form-label col-2">商品规格名称：</label>
+                            <label class="form-label col-2">商品图片：</label>
                             <div id="goods-stock-container">
                                     <input id="btn-upload" type="button" value="上传图片">
                                     {{-- <img src="" alt=""> --}}
