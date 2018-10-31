@@ -49,14 +49,15 @@
             <div class="type_title">商品规格</div>
             <form action="{{ route('goods_spec',['id'=>$data->id]) }}" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
                 @csrf
-                <div class=" clearfix cl">
                     <label class="form-label col-2">商品规格名称：</label>
                     <div id="goods-stock-container">
                             <table class="table-stock">
                                 <thead>
                                     <tr>
                                         @foreach($attr1 as $v)
-                                        <th name='a'>{{$v->attr_name}}</th>
+                                        <th name='a'>
+                                            {{$v->attr_name}}
+                                        </th>
                                         @endforeach
                                         @foreach($attr2 as $v)
                                         <th name='a'>{{$v->attr_name}}</th>
@@ -77,6 +78,7 @@
                                         foreach($_arr as $v1)
                                         {
                                             $arr2 = explode('|',$v1);
+                                            // dd($arr2);
                                             $arr1[$arr2[0]] = $arr2[1];
                                         }
                                         @endphp
@@ -102,6 +104,7 @@
                                                 <input type="hidden" name="attr_value[]" value="{{@$arr1[$v1->id]}}">{{@$arr1[$v1->id]}}
                                             </td>
                                             @endforeach
+
                                             <td><input type="number" name="price[]" value="{{$v->price}}"></td>
                                             <td><input type="number" name="stock[]" required value="{{$v->stock}}"></td>
                                             <td>{{$v->sku_id}}</td>
@@ -109,7 +112,6 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                        </div>
                 </div>
                 <div class="clearfix cl">
                     <div class="Button_operation">
@@ -137,13 +139,156 @@
     <script type="text/javascript" src="/js/H-ui.js"></script>
     <script type="text/javascript" src="/js/H-ui.admin.js"></script>
     <script>
-        var datas = document.getElementsByName('a');
-        // console.log(datas);
-        // var alertDtHave = [];
-        // for
+            /* ----------------------------------------------------- */
 
+            var datas =
+                `@foreach($attr1 as $v)
+                    '{{$v->attr_name}}':[{{$v->id}},'{!! str_replace(',','\',\'',$v->attr_options) !!}'],
+                @endforeach
+                @foreach($attr2 as $v)
+                    '{{$v->attr_name}}':[{{$v->id}},'{!! str_replace(',','\',\'',$v->attr_options) !!}'],
+                @endforeach
+                @foreach($attr3 as $v)
+                    '{{$v->attr_name}}':[{{$v->id}},'{!! str_replace(',','\',\'',$v->attr_options) !!}'],
+                @endforeach`;
+            ;
+
+            var alreadyHave = [];
+            @foreach({{$specData}} as $v)
+                alreadyHave.push('{{$v->attr_id.'/'.$v->attr_value}}');
+            // @endforeach
+
+            var gac = $("#goods-attr-container");
+            var gsc = $("#goods-stock-container");
+
+            // 初始化商品属性数据
+            var html = '';
+            for(var i in datas)
+            {
+                html += '<h2>'+i+'</h2>';
+                html += '<div class="attr-btn">';
+                for(var j=1; j<datas[i].length; j++)
+                {
+                    if(alreadyHave.indexOf(datas[i][0]+'/'+datas[i][j]) >= 0)
+                        html += '<a class="active" attr_id="'+datas[i][0]+'"  attr_name="'+i+'" href="javascript:">'+datas[i][j]+'</a>';
+                    else
+                        html += '<a attr_id="'+datas[i][0]+'"  attr_name="'+i+'" href="javascript:">'+datas[i][j]+'</a>';
+                }
+                html += '</div>';
+            }
+            gac.html(html);
+
+            // 点击事件
+            gac.find("a").click(function(){
+                $(this).toggleClass('active');
+                tableContent();
+            });
+
+            function tableContent()
+            {
+                var attrNames=[];
+                var selectedValues={};
+                gac.find("a.active").each(function(k,v){
+
+                    var _n = $(v).attr('attr_name');
+                    var _i = $(v).attr('attr_id');
+                    var _t = $(v).text();
+                    if(attrNames.indexOf(_n) == -1)
+                    {
+                        attrNames.push(_n);
+                    }
+
+                    if(selectedValues[_i] == undefined)
+                    {
+                        selectedValues[_i]=[_t];
+                    }
+                    else
+                    {
+                        selectedValues[_i].push(_t);
+                    }
+                });
+
+                var selectValueCount = 1;
+                for(var i in selectedValues)
+                {
+                    selectValueCount*=selectedValues[i].length;
+                }
+
+                var html = '<table class="table-stock">';
+
+                // head
+                html += '<thead>';
+                html += '<tr>';
+                for(var i=0;i<attrNames.length;i++)
+                {
+                    html += '<th>'+attrNames[i]+'</th>';
+                }
+                html += '<th>价格</th>';
+                html += '<th>库存</th>';
+                html += '<th>SKU</th>';
+                html += '</tr>';
+                html += '</thead>';
+
+                // body
+                html += '<tbody>';
+
+                // 排列组合
+                var x = [];
+                for(var i in selectedValues)
+                {
+                    x.push( selectedValues[i] );
+                }
+
+                var results = [];
+                var result = [];
+
+                function doExchange(arr,depth)
+                {
+                    for (var i = 0; i < arr[depth].length; i++) {
+                        result[depth] = arr[depth][i]
+                        if (depth != arr.length - 1) {
+                            doExchange(arr, depth + 1)
+                        } else {
+                            results.push(result.join('-'))
+                        }
+                    }
+                }
+
+                doExchange(x,0);
+
+                // 制作表格
+                for(var i=0;i<selectValueCount;i++)
+                {
+                    html += '<tr>';
+                    var _v = results[i].split('-');
+                    var _j=0;
+                    for(var j in selectedValues)
+                    {
+                        var _aname='';
+                        for(var k in datas)
+                        {
+                            if(datas[k][0]==j)
+                            {
+                                _aname = k
+                                break;
+                            }
+                        }
+                        html += '<td><input type="hidden" name="attr_id[]" value="'+j+'"><input type="hidden" name="attr_name[]" value="'+_aname+'"><input type="hidden" name="attr_value[]" value="'+_v[_j]+'">'+_v[_j]+'</td>';
+                        _j++;
+                    }
+                    html += '<td><input type="number" name="price[]"></td>';
+                    html += '<td><input type="number" name="stock[]" required></td>';
+                    html += '<td></td>';
+                    html += '</tr>';
+                }
+                html += '</tbody>';
+
+                html += '</table>';
+                gsc.html(html);
+            }
 
     </script>
+
     <script>
         $(function () {
             $("#add_picture").fix({
@@ -233,6 +378,7 @@
             //zTree.selectNode(zTree.getNodeByParam("id",'11'));
         });
     </script>
+
     <script type="text/javascript">
         $(function () {
             $('.skin-minimal input').iCheck({

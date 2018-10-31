@@ -36,10 +36,10 @@ class IndexController extends Controller
             }
         }
         // dd($ins);
-        return view('index',['ins'=>$ins]);
+        return view('admin_index/index',['ins'=>$ins]);
     }
      //显示后台页面
      public function home(){
-        return view('home');
+        return view('admin_index/home');
     }
 }

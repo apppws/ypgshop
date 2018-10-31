@@ -10,10 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+/*********************后端路由************************* */
 // 显示登录页面
 Route::get('/login','AdminLoginController@login')->name('login');
 // 处理登陆页面
@@ -222,3 +219,15 @@ Route::middleware(['login'])->group(function(){
     // 删除
     Route::get('/blog/delete/{id}','BlogController@delete')->name('blog_delete');
 });
+
+/**********************前端路由******************* */
+// 前台页面
+Route::get('/','BeIndexController@index');
+// 注册
+Route::get('/register','RegisterController@register')->name('register');
+Route::post('/register','RegisterController@doregister')->name('doregister');
+// 发短信
+Route::get('/sendmobilecode', 'RegisterController@sendmobilecode')->name('sendphone');
+// 登录页面
+Route::get('/belogin','BeLoginController@belogin')->name('belogin');
+Route::post('/belogin','BeLoginController@dobelogin')->name('dobelogin');

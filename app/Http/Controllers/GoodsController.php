@@ -85,20 +85,21 @@ class GoodsController extends Controller
         $goods->delete();
         return redirect()->route('goods');
     }
+
     // 显示属性
     public function attr(Request $req,$id){
         $goods = Goods::find($id);
         // 取出一级分类下的挂载的数据
         $attr1 = Attr::where('cat_id1',$goods->cat_id1)
-                        ->where('attr_type','<>','规格')
+                        // ->where('attr_type','<>','规格')
                         ->get();
         // 取出二级
         $attr2 = Attr::where('cat_id2',$goods->cat_id2)
-                        ->where('attr_type','<>','规格')
+                        // ->where('attr_type','<>','规格')
                         ->get();
         // 取出三级
         $attr3 = Attr::where('cat_id3',$goods->cat_id3)
-                        ->where('attr_type','<>','规格')
+                        // ->where('attr_type','<>','规格')
                         ->get();
         // dd($attr1);
 
@@ -146,22 +147,27 @@ class GoodsController extends Controller
         $goods = Goods::find($id);
         // 取出一级分类下的挂载的数据
         $attr1 = Attr::where('cat_id1',$goods->cat_id1)
-                        ->where('attr_type','<>','规格')
+                        // ->where('attr_type','<>','规格')
                         ->get();
+        // dd($attr1);
         // 取出二级
         $attr2 = Attr::where('cat_id2',$goods->cat_id2)
-                        ->where('attr_type','<>','规格')
+                        // ->where('attr_type','<>','规格')
                         ->get();
+        // dd($attr2);
         // 取出三级
         $attr3 = Attr::where('cat_id3',$goods->cat_id3)
-                        ->where('attr_type','<>','规格')
+                        // ->where('attr_type','<>','规格')
                         ->get();
         // dd($attr1);
 
         // 规格数据
         $spdata = GoodsSpec::where('goods_id',$id)->get();
+        // dd($spdata);
         // 取出库存
         $stockData = Goodsstock::where('goods_id',$id)->get();
+        // dd($stockData);
+        // return json_encode($stockData);
         return view('goods/spec',[
             'data'=>$goods,
             'attr1'=>$attr1,
@@ -170,6 +176,54 @@ class GoodsController extends Controller
             'spData'=>$spdata,
             'stockData'=>$stockData
         ]);
+    }
+    // 保存规格 和属性
+    public function dospec(Request $request,$goods_id){
+        $data = $request->all();
+        // dd($data);
+        // 商品属性
+        $inserted = [];
+        GoodsSpec::where('goods_id',$goods_id)->delete();
+        foreach($data['attr_id'] as $k => $v)
+        {
+            if(!in_array($v.'-'.$data['attr_value'][$k], $inserted))
+            {
+                $gs = new GoodsSpec;
+                $gs->fill([
+                    'attr_id' => $v,
+                    'attr_value' => $data['attr_value'][$k],
+                    'goods_id' => $goods_id,
+                ]);
+                $gs->save();
+                $inserted[] = $v.'-'.$data['attr_value'][$k];
+            }
+        }
+
+        // 商品库存量
+        GoodsStock::where('goods_id',$goods_id)->delete();
+        $rate = count($data['attr_id'])/count($data['price']);
+        $j=0;
+        foreach($data['price'] as $k => $v)
+        {
+            $_arr = [];
+            $_arrstr = [];
+            for($i=0;$i<$rate;$i++)
+            {
+                $_arr[] = $data['attr_id'][$j].'|'.$data['attr_value'][$j];
+                $_arrstr[] = $data['attr_name'][$j].'|'.$data['attr_value'][$j];
+                $j++;
+            }
+            sort($_arr, SORT_NUMERIC);
+            $gs = new GoodsStock;
+            $gs->fill([
+                'price' => $v,
+                'stock' => $data['stock'][$k],
+                'goods_id' => $goods_id,
+                'goods_attr_list' => implode('@', $_arr),
+            ]);
+            $gs->save();
+        }
+        return redirect()->route('goods');
     }
      // 相册管理的列表页面
     public function pic(Request $req,$id){

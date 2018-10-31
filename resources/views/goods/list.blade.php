@@ -130,9 +130,6 @@
                                         <a title="属性" href="/goods/attr/{{$v->id}}" class="btn btn-xs btn-danger">
                                             <i class="glyphicon glyphicon-eye-open"> </i>
                                         </a>
-                                        <a title="规格" href="/goods/spec/{{$v->id}}" class="btn btn-inverser">
-                                            <i class="	glyphicon glyphicon-briefcase"> </i>
-                                        </a>
                                         <a title="评论" href="/comment/add/{{$v->id}}" class="btn btn-info">
                                             <i class="glyphicon glyphicon-comment"> </i>
                                         </a>

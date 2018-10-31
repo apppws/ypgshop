@@ -12,4 +12,14 @@ class Goods extends Model
     public function goodsattrs(){
         return $this->belongToMany('App\models\GoodsAttr','goods_sku','goods_id','attr_id');
     }
+
+    public function goods_pics()
+    {
+    	return $this->hasMany('App\Models\GoodsPic', 'goods_id');
+    }
+
+    public function comments()
+    {
+    	return $this->hasMany('App\Models\Comment', 'goods_id');
+    }
 }
