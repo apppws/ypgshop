@@ -222,7 +222,7 @@ Route::middleware(['login'])->group(function(){
 
 /**********************前端路由******************* */
 // 前台页面
-Route::get('/','BeIndexController@index');
+Route::get('/','BeIndexController@index')->name('/');
 // 注册
 Route::get('/register','RegisterController@register')->name('register');
 Route::post('/register','RegisterController@doregister')->name('doregister');
@@ -231,3 +231,5 @@ Route::get('/sendmobilecode', 'RegisterController@sendmobilecode')->name('sendph
 // 登录页面
 Route::get('/belogin','BeLoginController@belogin')->name('belogin');
 Route::post('/belogin','BeLoginController@dobelogin')->name('dobelogin');
+// 购物车
+Route::get('/cart','CartController@index')->name('cart');

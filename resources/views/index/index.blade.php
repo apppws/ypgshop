@@ -616,7 +616,7 @@
                 <div data-version="1" data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CART" id="miniCart" class="hd_mini_cart">
                     <i class="hd_c_arrow"></i>
                     <u id="in_cart_num" class="hd_c_num none" style="display: none;"></u>
-                    <a data-ref="YHD_TOP_MINICART" href="cart.html" class="hd_prism_cart">
+                    <a data-ref="YHD_TOP_MINICART" href="{{ route('cart') }}" class="hd_prism_cart">
                         <em></em>购物车
                     </a>
                     <div id="showMiniCartDetail" class="hd_cart_show none" style="display: none;">
