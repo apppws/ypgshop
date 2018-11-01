@@ -419,11 +419,11 @@
                                     <div class="hd_show_sort global_loading" cindex="1" categoryid="137555" style="border: 1px solid #c30;">
                                             <ul style="width: 100%;height: 100%;">
                                                     @foreach($c->subCat as $v1)
-                                                    <li style="width: 95%;margin:0 auto;height: 40px;border-bottom: 1px dotted #ccc;list-style-type: none;margin-left: -40px;">
-                                                        <a href="/channel?cat_id1={{$c->id}}&cat_id2={{$v1->id}}" style="text-decoration:none;font-size:14px;line-height: 40px;color: red;font-weight: bold;display: block;width: 100px;height: 40px;float: left;text-align: right;">{{$v1->name}}</a>
+                                                    <li style="width: 98%;margin:0 auto;height: 40px;border-bottom: 1px dotted #ccc;list-style-type: none;margin-left: -40px;">
+                                                        <a href="#" style="text-decoration:none;font-size:14px;line-height: 40px;color: red;font-weight: bold;display: block;width: 100px;height: 40px;float: left;text-align: right;">{{$v1->name}}</a>
                                                         <i style="width:1px;height:14px;margin:0 10px;float: left;background-color: #ccc;margin-top: 13px;"></i>
                                                         @foreach($v1->subCat as $v2)
-                                                        <a href="/search?cat_id1={{$c->id}}&cat_id2={{$v1->id}}&cat_id3={{$v2->id}}" style="text-decoration:none;font-size:14px;line-height: 40px;color: #3c3c3c;float: left;">{{$v2->name}}</a>
+                                                        <a href="#" style="text-decoration:none;font-size:14px;line-height: 40px;color: #3c3c3c;float: left;">{{$v2->name}}</a>
                                                         <i style="width:1px;height:14px;margin:0 10px;float: left;background-color: #ccc;margin-top: 13px;"></i>
                                                         @endforeach
                                                     </li>
