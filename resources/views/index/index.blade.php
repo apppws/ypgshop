@@ -401,178 +401,37 @@
             <div class="hd_fixed_bg"></div>
             <div class="wrap clearfix">
                 <div id="allSortOuterbox">
-                    <div data-tpa="YHD_GLOBAl_HEADER_CATEGORY_0" class="hd_all_sort_link fl"><a class="fl" href="http://www.yhd.com/marketing/allproduct.html"
-                            data-ref="YHD_TOP_index_5">所有商品分类</a></div>
+                    <div data-tpa="YHD_GLOBAl_HEADER_CATEGORY_0" class="hd_all_sort_link fl">
+                        <a class="fl" href="http://www.yhd.com/marketing/allproduct.html" data-ref="YHD_TOP_index_5">所有商品分类</a>
+                    </div>
                     <div id="allCategoryHeader" class="hd_allsort_out_box_new">
                         <div class="hd_allsort_out">
                             <ul id="j_allsort" class="hd_allsort ">
+                                @foreach ($cat as $c)
                                 <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_1" data-background="" data-color="hd_sort_color"
                                     class="hd_no_pic">
                                     <h3 class="hd_gray_bg">
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/jinkou/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137555.1"
-                                            data-ref="CatMenu_Search_100000024_137555_104293" title="进口食品">进口食品</a>、
-                                        <a href="list.html?/c20947-0/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137555.2"
-                                            data-ref="CatMenu_Search_100000024_137555_104294" title="生鲜">生鲜</a>、
-                                        <a href="list.html?/c21266-0-139058" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137555.3"
-                                            data-ref="CatMenu_Search_100000024_137555_104295" title="海购">海购</a>
+                                        <i class="hd_iconfont"></i>
+                                        <a href="#" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137555.1"
+                                            data-ref="CatMenu_Search_100000024_137555_104293" title="进口食品">{{ $c->name }}</a>
                                     </h3>
-                                    <div class="hd_show_sort global_loading" cindex="1" categoryid="137555">
+                                    {{-- 子分类 --}}
+                                    <div class="hd_show_sort global_loading" cindex="1" categoryid="137555" style="border: 1px solid #c30;">
+                                            <ul style="width: 100%;height: 100%;">
+                                                    @foreach($c->subCat as $v1)
+                                                    <li style="width: 95%;margin:0 auto;height: 40px;border-bottom: 1px dotted #ccc;list-style-type: none;margin-left: -40px;">
+                                                        <a href="/channel?cat_id1={{$c->id}}&cat_id2={{$v1->id}}" style="text-decoration:none;font-size:14px;line-height: 40px;color: red;font-weight: bold;display: block;width: 100px;height: 40px;float: left;text-align: right;">{{$v1->name}}</a>
+                                                        <i style="width:1px;height:14px;margin:0 10px;float: left;background-color: #ccc;margin-top: 13px;"></i>
+                                                        @foreach($v1->subCat as $v2)
+                                                        <a href="/search?cat_id1={{$c->id}}&cat_id2={{$v1->id}}&cat_id3={{$v2->id}}" style="text-decoration:none;font-size:14px;line-height: 40px;color: #3c3c3c;float: left;">{{$v2->name}}</a>
+                                                        <i style="width:1px;height:14px;margin:0 10px;float: left;background-color: #ccc;margin-top: 13px;"></i>
+                                                        @endforeach
+                                                    </li>
+                                                    @endforeach
+                                            </ul>
                                     </div>
                                 </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_2" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3>
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/c5135-0-81522/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137778.1"
-                                            data-ref="CatMenu_Search_100000024_137778_105060" title="食品">食品</a>、
-                                        <a href="http://www.yhd.com/ctg/vc3254" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137778.2"
-                                            data-ref="CatMenu_Search_100000024_137778_105061" title="饮料">饮料</a>、
-                                        <a href="list.html?/c5140-0-81016" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137778.3"
-                                            data-ref="CatMenu_Search_100000024_137778_105062" title="酒">酒</a>、
-                                        <a href="http://search.yhd.com/c0-0/k%25E5%25B9%25B4%25E8%25B4%25A7/1/" target="_blank"
-                                            data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137778.4" data-ref="CatMenu_Search_100000024_137778_105063"
-                                            title="年货">年货</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="2" categoryid="137778">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_3" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3 class="hd_gray_bg">
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/baby.html" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137454.1"
-                                            data-ref="CatMenu_Search_100000024_137454_107333" title="母婴">母婴</a>、
-                                        <a href="list.html?/c17722-0-87247/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137454.2"
-                                            data-ref="CatMenu_Search_100000024_137454_107334" title="玩具">玩具</a>、
-                                        <a href="http://kids.yhd.com/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137454.3"
-                                            data-ref="CatMenu_Search_100000024_137454_107335" title="童装">童装</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="3" categoryid="137454">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_4" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3>
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/jiaju" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137469.1"
-                                            data-ref="CatMenu_Search_100000024_137469_100397" title="厨卫清洁">厨卫清洁</a>、
-                                        <a href="list.html?/c5176-0/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137469.2"
-                                            data-ref="CatMenu_Search_100000024_137469_100398" title="纸">纸</a>、
-                                        <a href="list.html?/c5183-0-84560/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137469.3"
-                                            data-ref="CatMenu_Search_100000024_137469_100399" title="清洁剂">清洁剂</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="4" categoryid="137469">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_5" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3 class="hd_gray_bg">
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/c950340-0-83112/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137470.1"
-                                            data-ref="CatMenu_Search_100000024_137470_104741" title="家居">家居</a>、
-                                        <a href="list.html?/c36939-0-90632/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137470.2"
-                                            data-ref="CatMenu_Search_100000024_137470_104742" title="家装">家装</a>、
-                                        <a href="list.html?/c950350-0-83479/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137470.3"
-                                            data-ref="CatMenu_Search_100000024_137470_104743" title="宠物">宠物</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="5" categoryid="137470">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_6" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3>
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/meirong" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137468.1"
-                                            data-ref="CatMenu_Search_100000024_137468_105126" title="美妆、个人护理">美妆、个人护理</a>、
-                                        <a href="http://www.yhd.com/ctg/vc3384" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137468.2"
-                                            data-ref="CatMenu_Search_100000024_137468_105127" title="洗护">洗护</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="6" categoryid="137468">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_7" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3 class="hd_gray_bg">
-                                        <i class="hd_iconfont"></i>
-                                        <a href="http://lady.yhd.com/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_132979.1"
-                                            data-ref="CatMenu_Search_100000024_132979_106661" title="女装内衣">女装内衣</a>、
-                                        <a href="http://man.yhd.com/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_132979.2"
-                                            data-ref="CatMenu_Search_100000024_132979_106662" title="男装">男装</a>、
-                                        <a href="list.html?/c32258-0-84328/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_132979.3"
-                                            data-ref="CatMenu_Search_100000024_132979_106663" title="配饰">配饰</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="7" categoryid="132979">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_8" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3>
-                                        <i class="hd_iconfont"></i>
-                                        <a href="http://shoes.yhd.com/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_132950.1"
-                                            data-ref="CatMenu_Search_100000024_132950_104485" title="鞋靴">鞋靴</a>、
-                                        <a href="http://bag.yhd.com/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_132950.2"
-                                            data-ref="CatMenu_Search_100000024_132950_104486" title="箱包">箱包</a>、
-                                        <a href="http://sport.yhd.com/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_132950.3"
-                                            data-ref="CatMenu_Search_100000024_132950_104487" title="运动户外">运动户外</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="8" categoryid="132950">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_9" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3 class="hd_gray_bg">
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/c23586-0-81436/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137471.1"
-                                            data-ref="CatMenu_Search_100000024_137471_3597" title="手机">手机</a>、
-                                        <a href="list.html?/c21314-0-85978/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137471.2"
-                                            data-ref="CatMenu_Search_100000024_137471_3598" title="数码">数码</a>、
-                                        <a href="list.html?/c21392-0-84179" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137471.3"
-                                            data-ref="CatMenu_Search_100000024_137471_3599" title="电脑办公">电脑办公</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="9" categoryid="137471">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_10" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3>
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/shenghuodianqi" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137472.1"
-                                            data-ref="CatMenu_Search_100000024_137472_98958" title="大家电、小家电">大家电、小家电</a>、
-                                        <a href="list.html?/c23926-0-0" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137472.2"
-                                            data-ref="CatMenu_Search_100000024_137472_98959" title="汽车">汽车</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="10" categoryid="137472">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_11" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3 class="hd_gray_bg">
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/c8704-0-85100/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_138066.1"
-                                            data-ref="CatMenu_Search_100000024_138066_100749" title="保健滋补">保健滋补</a>、
-                                        <a href="list.html?/c36738-0-84975" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_138066.2"
-                                            data-ref="CatMenu_Search_100000024_138066_100750" title="医药">医药</a>、
-                                        <a href="list.html?/c31745-0-85324/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_138066.3"
-                                            data-ref="CatMenu_Search_100000024_138066_100751" title="成人">成人</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="11" categoryid="138066">
-                                    </div>
-                                </li>
-                                <li data-mrt="1" data-tpa="YHD_GLOBAl_HEADER_CATEGORY_12" data-background="" data-color="hd_sort_color"
-                                    class="hd_no_pic">
-                                    <h3>
-                                        <i class="hd_iconfont"></i>
-                                        <a href="list.html?/c950780-0-82133/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137992.1"
-                                            data-ref="CatMenu_Search_100000024_137992_106053" title="礼品卡">礼品卡</a>、
-                                        <a href="list.html?/c33095-0-62049" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137992.2"
-                                            data-ref="CatMenu_Search_100000024_137992_106054" title="旅游">旅游</a>、
-                                        <a href="list.html?/c25228-0/" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137992.3"
-                                            data-ref="CatMenu_Search_100000024_137992_106055" title="图书">图书</a>
-                                    </h3>
-                                    <div class="hd_show_sort global_loading" cindex="12" categoryid="137992">
-                                    </div>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

@@ -243,5 +243,6 @@ Route::get('/sendmobilecode', 'RegisterController@sendmobilecode')->name('sendph
 // 登录页面
 Route::get('/belogin','BeLoginController@belogin')->name('belogin');
 Route::post('/belogin','BeLoginController@dobelogin')->name('dobelogin');
+
 // 购物车
 Route::get('/cart','CartController@index')->name('cart');
