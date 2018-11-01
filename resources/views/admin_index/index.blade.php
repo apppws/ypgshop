@@ -416,7 +416,8 @@
                                         class="iframeurl"><i class="icon-double-angle-right"></i>分类管理</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="{{ route('attr') }}" title="属性管理"
                                         class="iframeurl"><i class="icon-double-angle-right"></i>属性管理</a></li>
-
+                                <li class="home"><a href="javascript:void(0)" name="{{ route('floor') }}" title="楼层管理"
+                                        class="iframeurl"><i class="icon-double-angle-right"></i>楼层管理</a></li>
                             </ul>
                         </li>
 

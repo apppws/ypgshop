@@ -129,6 +129,18 @@ Route::middleware(['login'])->group(function(){
     // 删除
     Route::get('/comment/delete/{id}','CommentController@delete')->name('comment_delete');
     /**
+     *商品楼层
+     */
+    Route::get('/floor','FloorController@list')->name('floor');
+    // 增
+    Route::get('/floor/add','FloorController@add')->name('floor_add');
+    Route::post('/floor/add','FloorController@doadd')->name('floor_doadd');
+    // 修改
+    Route::get('/floor/edit/{id}','FloorController@edit')->name('floor_edit');
+    Route::post('/floor/edit/{id}','FloorController@doedit')->name('floor_doedit');
+    // 删除
+    Route::get('/floor/delete/{id}','FloorController@delete')->name('floor_delete');
+    /**
      * 权限管理
      */
     Route::get('/privilege','PrivilegeController@list')->name('privilege');
