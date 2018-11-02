@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 use App\Models\Category;
 use App\Models\AdPos;
+use App\Models\Blog;
+use App\Models\Floor;
+use Illuminate\Support\Facades\Storage;
 class BeIndexController extends Controller
 {
     // 显示前台首页
@@ -15,11 +19,42 @@ class BeIndexController extends Controller
         // dd($cat);
         // 广告模块
         $ad = new AdPos;
-        // $adpo = $ad->showad(3);
-        // dd($adpo);
+        // 日志资讯
+        $blog = new Blog;
+        $blogs = $blog->getblog();
+        // 楼层显示
+        $floor = new Floor;
+        $floors = $floor->floor();
+        // dd($floors);
         return view('index/index',[
             'cat'=>$cat,
-            'adpo'=>$ad
+            'adpo'=>$ad,
+            'blogs'=>$blogs,
+            'floor'=>$floors
         ]);
+    }
+    //显示文章内容
+    public function blcontent(){
+        return view('templates/bloglist');
+    }
+
+    // 生成代码
+    public function make($id)
+    {
+        // 1. 接收参数拼接一个 那个html的页面名字
+        $tableName = 'blog-'.$id;
+        // dd($tableName);
+        $blog = new Blog;
+        $blogs = $blog->getblog();  //取出所有数据  然后放到模拟模板中
+        // dd($blogs);
+        // 2. 生成日志视图文件
+        // 生成视图目录
+        @mkdir('/views/'.$tableName, 0777);
+        ob_start();
+        view('templates/bloglist')->__toString();
+        // dd($c);
+        $str = ob_get_clean();
+        // dd($str);
+        file_put_contents($tableName.'.blade.php', $str);
     }
 }

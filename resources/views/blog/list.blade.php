@@ -49,7 +49,8 @@
                                 <th width="50px">标题</th>
                                 <th width="100">所属分类</th>
                                 <th width="150px">图片</th>
-                                <th width="150px">是否显示</th>
+                                <th width="150px">地址</th>
+                                <th width="80px">是否显示</th>
                                 <th width="150px">添加时间</th>
                                 <th width="150px">操作</th>
                             </tr>
@@ -72,6 +73,7 @@
                                     <img src="{{$v->img}}" width="130">
                                      @endif
                                 </td>
+                                <td>{{ $v->url }}</td>
                                 <td class="displayPart" displayLength="60">{{ $v->is_show=='y'?'显示':'不显示'}}</td>
                                 <td>{{ $v->created_at }}</td>
                                 <td class="td-manage">

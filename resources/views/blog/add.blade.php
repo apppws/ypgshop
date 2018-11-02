@@ -46,9 +46,9 @@
                     <ul class="add_conent">
                         <li class=" clearfix"><label class="label_name"><i>*</i>日志分类：</label>
                             <select name="cat_id" id="form-field-1">
-                                <option value="0">顶级权限</option>
+                                <option value="0">==顶级权限==</option>
                                 @foreach ($blogcat as $v )
-                                <option value="{{$v->id}}">{{str_repeat('-',8*$v->level).$v->cat_name }}</option>
+                                <option value="{{$v->id}}">{{str_repeat('-',2*$v->level).$v->cat_name  }}</option>
                                 @endforeach
                             </select>
                         </li>
@@ -77,6 +77,9 @@
                                 <p>图片大小<b>120px*60px</b>图片大小小于5MB,</p>
                                 <p>支持.jpg;.gif;.png;.jpeg格式的图片</p>
                             </div>
+                        </li>
+                        <li class=" clearfix"><label class="label_name"><i>*</i>日志地址：</label>
+                            <input name="url" type="text" class="add_text"/>
                         </li>
                         <li class=" clearfix"><label class="label_name">文章内容：</label>
                             <div class="formControls col-10">

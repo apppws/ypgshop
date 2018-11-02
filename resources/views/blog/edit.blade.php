@@ -78,6 +78,9 @@
                                 <p>支持.jpg;.gif;.png;.jpeg格式的图片</p>
                             </div>
                         </li>
+                        <li class=" clearfix"><label class="label_name"><i>*</i>日志地址：</label>
+                            <input name="url" value="{{ $blog->url }}" type="text" class="add_text"/>
+                        </li>
                         <li class=" clearfix"><label class="label_name">文章内容：</label>
                             <div class="formControls col-10">
                                 <textarea id="editor" value="" name="content" autofocus style="width:100%;height:400px;">{{ $blog->content }}</textarea>
