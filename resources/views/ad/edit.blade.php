@@ -145,9 +145,9 @@
 
     // 调用插件
     image.cropper({
-      aspectRatio: 1,         // 裁切的框形状
+      aspectRatio: 16 / 9,         // 裁切的框形状
       preview: '.img-preview',    // 显示预览的位置
-      viewMode: 1,                // 显示模式：图片不能无限缩小，但可以放大
+      viewMode: 3,                // 显示模式：图片不能无限缩小，但可以放大
       // 裁切时把参数保存到表单中
       crop: function (event) {
         x.val(event.detail.x);

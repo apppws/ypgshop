@@ -15,8 +15,8 @@
     <meta content="1号店网上超市，最经济实惠的网上购物商城，用鼠标逛超市，不用排队，方便实惠送上门，网上购物新生活。" name="Description">
 
 
-    <link href="/becss/global_site_index_new.css?1560110" rel="stylesheet" type="text/css">
-    <script src="/bejs/global_event_notify_js_error.js?1560110" type="text/javascript"></script>
+    <link href="/becss/global_site_index_new.css" rel="stylesheet" type="text/css">
+    <script src="/bejs/global_event_notify_js_error.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         try {
@@ -141,7 +141,7 @@
         var indexFreshmanPopFlag = "0";
         var globalTpCheckFlag = "1";
     </script>
-    <link rel="stylesheet" type="text/css" href="/becss/global_yhdLib.css?1560110">
+    <link rel="stylesheet" type="text/css" href="/becss/global_yhdLib.css">
 </head>
 
 <body data-cdndetection="-1" data-param="{" globalPageCode":"YHD_HOME","currPageId":"1","tierthirdProvinceFlag":"0",
@@ -482,10 +482,11 @@
                     </div>
                 </div>
                 <div class="hd_mobile_wrap">
-                    <a data-tpa="YHD_GLOBAl_HEADER_RIGHT_AD" data-ref="17102_28453146_1" target="_blank" href="http://cms.yhd.com/sale/157119"
+                    {{-- <a data-tpa="YHD_GLOBAl_HEADER_RIGHT_AD" data-ref="17102_28453146_1" target="_blank" href="http://cms.yhd.com/sale/157119"
                         id="globalRightPicsV2">
                         <i><img alt="掌上1号店" src="/beimages/ChEi2lYI4L-AB-YcAAAgFI-WAls08000.gif"></i>
-                    </a>
+                    </a> --}}
+                    {!! $adpo->showad(1) !!}
                 </div>
             </div>
         </div>
@@ -496,15 +497,8 @@
                 <div lunbobackgroudflag="1" data-init="0" id="index_menu_carousel" class="promo_wrapper" data-adjust="1"
                     data-inited="1">
                     <ol class="clearfix" id="slider">
-                        <li data-tpc="1" flag="1" data-bgcolor="#fe4d60" style="background: rgb(254, 77, 96) none repeat scroll 0% 0%; position: absolute; z-index: 0; display: none;">
-                            <a data-tag="13" data-nsf="" data-ajax="0" data-advid="15069" data-ref="15069_30915043_1"
-                                target="_blank" class="big_pic global_loading" data-tc="ad.0.0.15069-30915043.1"
-                                data-recordtracker="1" title="2016宠爱女人节-全场3.8折起 正式会场" href="http://cms.yhd.com/sale/vdfXODXbBvo">
-                                <img data-ajax="0" data-advid="15069" src="/beimages/CgQIzVbQIE-AHXOAAAHs2Tb76Gw52500.jpg"
-                                    alt="2016宠爱女人节-全场3.8折起 正式会场" id="lunbo_1" data-loaded="1">
-                            </a>
-                        </li>
-                        <li data-tpc="2" flag="2" data-bgcolor="#f64561" style="background: rgb(246, 69, 97) none repeat scroll 0% 0%; position: absolute; z-index: 0; display: none;">
+                        {!! $adpo->showad(3) !!}
+                        {{-- <li data-tpc="2" flag="2" data-bgcolor="#f64561" style="background: rgb(246, 69, 97) none repeat scroll 0% 0%; position: absolute; z-index: 0; display: none;">
                             <a data-tag="0" data-nsf="" data-ajax="1" data-advid="15070" data-ref="15070_30914823_1"
                                 target="_blank" class="big_pic global_loading" data-tc="ad.0.0.15070-30914823.1"
                                 data-recordtracker="1" title="女人节食品综合会场" href="http://cms.yhd.com/sale/ykOPohjjvZB">
@@ -575,7 +569,7 @@
                                     si="http://d7.yihaodianimg.com/N09/M03/E3/3E/ChEi2FbTDr2AZqcKAAF7S1HZU3o94700.jpg"
                                     src="/beimages/CgQIzlbTDseAbKcbAAH7xVegiGo08600.jpg" alt="COSME大赏 全球美护TOP list " id="lunbo_9">
                             </a>
-                        </li>
+                        </li> --}}
                     </ol>
                 </div>
                 <div class="mod_promonum_show">
@@ -870,12 +864,12 @@
 <a title="进口" class="bt" target="_blank" href="list.html?/jinkou" data-tc="ad.0.0.16072-14649577.1" data-ref="16072_14649577_1">进口</a>
 <em class="dian"> • </em>
 <a title="海购" class="bt" target="_blank" href="list.html?/haigou" data-tc="ad.0.0.16072-25206008.2" data-ref="16072_25206008_2">海购</a>
-<a title="进口蜂蜜全球集市" class="floor_subtitle_wrap" target="_blank" href="list.html?/themeBuy.do?themeId=1039" data-tc="ad.0.0.18661-27870002.1" data-ref="18661_27870002_1">
+<a title="" class="floor_subtitle_wrap" target="_blank" href="list.html?/themeBuy.do?themeId=1039" data-tc="ad.0.0.18661-27870002.1" data-ref="18661_27870002_1">
 <em></em>
 <div class="floor_subtitle">
-进口蜂蜜全球集市
+        {!! $adpo->showad(6) !!}
 <i></i>
-<span>进口蜂蜜全球集市</span>
+<span>{!! $adpo->showad(6) !!}</span>
 </div>
 </a>
 </div>
@@ -2139,9 +2133,9 @@
             <em class="two_line">返回顶部</em>
         </a>
     </div>
-    <script src="/bejs/global_index_top_new.js?1560110" type="text/javascript"></script>
-    <script src="/bejs/index.js?1560110" type="text/javascript"></script>
-    <script src="/bejs/global_event_listen.js?1560110" type="text/javascript"></script>
+    <script src="/bejs/global_index_top_new.js"></script>
+    <script src="/bejs/index.js"></script>
+    <script src="/bejs/global_event_listen.js"></script>
     <div>
         <span style="color: #FFFFFF">
             14!$
