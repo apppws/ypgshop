@@ -80,15 +80,7 @@
                         <input type='radio' value="多选" @if($data->show_type=='多选') checked @endif name='show_type'> 多选
                         <input type='radio' value="自定义" @if($data->show_type=='自定义') checked @endif name='show_type'> 自定义
                     </li>
-                    <li class=" clearfix"><label class="label_name"><i>*</i>属性值：</label>
-                        <input name="attrval" type="text" value="{{ $data->attrval }}" class="add_text" style="width:120px" /></li>
-                    <li class=" clearfix"><label class="label_name"><i>*</i>价钱：</label>
-                        <input name="attrprice" type="text" value="{{ $data->attrprice }}" class="add_text" style="width:120px" />
-                    </li>
-                    <li class=" clearfix"><label class="label_name"><i>*</i>库存：</label>
-                        <input name="attrstock" value="{{ $data->attrstock }}" type="text" class="add_text" style="width:120px" />
-                    </li>
-                    <li class=" clearfix"><label class="label_name"><i>*</i>可选值：</label>
+                    <li class=" clearfix"><label class="label_name"><i>*</i>属性可选值：</label>
                         <textarea name="attr_options" id="" cols="30" rows="10">{{ $data->attr_options }}</textarea>
                     </li>
                 </ul>

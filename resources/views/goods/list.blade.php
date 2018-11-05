@@ -91,9 +91,11 @@
                                     <th width="50px">二级分类id</th>
                                     <th width="50px">三级分类id</th>
                                     <th width="50px">重量</th>
+                                    <th width="50px">长</th>
+                                    <th width="50px">宽</th>
+                                    <th width="50px">高</th>
                                     <th width="50px">市场价格</th>
-                                    <th width="50px">现价</th>
-                                    <th width="80px">产地</th>
+                                    <th width="50px">本店价格</th>
                                     <th width="80px">上传时间</th>
                                     <th width="70px">状态</th>
                                     <th width="200px">操作</th>
@@ -109,9 +111,11 @@
                                     <th width="50px">{{ $v->cat_id2 }}</th>
                                     <th width="50px">{{ $v->cat_id3 }}</th>
                                     <th width="50px">{{ $v->weigth }}</th>
+                                    <th width="50px">{{ $v->length }}</th>
+                                    <th width="50px">{{ $v->width }}</th>
+                                    <th width="50px">{{ $v->height }}</th>
                                     <th width="50px">{{ $v->maprice }}</th>
                                     <th width="50px">{{ $v->shprice }}</th>
-                                    <th width="80px">{{ $v->chandi }}</th>
                                     <th width="80px">{{ $v->created_at }}</th>
                                     <td class="td-status"><span class="label label-success radius">已启用</span></td>
                                     <td class="td-manage">
@@ -132,6 +136,9 @@
                                         </a>
                                         <a title="评论" href="/comment/add/{{$v->id}}" class="btn btn-info">
                                             <i class="glyphicon glyphicon-comment"> </i>
+                                        </a>
+                                        <a title="规格" href="/goods/spec/{{ $v->id }}" class="btn btn-xs btn-danger">
+                                            <i class="glyphicon glyphicon-eye-open"> </i>
                                         </a>
                                     </td>
                                 </tr>

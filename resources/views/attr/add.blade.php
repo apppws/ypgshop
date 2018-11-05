@@ -71,15 +71,7 @@
                         <input type="radio" name="show_type" id="" value="多选"> 多选
                         <input type="radio" name="show_type" id="" value="自定义"> 自定义
                     </li>
-                    <li class=" clearfix"><label class="label_name"><i>*</i>属性值：</label>
-                        <input name="attrval" type="text" class="add_text" style="width:120px" /></li>
-                    <li class=" clearfix"><label class="label_name"><i>*</i>价钱：</label>
-                        <input name="attrprice" type="text" class="add_text" style="width:120px" />
-                    </li>
-                    <li class=" clearfix"><label class="label_name"><i>*</i>库存：</label>
-                        <input name="attrstock" type="text" class="add_text" style="width:120px" />
-                    </li>
-                    <li class=" clearfix"><label class="label_name"><i>*</i>可选值：</label>
+                    <li class=" clearfix"><label class="label_name"><i>*</i>属性可选项：</label>
                         <textarea name="attr_options" id="" cols="30" rows="10"></textarea>
                     </li>
                 </ul>

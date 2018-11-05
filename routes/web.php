@@ -116,6 +116,19 @@ Route::middleware(['login'])->group(function(){
     Route::post('/attr/edit/{id}','AttrController@doedit')->name('brand_doedit');
     // 删除
     Route::get('/attr/delete/{id}','AttrController@delete')->name('attr_delete');
+
+     /**
+     * 商品规格
+     */
+    Route::get('/spec','SpecController@list')->name('spec');
+    // 增
+    Route::get('/spec/add','SpecController@add')->name('spec_add');
+    Route::post('/spec/add','SpecController@doadd')->name('spec_doadd');
+    // 修改
+    Route::get('/spec/edit/{id}','SpecController@edit')->name('spec_edit');
+    Route::post('/spec/edit/{id}','SpecController@doedit')->name('spec_doedit');
+    // 删除
+    Route::get('/spec/delete/{id}','SpecController@delete')->name('spec_delete');
     /**
      * 商品评论
      */
@@ -250,3 +263,8 @@ Route::post('/belogin','BeLoginController@dobelogin')->name('dobelogin');
 
 // 购物车
 Route::get('/cart','CartController@index')->name('cart');
+
+// 显示商品
+Route::get('/begoods/{id}','BeGoodsController@index')->name('begoods');
+// 获取sku信息
+Route::get('/sku/{gid}/{skustr}','BeGoodsController@sku')->name('sku');

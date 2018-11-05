@@ -9,4 +9,9 @@ class GoodsAttr extends Model
     protected $table = 'goods_goodattr';
     public $timestamps = false;
     protected $fillable = ['attr_id','attr_value','goods_id'];
+
+    // 商品属性关联
+    public function Attrgood(){
+        return $this->belongsTo('App\Models\Attr','attr_id');
+    }
 }

@@ -10,6 +10,7 @@ use App\Models\GoodsAttr;
 use App\Models\GoodsStock;
 use App\Models\GoodsSpec;
 use App\Models\Pic;
+use App\Models\BrandCategory;
 use Image;
 class GoodsController extends Controller
 {
@@ -63,12 +64,16 @@ class GoodsController extends Controller
         $secCat1 = Category::where('parent1_id',$goods->cat_id1)->where('parent2_id',0)->get();
         // 取出三级分类
         $secCat2 = Category::where('parent2_id',$goods->cat_id2)->get();
+         // 取出品牌
+         $brandData = BrandCategory::where('category_id',$goods->cat_id3)->with('brands')->get();
+        //  dd($brandData);
         // dd($secCat2);
         return view('goods/edit',[
             'data'=>$goods,
             'topCat'=>$topCat,
             'secCat1'=>$secCat1,
-            'secCat2'=>$secCat2
+            'secCat2'=>$secCat2,
+            'brandData'=>$brandData
         ]);
     }
     // 处理修改页面
@@ -147,19 +152,20 @@ class GoodsController extends Controller
         $goods = Goods::find($id);
         // 取出一级分类下的挂载的数据
         $attr1 = Attr::where('cat_id1',$goods->cat_id1)
-                        // ->where('attr_type','<>','规格')
+                        // ->where('cat_id2',0)
+                        // ->where('attr_type','规格')
                         ->get();
         // dd($attr1);
         // 取出二级
         $attr2 = Attr::where('cat_id2',$goods->cat_id2)
-                        // ->where('attr_type','<>','规格')
+                        // ->where('attr_type','规格')
                         ->get();
         // dd($attr2);
         // 取出三级
         $attr3 = Attr::where('cat_id3',$goods->cat_id3)
-                        // ->where('attr_type','<>','规格')
+                        // ->where('attr_type','规格')
                         ->get();
-        // dd($attr1);
+        // dd($attr3);
 
         // 规格数据
         $spdata = GoodsSpec::where('goods_id',$id)->get();

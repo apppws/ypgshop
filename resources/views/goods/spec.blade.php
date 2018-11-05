@@ -50,6 +50,7 @@
             <form action="{{ route('goods_spec',['id'=>$data->id]) }}" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
                 @csrf
                     <label class="form-label col-2">商品规格名称：</label>
+                    <div id="goods_attr_container"></div>
                     <div id="goods-stock-container">
                             <table class="table-stock">
                                 <thead>
@@ -141,8 +142,8 @@
     <script>
             /* ----------------------------------------------------- */
 
-            var datas =
-                `@foreach($attr1 as $v)
+            var datas ={
+                @foreach($attr1 as $v)
                     '{{$v->attr_name}}':[{{$v->id}},'{!! str_replace(',','\',\'',$v->attr_options) !!}'],
                 @endforeach
                 @foreach($attr2 as $v)
@@ -150,25 +151,29 @@
                 @endforeach
                 @foreach($attr3 as $v)
                     '{{$v->attr_name}}':[{{$v->id}},'{!! str_replace(',','\',\'',$v->attr_options) !!}'],
-                @endforeach`;
-            ;
+                @endforeach
+            };
+            // console.log(datas);
+            var alreadyHave =[];
+            @foreach($attr1 as $v)
+                alreadyHave.push('{{ $v->attr_id.'/'.$v->attr_value }}');
+            @endforeach
+            // console.log(alreadyHave);
 
-            var alreadyHave = [];
-            @foreach({{$specData}} as $v)
-                alreadyHave.push('{{$v->attr_id.'/'.$v->attr_value}}');
-            // @endforeach
-
-            var gac = $("#goods-attr-container");
+            var gac = $("#goods_attr_container");
+            // alert(gac);
             var gsc = $("#goods-stock-container");
 
             // 初始化商品属性数据
             var html = '';
             for(var i in datas)
             {
+                // console.log(datas);
                 html += '<h2>'+i+'</h2>';
                 html += '<div class="attr-btn">';
                 for(var j=1; j<datas[i].length; j++)
                 {
+                    console.log(datas[i].length);
                     if(alreadyHave.indexOf(datas[i][0]+'/'+datas[i][j]) >= 0)
                         html += '<a class="active" attr_id="'+datas[i][0]+'"  attr_name="'+i+'" href="javascript:">'+datas[i][j]+'</a>';
                     else
@@ -176,10 +181,12 @@
                 }
                 html += '</div>';
             }
+            // console.log(html);
             gac.html(html);
-
+            // console.log(gac.html(html));
             // 点击事件
             gac.find("a").click(function(){
+                console.log($(this));
                 $(this).toggleClass('active');
                 tableContent();
             });
@@ -231,7 +238,7 @@
 
                 // body
                 html += '<tbody>';
-
+                // console.log(html);
                 // 排列组合
                 var x = [];
                 for(var i in selectedValues)

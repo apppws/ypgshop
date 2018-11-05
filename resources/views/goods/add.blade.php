@@ -29,105 +29,95 @@
 
 <body>
     <div class="clearfix" id="add_picture">
-        {{-- <div id="scrollsidebar" class="left_Treeview">
-            <div class="show_btn" id="rightArrow"><span></span></div>
-            <div class="widget-box side_content">
-                <div class="side_title"><a title="隐藏" class="close_btn"><span></span></a></div>
-                <div class="side_list">
-                    <div class="widget-header header-color-green2">
-                        <h4 class="lighter smaller">选择产品类型</h4>
-                    </div>
-                    <div class="widget-body">
-                        <div class="widget-main padding-8">
-                            <div id="treeDemo" class="ztree"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
         <div class="page_right_style">
             <div class="type_title">添加商品</div>
-            <form action="{{ route('goods_doadd') }}" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
+            <form action="{{ route('goods_doadd') }}" method="post" class="form form-horizontal" id="form-article-add"
+                enctype="multipart/form-data">
                 @csrf
                 <div class=" clearfix cl">
-                    <label class="form-label col-2">商品名称：</label>
-                    <div class="formControls col-10"><input type="text" class="input-text" value="" placeholder="" id=""
-                            name="goods_name"></div>
-                </div>
+                        <label class="form-label col-2">商品名称：</label>
+                        <div class="formControls col-10"><input type="text" class="input-text" value="" placeholder="" id=""
+                                name="goods_name"></div>
+                    </div>
                 <div class=" clearfix cl">
-                    <div class="Add_p_s">
-                        <label class="form-label col-2">产&nbsp;&nbsp;&nbsp;&nbsp;地：</label>
-                        <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
-                                id="" name="chandi"></div>
-                    </div>
-                    <div class="Add_p_s">
-                        <label class="form-label col-2">材&nbsp;&nbsp;&nbsp;&nbsp;质：</label>
-                        <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
-                                id="" name="caizhi"></div>
-                    </div>
-                    <div class="Add_p_s">
-                        <label class="form-label col-2">产品重量：</label>
-                        <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
-                                id="" name="weight">kg</div>
-                    </div>
-                    <div class="Add_p_s">
-                        <label class="form-label col-2">是否上架：</label>
-                        <div class="formControls col-2">
-                            <input type="radio"  name="is_on_sale" value="y">上架
-                            <input type="radio" name="is_on_sale" value="n">下架
+                        <div class="Add_p_s">
+                            <label class="form-label col-2">产品重量：</label>
+                            <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
+                                    id="" name="weight">kg</div>
+                        </div>
+                        <div class="Add_p_s">
+                            <label class="form-label col-2">产品长</label>
+                            <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
+                                        id="" name="length">cm</div>
+                            </div>
+                        <div class="Add_p_s">
+                            <label class="form-label col-2">产品宽</label>
+                            <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
+                                        id="" name="width">cm</div>
+                        </div>
+                        <div class="Add_p_s">
+                            <label class="form-label col-2">产品高：</label>
+                            <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
+                                        id="" name="height">cm</div>
+                        </div>
+                        <div class="Add_p_s">
+                            <label class="form-label col-2">是否上架：</label>
+                            <div class="formControls col-2">
+                                    <input  id="btn-onsale" type="radio" name="is_on_sale" value="y"> 上架
+                                    <input  id="btn-offsale" type="radio" name="is_on_sale" value="n"> 下架
+                            </div>
+                        </div>
+                        <div class="Add_p_s">
+                            <label class="form-label col-2">展示价格：</label>
+                            <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
+                                    id="" name="shprice">元</div>
+                        </div>
+                        <div class="Add_p_s">
+                            <label class="form-label col-2">市场价格：</label>
+                            <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
+                                    id="" name="maprice">元</div>
                         </div>
                     </div>
-                    <div class="Add_p_s">
-                        <label class="form-label col-2">展示价格：</label>
-                        <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
-                                id="" name="shprice">元</div>
-                    </div>
-                    <div class="Add_p_s">
-                        <label class="form-label col-2">市场价格：</label>
-                        <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder=""
-                                id="" name="maprice">元</div>
+                <div class="clearfix cl">
+                    <label class="form-label col-2">商品分类：</label>
+                    <div class="formControls col-10">
+                        <select name="cat_id1" size="10">
+                            <option value="" selected="selected">==一级分类==</option>
+                            @foreach($topCat as $v)
+                            <option value="{{$v->id}}">{{$v->name}}</option>
+                            @endforeach
+                        </select>
+                        <select name="cat_id2" size="10">
+                            <option value="" selected="selected">==二级分类==</option>
+                        </select>
+                        <select name="cat_id3" size="10">
+                            <option value="" selected="selected">==三级分类==</option>
+                        </select>
                     </div>
                 </div>
                 <div class="clearfix cl">
-                        <label class="form-label col-2">商品分类：</label>
-                        <div class="formControls col-10">
-                            <select name="cat_id1" size="10">
-                                <option value="" selected="selected">==一级分类==</option>
-                                @foreach($topCat as $v)
-                                <option value="{{$v->id}}">{{$v->name}}</option>
-                                @endforeach
-                            </select>
-                            <select name="cat_id2" size="10">
-                                <option value="" selected="selected">==二级分类==</option>
-                            </select>
-                            <select name="cat_id3" size="10">
-                                <option value="" selected="selected">==三级分类==</option>
-                            </select>
-                        </div>
-                </div>
-                <div class="clearfix cl">
-                        <label class="form-label col-2">品牌：</label>
-                        <div class="formControls col-10">
-                            <select name="brand_id">
-                                <option value="" selected="selected">==选择品牌==</option>
-                            </select>
-                        </div>
+                    <label class="form-label col-2">品牌：</label>
+                    <div class="formControls col-10">
+                        <select name="brand_id">
+                            <option value="" selected="selected">==选择品牌==</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="clearfix cl">
                     <label class="form-label col-2">商品描述：</label>
                     <div class="formControls col-10">
-                        <textarea id="editor" value="" name="goodDesc" autofocus style="width:100%;height:400px;"></textarea>
+                        <textarea id="editor" value="" name="goods_desc" autofocus style="width:100%;height:400px;"></textarea>
                     </div>
                 </div>
                 <div class="clearfix cl">
                     <div class="Button_operation">
                         <button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="icon-save "></i>保存并提交审核</button>
                         <button onClick="article_save();" class="btn btn-secondary  btn-warning" type="button"><i class="icon-save"></i>保存草稿</button>
-                        <button  onclick="history.go(-1)" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                        <button onclick="history.go(-1)" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
                     </div>
                 </div>
-            </form>
-        </div>
+        </form>
+    </div>
     </div>
     </div>
     <script src="/js/jquery-1.9.1.min.js"></script>
@@ -150,70 +140,65 @@
     <script type="text/javascript" src="/js/H-ui.admin.js"></script>
     <script>
         // 三级联动
-        $('select[name=cat_id1]').change(function(){
+        $('select[name=cat_id1]').change(function () {
             var s2 = $('select[name=cat_id2]');
             var html = '<option value="" selected="selected">==二级分类==</option>';
             // 如果这个值为空就在就获取显示二级分类
-            if($(this).val()==''){
+            if ($(this).val() == '') {
                 s2.html(html);
-            }else{
-                    $.ajax({
-                        type:"GET",
-                        url:"/subcat/"+$(this).val(),
-                        dataType:"json",
-                        contentType:"application/json",
-                        success:function(data)
-                        {
-                            $(data).each(function(k,v){
-                                html += '<option value="'+v.id+'">'+v.name+'</option>';
-                            });
-                            s2.html(html);
-                        }
-                    });
+            } else {
+                $.ajax({
+                    type: "GET",
+                    url: "/subcat/" + $(this).val(),
+                    dataType: "json",
+                    contentType: "application/json",
+                    success: function (data) {
+                        $(data).each(function (k, v) {
+                            html += '<option value="' + v.id + '">' + v.name + '</option>';
+                        });
+                        s2.html(html);
+                    }
+                });
             }
         });
-        $('select[name=cat_id2]').change(function(){
+        $('select[name=cat_id2]').change(function () {
             var s3 = $('select[name=cat_id3]');
             var html = '<option value="" selected="selected">==三级分类==</option>';
             // 如果这个值为空就在就获取显示二级分类
-            if($(this).val()==''){
+            if ($(this).val() == '') {
                 s3.html(html);
-            }else{
-                    $.ajax({
-                        type:"GET",
-                        url:"/subcat1/"+$(this).val(),
-                        dataType:"json",
-                        contentType:"application/json",
-                        success:function(data)
-                        {
-                            $(data).each(function(k,v){
-                                html += '<option value="'+v.id+'">'+v.name+'</option>';
-                            });
-                            s3.html(html);
-                        }
-                    });
+            } else {
+                $.ajax({
+                    type: "GET",
+                    url: "/subcat1/" + $(this).val(),
+                    dataType: "json",
+                    contentType: "application/json",
+                    success: function (data) {
+                        $(data).each(function (k, v) {
+                            html += '<option value="' + v.id + '">' + v.name + '</option>';
+                        });
+                        s3.html(html);
+                    }
+                });
             }
         });
 
         // 品牌
-        $("select[name=cat_id3]").change(function(){
+        $("select[name=cat_id3]").change(function () {
             var s2 = $("select[name=brand_id]");
             console.log(s2);
             var html = '<option value="" selected="selected">==选择品牌==</option>';
-            if($(this).val()=='')
-            {
+            if ($(this).val() == '') {
                 s2.html(html);
             }
-            else
-            {
+            else {
                 $.ajax({
-                    type:"GET",
-                    url:"/category/brand/"+$(this).val(),
-                    dataType:"json",
-                    success:function(data)
-                    {
-                        $(data).each(function(k,v){
-                            html += '<option value="'+v.brands.id+'">'+v.brands.name+'</option>';
+                    type: "GET",
+                    url: "/category/brand/" + $(this).val(),
+                    dataType: "json",
+                    success: function (data) {
+                        $(data).each(function (k, v) {
+                            html += '<option value="' + v.brands.id + '">' + v.brands.name + '</option>';
                         });
                         s2.html(html);
                     }
@@ -222,33 +207,33 @@
         });
 
     </script>
-     <script>
-            var editor = new Simditor({
-                textarea: $('#editor'),
-                toolbar:[
-                    'title',
-                    'bold',
-                    'italic',
-                    'underline',
-                    'strikethrough',
-                    'fontScale',
-                    'color',
-                    'ol'    ,
-                    'ul'         ,
-                    'blockquote',
-                    'code'       ,
-                    'table',
-                    'link',
-                    'image',
-                    'hr'          ,
-                    'indent',
-                    'outdent',
-                    'alignment'
-                    ]
-                });
+    <script>
+        var editor = new Simditor({
+            textarea: $('#editor'),
+            toolbar: [
+                'title',
+                'bold',
+                'italic',
+                'underline',
+                'strikethrough',
+                'fontScale',
+                'color',
+                'ol',
+                'ul',
+                'blockquote',
+                'code',
+                'table',
+                'link',
+                'image',
+                'hr',
+                'indent',
+                'outdent',
+                'alignment'
+            ]
+        });
 
 
-        </script>
+    </script>
     <script>
         $(function () {
             $("#add_picture").fix({
@@ -1027,4 +1012,3 @@
 </body>
 
 </html>
-

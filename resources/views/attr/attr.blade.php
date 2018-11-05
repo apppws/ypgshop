@@ -58,7 +58,7 @@
                 <div class="search_style">
                     <form>
                         <ul class="search_content clearfix">
-                            <li><label class="l_f">商品名称</label>
+                            <li><label class="l_f">属性名称</label>
                                 <input name="keyword" value="{{ $req->keyword }}" type="text" class="text_add" placeholder="输入属性名" style=" width:400px" />
                             </li>
                             <li style="width:90px;">
@@ -85,12 +85,9 @@
                                         <th width="80px" >ID</th>
                                         <th width="120px">属性名</th>
                                         <th width="250px">分组名</th>
-                                        <th width="130px">属性值</th>
-                                        <th width="200px">价钱</th>
-                                        <th width="100px">规格</th>
+                                        <th width="130px">属性类型</th>
                                         <th width="100px">显示类型</th>
-                                        <th width="100px">库存</th>
-                                        <th width="100px">可选值</th>
+                                        <th width="100px">可选属性值</th>
                                         <th width="70px" >状态</th>
                                         <th width="450px">操作</th>
                                     </tr>
@@ -102,11 +99,8 @@
                                   <td width="80px" >{{ $v->id }}</td>
                                   <td width="120px">{{ $v->attr_name }}</td>
                                   <td width="250px">{{ $v->group_name }}</td>
-                                  <th width="130px">{{ $v->attrval }}</th>
-                                  <td width="200px">{{ $v->attrprice }}</td>
-                                  <th width="100px">{{ $v->attr_type }}</th>
+                                  <th width="130px">{{ $v->attr_type }}</th>
                                   <th width="100px">{{ $v->show_type }}</th>
-                                  <td width="100px">{{ $v->attrstock }}</td>
                                   <td width="100px">{{ $v->attr_options }}</td>
                                   <td width="70px" class="td-status"><span class="label label-success radius">已启用</span></td>
                                   <td width="450px"  class="td-manage">

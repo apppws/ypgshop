@@ -56,24 +56,24 @@
                 </div>
                 <div class=" clearfix cl">
                     <div class="Add_p_s">
-                        <label class="form-label col-2">产&nbsp;&nbsp;&nbsp;&nbsp;地：</label>
-                        <div class="formControls col-2"><input type="text" class="input-text" value="{{ $data->chandi }}" placeholder=""
-                                id="" name="chandi"></div>
-                    </div>
-                    <div class="Add_p_s">
-                        <label class="form-label col-2">材&nbsp;&nbsp;&nbsp;&nbsp;质：</label>
-                        <div class="formControls col-2"><input type="text" class="input-text" value="{{ $data->caizhi }}" placeholder=""
-                                id="" name="caizhi"></div>
-                    </div>
-                    <div class="Add_p_s">
-                        <label class="form-label col-2">品&nbsp;&nbsp;&nbsp;&nbsp;牌：</label>
-                        <div class="formControls col-2"><input type="text" class="input-text" value="{{ $data->brand_id }}" placeholder=""
-                                id="" name="brand_id"></div>
-                    </div>
-                    <div class="Add_p_s">
                         <label class="form-label col-2">产品重量：</label>
                         <div class="formControls col-2"><input type="text" class="input-text" value="{{ $data->weigth }}" placeholder=""
                                 id="" name="weight">kg</div>
+                    </div>
+                    <div class="Add_p_s">
+                            <label class="form-label col-2">产品长</label>
+                            <div class="formControls col-2"><input type="text" class="input-text" value="{{ $data->length }}" placeholder=""
+                                        id="" name="length">cm</div>
+                            </div>
+                    <div class="Add_p_s">
+                            <label class="form-label col-2">产品宽</label>
+                            <div class="formControls col-2"><input type="text" class="input-text" value="{{ $data->width }}" placeholder=""
+                                        id="" name="width">cm</div>
+                    </div>
+                     <div class="Add_p_s">
+                        <label class="form-label col-2">产品高：</label>
+                        <div class="formControls col-2"><input type="text" class="input-text" value="{{ $data->height }}" placeholder=""
+                                        id="" name="height">cm</div>
                     </div>
                     <div class="Add_p_s">
                         <label class="form-label col-2">是否上架：</label>
@@ -118,6 +118,18 @@
                                     <option @if($data->cat_id3==$v->id) selected="selected" @endif value="{{$v->id}}">
                                         {{$v->name}}
                                     </option>
+                                @endforeach
+                            </select>
+                        </div>
+                </div>
+                <div class="clearfix cl">
+                        <label class="form-label col-2">品牌：</label>
+                        <div class="formControls col-10">
+
+                            <select name="brand_id">
+                                <option value="0" selected="selected">==选择品牌==</option>
+                                @foreach($brandData as $v)
+                                    <option @if($data->brand_id==$v->brands->id) selected="selected" @endif value="{{$v->brands->id}}">{{$v->brands->name}}</option>
                                 @endforeach
                             </select>
                         </div>
