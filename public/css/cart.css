@@ -1,0 +1,30 @@
+/* --------------------- 商品列表 --------------------- */
+.cart-head {
+	background-color: #EEE;
+	border: 1px solid #DDD;
+	padding: 10px;
+}
+.cart-body .row {
+	padding: 15px 10px;
+}
+.cart-body li {
+	border-bottom: 1px solid #DDD;
+}
+.cart-body img {
+	width: 90px;
+	vertical-align: top;
+	float: left;
+	margin-right: 10px;
+}
+.cart-foot {
+	margin-top: 10px;
+	border: 1px solid #DDD;
+	padding: 12px;
+}
+.cart-foot .price {
+	color: #c81623;
+	font-size: 18px;
+}
+.cart-foot .col-xs-3 {
+	text-align: right;
+}

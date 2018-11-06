@@ -89,6 +89,7 @@ Route::middleware(['login'])->group(function(){
     Route::post('/goods/spec/{id}','GoodsController@dospec')->name('goods_dospec');
     // 商品相册
     Route::get('/goods/pic/{id}','GoodsController@pic')->name('pic');
+    Route::post('/goods/pic/{id}','GoodsController@dopic')->name('dopic');
     Route::get('/goods/uploader','GoodsController@uploader')->name('pic');
     Route::post('/goods/pic/{goods_id}','GoodsController@upload');
     Route::get('/goods/del_pic/{goods_pic}','GoodsController@del_pic');
@@ -268,3 +269,5 @@ Route::get('/cart','CartController@index')->name('cart');
 Route::get('/begoods/{id}','BeGoodsController@index')->name('begoods');
 // 获取sku信息
 Route::get('/sku/{gid}/{skustr}','BeGoodsController@sku')->name('sku');
+// 加入购物车   skuid   商品数量
+Route::get('/addtocart/{skuid}/{gocount}','CartController@addcatr')->name('addcart');

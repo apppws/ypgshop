@@ -13,6 +13,20 @@
 </head>
 
 <body>
+        <form action="/goods/upload" method="POST">
+        <div class=" clearfix cl">
+                <label class="form-label col-2">选择规格sku：</label>
+                <div id="goods-sku">
+                    <select name="sku_id" id="">
+                        <option value="0">==选择规格==</option>
+                        @foreach ($sku as $v)
+                            <option value="{{ $v->sku_id }}">{{$v->goods_attr_list}}</option>
+                        @endforeach
+                    </select>
+                    <div style="clear: both;"></div>
+                </div>
+        </div>
+        </form>
     <!--添加用户图层-->
     <div id="demo" class="demo"></div>
 </body>

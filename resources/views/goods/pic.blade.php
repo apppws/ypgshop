@@ -31,14 +31,26 @@
         <div class="clearfix" id="add_picture">
                 <div class="page_right_style">
                     <div class="type_title">商品图片</div>
-                    <form action="" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
+                    <form action="{{ route('dopic',['id'=>$goods_id]) }}" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
                         @csrf
                         <div class=" clearfix cl">
+                                <label class="form-label col-2">选择规格sku：</label>
+                                <div id="goods-sku">
+                                    <select name="sku_id" id="">
+                                        <option value="0">==选择规格==</option>
+                                        @foreach ($sku as $v)
+                                            <option value="{{ $v->sku_id }}">{{$v->goods_attr_list}}</option>
+                                        @endforeach
+                                    </select>
+                                    <div style="clear: both;"></div>
+                                </div>
+                        </div>
+                        {{-- <div class=" clearfix cl">
                             <label class="form-label col-2">商品图片：</label>
                             <div id="goods-stock-container">
-                                    <input id="btn-upload" type="button" value="上传图片">
+                                    <input id="btn-upload" type="button" value="上传图片"> --}}
                                     {{-- <img src="" alt=""> --}}
-                                    <ul id="pic-list" goods_id="{{$goods_id}}" csrf_token="{{csrf_token()}}">
+                                    {{-- <ul id="pic-list" goods_id="{{$goods_id}}" csrf_token="{{csrf_token()}}">
                                         @foreach($data as $v)
                                         <li>
                                             <img src="{{'/upload/'.$v->mid_pic}}" alt="" width="150px" height="150px">
@@ -48,6 +60,25 @@
                                     </ul>
                                     <div style="clear: both;"></div>
                             </div>
+                        </div> --}}
+
+                        <div class=" clearfix cl">
+                               <!-- 预览图片 -->
+                            <div class="add-article-box-content">
+                                <div class="img-preview" style="display: block; width: 150px; height: 121px;z-index:10"><img src="/images/image.png" width="100px" alt="" height="100px" /></div>
+                            </div>
+                            <div class="demo l_f">
+                                <div class="add-article-box-content">
+                                    <!-- 保存裁切时的区域信息 -->
+                                    <input type="hidden" name="x" id="x">
+                                    <input type="hidden" name="y" id="y">
+                                    <input type="hidden" name="w" id="w">
+                                    <input type="hidden" name="h" id="h">
+                                    <!-- 选择图片 -->
+                                    <input type="file" class="form-control" placeholder="点击按钮选择图片" id="fileList" name="fileList" autocomplete="off"
+                                    required>
+                                </div>
+                            </div>
                         </div>
                         <div class="clearfix cl">
                             <div class="Button_operation">
@@ -56,9 +87,14 @@
                                 <button onclick="history.go(-1)" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
                             </div>
                         </div>
+                        <!-- 照片裁切显示原图 -->
+                        <div class="cut-img-container">
+                                <img id="image" src="" alt="Picture">
+                        </div>
                     </form>
                 </div>
             </div>
+
     <script src="/js/jquery-1.9.1.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/typeahead-bs2.min.js"></script>
@@ -78,15 +114,77 @@
     <script type="text/javascript" src="/js/H-ui.js"></script>
     <script type="text/javascript" src="/js/H-ui.admin.js"></script>
     <script src="/Js/jquery-3.2.1.min.js"></script>
+    <!-- 裁切图片 -->
+<link rel="stylesheet" href="/cropper/cropper.css">
+<script src="/cropper/cropper.js"></script>
+<script>
+  var image = $('#image');
+  // 原图显示的位置
+  var img_container = $('.cut-img-container');
+  // 缩略图显示的位置
+  var img_preview = $('.img-preview');
+  // 坐标
+  var x = $('#x');
+  var y = $('#y');
+  var w = $('#w');
+  var h = $('#h');
+  // 点击时 停止冒泡事件
+  $('.cut-img-container').click(function () {
+    event.stopPropagation()
+  });
+  $(document).on('click', ':not(.cut-img-container)', function () {
+    img_container.css('display', 'none');
+  })
+  // 选择图片的时候调用cropper插件
+  $("input[name=fileList]").change(function () {
+    // console.log(x);
+    img_container.css('display', 'block');
+    img_preview.css('display', 'block');
+    // 先清除一下插件
+    image.cropper('destroy');
+    // 图片保存的路径
+    var url = getObjectUrl(this.files[0]);
+    // alert(url);
+    image.attr('src', url);
+
+    // 调用插件
+    image.cropper({
+      aspectRatio: 1,         // 裁切的框形状
+      preview: '.img-preview',    // 显示预览的位置
+      viewMode: 1,                // 显示模式：图片不能无限缩小，但可以放大
+      // 裁切时把参数保存到表单中
+      crop: function (event) {
+        x.val(event.detail.x);
+        y.val(event.detail.y);
+        w.val(event.detail.width);
+        h.val(event.detail.height);
+      }
+    })
+  });
+
+
+  // 预览时需要使用下面这个函数转换一下
+  function getObjectUrl(file) {
+    var url = null;
+    if (window.createObjectURL != undefined) {
+      url = window.createObjectURL(file)
+    } else if (window.URL != undefined) {
+      url = window.URL.createObjectURL(file)
+    } else if (window.webkitURL != undefined) {
+      url = window.webkitURL.createObjectURL(file)
+    }
+    return url
+  }
+</script>
     <script>
-    $('#btn-upload').on('click', function(){
-        layer.open({
-        type: 2,
-        title: '上传新图片',
-        area: ['850px', '650px'],
-        content: '/goods/uploader'
-        });
-    });
+    // $('#btn-upload').on('click', function(){
+    //     layer.open({
+    //     type: 2,
+    //     title: '上传新图片',
+    //     area: ['850px', '650px'],
+    //     content: '/goods/uploader'
+    //     });
+    // });
     function del(a,id)
     {
         if(confirm('确定要删除吗?'))

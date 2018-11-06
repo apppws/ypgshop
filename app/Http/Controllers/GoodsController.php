@@ -234,21 +234,20 @@ class GoodsController extends Controller
      // 相册管理的列表页面
     public function pic(Request $req,$id){
         $data = Pic::where('goods_id',$id)->select('id','mid_pic')->get();
+        $sku = GoodsStock::get();
+        // dd($sku);
         return view('goods/pic',[
                 'goods_id'=>$id,
                 'data' => $data,
+                'sku'=>$sku
             ]);
     }
-    // 弹出框的页面w
-    public function uploader(){
-        return view('goods/uploader');
-    }
-     // 上传图片
-     public function upload(Request $req, $id)
-     {
+    public function dopic(Request $req,$id){
         $goods = Goods::find($id);
          $pics = new Pic;
+        //  dd($req->all());
         //  dd($req->hasFile('fileList'));
+        $sku_id = $req->sku_id;
          if($req->hasFile('fileList') && $req->file('fileList')->isValid())
          {
              $date = date('Ymd');
@@ -279,13 +278,65 @@ class GoodsController extends Controller
                  'sm_pic' => $smPic,
                  'mid_pic' => $midPic,
                  'big_pic' => $bigPic,
+                 'sku_id' =>$sku_id
              ]);
                 // dd($pics);
              $pics->save();
+        }
 
-             return back();
-         }
-     }
+        return redirect()->route('goods');
+    }
+    // 弹出框的页面w
+    // public function uploader(){
+    //     $sku = GoodsStock::get();
+    //     return view('goods/uploader',[
+    //         'sku'=>$sku
+    //     ]);
+    // }
+     // 上传图片
+    //  public function upload(Request $req, $id)
+    //  {
+    //     $goods = Goods::find($id);
+    //      $pics = new Pic;
+    //      dd($req->all());
+    //     //  dd($req->hasFile('fileList'));
+    //      if($req->hasFile('fileList') && $req->file('fileList')->isValid())
+    //      {
+    //          $date = date('Ymd');
+    //          $dir = 'goods/'.$date;
+    //          $pic = $req->fileList->store($dir);
+    //         //  dd($pic);
+    //          // 生成缩略图
+    //          $img = Image::make('./upload/'.$pic);
+    //             // dd($img);
+    //          // 大缩略图
+    //          $bigPic = $img->resize(750, 750);
+    //          $bigPic = str_replace($date.'/', $date.'/big_', $pic);
+    //          $img->save('./upload/'.$bigPic);
+    //         // dd($bigPic);
+    //          // 中缩略图
+    //          $midPic = $img->resize(400, 400);
+    //          $midPic = str_replace($date.'/', $date.'/mid_', $pic);
+    //          $img->save('./upload/'.$midPic);
+
+    //          // 小缩略图
+    //          $img->resize(100, 100);
+    //          $smPic = str_replace($date.'/', $date.'/sm_', $pic);
+    //          $img->save('./upload/'.$smPic);
+
+    //          $pics->fill([
+    //              'goods_id' => $id,
+    //              'pic' => $pic,
+    //              'sm_pic' => $smPic,
+    //              'mid_pic' => $midPic,
+    //              'big_pic' => $bigPic,
+    //          ]);
+    //             // dd($pics);
+    //          $pics->save();
+
+    //          return redirect()->route('pic');
+    //      }
+    //  }
      // 删除图片
     public function del_pic(Request $req,$id)
     {

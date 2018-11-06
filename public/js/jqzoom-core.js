@@ -1,5 +1,5 @@
 /*!
- * jQzoom Evolution Library v2.3  - Javascript Image magnifier
+ * jQzoom Evolution Library v2.2  - Javascript Image magnifier
  * http://www.mind-projects.it
  *
  * Copyright 2011, Engineer Marco Renzi
@@ -16,11 +16,11 @@
  *       names of its contributors may be used to endorse or promote products
  *       derived from this software without specific prior written permission.
  *
- * Date: 03 May 2011 22:16:00
+ * Date: 11 April 2011 22:16:00
  */
 (function ($) {
     //GLOBAL VARIABLES
-    // var isIE6 = ($.browser.msie && $.browser.version < 7);
+    var isIE6 = ($.browser.msie && $.browser.version < 7);
     var body = $(document.body);
     var window = $(window);
     var jqzoompluging_disabled = false; //disabilita globalmente il plugin
@@ -79,10 +79,6 @@
                 if ($(".zoomPad", el).length == 0) {
                     el.zoomPad = $('<div/>').addClass('zoomPad');
                     img.wrap(el.zoomPad);
-                }
-                if(settings.zoomType == 'innerzoom'){
-                    settings.zoomWidth  = smallimage.w;
-                    settings.zoomHeight  =   smallimage.h;
                 }
                 //creating ZoomPup
                 if ($(".zoomPup", el).length == 0) {
@@ -181,9 +177,6 @@
                         i++;
                     }
                     $(this).click(function (e) {
-                        if($(this).hasClass('zoomThumbActive')){
-                          return false;
-                        }
                         thumblist.each(function () {
                             $(this).removeClass('zoomThumbActive');
                         });
@@ -303,7 +296,6 @@
                 $obj.pos.b = $obj.h + $obj.pos.t;
                 $obj.rightlimit = image.offset().left + $obj.ow;
                 $obj.bottomlimit = image.offset().top + $obj.oh;
-
             };
             this.node.onerror = function () {
                 alert('Problems while loading image.');
@@ -362,8 +354,8 @@
                 }
             };
             this.setdimensions = function () {
-                this.node.w = (parseInt((settings.zoomWidth) / el.scale.x) > smallimage.w ) ? smallimage.w : (parseInt(settings.zoomWidth / el.scale.x));
-                this.node.h = (parseInt((settings.zoomHeight) / el.scale.y) > smallimage.h ) ? smallimage.h : (parseInt(settings.zoomHeight / el.scale.y));
+                this.node.w = (parseInt((settings.zoomWidth) / el.scale.x) > smallimage.w) ? smallimage.w : parseInt((settings.zoomWidth) / el.scale.x);
+                this.node.h = (parseInt((settings.zoomHeight) / el.scale.y) > smallimage.h) ? smallimage.h : parseInt((settings.zoomHeight) / el.scale.y);
                 this.node.top = (smallimage.oh - this.node.h - 2) / 2;
                 this.node.left = (smallimage.ow - this.node.w - 2) / 2;
                 //centering lens
@@ -389,6 +381,7 @@
                         position: 'absolute',
                         display: 'block',
                         left: -(this.node.left + 1 - smallimage.bleft) + 'px',
+
                         top: -(this.node.top + 1 - smallimage.btop) + 'px'
                     });
 
@@ -422,22 +415,20 @@
                 var lenstop = 0;
 
                 function overleft(lens) {
-                    return el.mousepos.x - (lens.w) / 2 < smallimage.pos.l;
+                    return el.mousepos.x - (lens.w) / 2 < smallimage.pos.l; //el.mousepos.x - (lens.w) / 2  - smallimage.bleft <
                 }
 
                 function overright(lens) {
-                    return el.mousepos.x + (lens.w) / 2 > smallimage.pos.r;
-
+                    return el.mousepos.x + (lens.w) / 2 > smallimage.pos.r; //+ smallimage.bleft
                 }
 
                 function overtop(lens) {
-                    return el.mousepos.y - (lens.h) / 2 < smallimage.pos.t;
+                    return el.mousepos.y - (lens.h) / 2 < smallimage.pos.t; // + smallimage.btop;
                 }
 
                 function overbottom(lens) {
-                    return el.mousepos.y + (lens.h) / 2 > smallimage.pos.b;
+                    return el.mousepos.y + (lens.h) / 2 > smallimage.pos.b; // + smallimage.btop;
                 }
-
                 lensleft = el.mousepos.x + smallimage.bleft - smallimage.pos.l - (this.node.w + 2) / 2;
                 lenstop = el.mousepos.y + smallimage.btop - smallimage.pos.t - (this.node.h + 2) / 2;
                 if (overleft(this.node)) {
@@ -450,7 +441,6 @@
                 } else if (overbottom(this.node)) {
                     lenstop = smallimage.h + smallimage.btop - this.node.h - 1;
                 }
-
                 this.node.left = lensleft;
                 this.node.top = lenstop;
                 this.node.css({
@@ -468,6 +458,7 @@
                         left: -(this.node.left + 1 - smallimage.bleft) + 'px',
                         top: -(this.node.top + 1 - smallimage.btop) + 'px'
                     });
+
                 }
 
                 largeimage.setposition();
@@ -479,11 +470,9 @@
                 this.node.hide();
             };
             this.show = function () {
-
                 if (settings.zoomType != 'innerzoom' && (settings.lens || settings.zoomType == 'drag')) {
                     this.node.show();
                 }
-
                 if (settings.zoomType == 'reverse') {
                     img.css({
                         'opacity': settings.imageOpacity
@@ -551,24 +540,31 @@
                     });
                     var thickness = (smallimage.bleft == 0) ? 1 : smallimage.bleft;
                     $('.zoomWrapper', this.node).css({
+                        width: smallimage.w + 'px',
                         borderWidth: thickness + 'px'
                     });
-                }
-
-                  $('.zoomWrapper', this.node).css({
-                      width: Math.round(settings.zoomWidth) + 'px' ,
-                      borderWidth: thickness + 'px'
-                  });
-                  $('.zoomWrapperImage', this.node).css({
-                      width: '100%',
-                      height: Math.round(settings.zoomHeight) + 'px'
-                  });
-                  //zoom title
-                 $('.zoomWrapperTitle', this.node).css({
+                    $('.zoomWrapperImage', this.node).css({
+                        width: '100%',
+                        height: smallimage.h + 'px'
+                    });
+                    $('.zoomWrapperTitle', this.node).css({
                         width: '100%',
                         position: 'absolute'
-                  });
-
+                    });
+                } else {
+                    $('.zoomWrapper', this.node).css({
+                        width: Math.round(settings.zoomWidth) + 'px'
+                    });
+                    $('.zoomWrapperImage', this.node).css({
+                        width: '100%',
+                        height: Math.round(settings.zoomHeight) + 'px'
+                    });
+                    $('.zoomWrapperTitle', this.node).css({
+                        width: '100%',
+                        position: 'absolute'
+                    });
+                }
+                //zoom title
                 $('.zoomWrapperTitle', this.node).hide();
                 if (settings.title && zoomtitle.length > 0) {
                     $('.zoomWrapperTitle', this.node).html(zoomtitle).show();
@@ -587,6 +583,7 @@
                 this.ieframe.hide();
             };
             this.show = function () {
+                        this.setposition();
                 switch (settings.showEffect) {
                 case 'fadein':
                     this.node.fadeIn();
@@ -731,4 +728,3 @@
         }
     };
 })(jQuery);
-

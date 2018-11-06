@@ -9,6 +9,10 @@
     <meta content="yhd://detail/?body={" pmId":73725,"provinceId":6}" name="ios">
     <meta content="yhd://detail/?body={" pmId":73725,"provinceId":6}" name="android">
     <meta content="yhd://detail/?body={" pmId":73725,"provinceId":6}" name="ipad">
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery.pin.js"></script>
+<script src="/js/jqzoom-core.js"></script>
+<script src="/js/jqmove.js"></script>
     <meta content="http://item.m.yhd.com/item/73725" name="h5">
     <script type="text/javascript">
         (function () {
@@ -1553,18 +1557,18 @@
             </small>
         </div>
     </div>
-    <script>
+    {{-- <script>
         try {
             globalErrorLog.globalNodifyErrorLog();
         } catch (e) {
         }
-    </script>
+    </script> --}}
     <!-- cache enable -->
     <!--js start-->
     <!--无页面级头部js时, 全局头部js下移-->
-    <script charset="utf-8" src="/bejs/global_site_tracker_jq11.js?11" type="text/javascript"></script>
-    <script charset="utf-8" src="/bejs/global_site_top.js?1554974" type="text/javascript"></script>
-    <script charset="utf-8" src="/bejs/product_detail_c_page.js?1554974" type="text/javascript"></script>
+    {{-- <script charset="utf-8" src="/bejs/global_site_tracker_jq11.js" type="text/javascript"></script>
+    <script charset="utf-8" src="/bejs/global_site_top.js" type="text/javascript"></script>
+    <script charset="utf-8" src="/bejs/product_detail_c_page.js" type="text/javascript"></script> --}}
     <!--js end-->
     <div>
         <span style="color: #FFFFFF">
@@ -1619,12 +1623,11 @@
 
 </html>
 <!-- jqzoom 效果 -->
-<script src="/js/jquery-3.2.1.min.js"></script>
-<script src="/js/jquery.pin.js"></script>
-<script src="/js/jqzoom-core.js"></script>
-<script src="/js/jqmove.js"></script>
+
+
 <script>
-        /*使用jqzoom*/
+    window.onload=function(){
+
         $(function(){
             $('.jqzoom').jqzoom({
                 zoomType: 'standard',
@@ -1638,6 +1641,10 @@
                 position:'right'
             });
         });
+
+    }
+        /*使用jqzoom*/
+
         // 数量++
         $("#cart-num-btn-add").click(function(){
             var v = parseInt($("#cart-num").val());
@@ -1662,9 +1669,11 @@
         var skuid;
         // 获取这个 商品规格a标签
         $(".goods-spec a").click(function(){
-            // $("#price,#stock").html("<img width='30' src='/beimages/zoomloader.gif'>");
+            //获取这个第一个a父类  并移除
             $(this).parent().find('a').removeClass('active');
+            // 添加这个样式
             $(this).addClass('active');
+            // 调用sku方法
             goods_sku();
         });
         // 获取sku值
@@ -1678,7 +1687,7 @@
             });
             // 把得到这个数组转成字符串
             var skustr = arr.join('@');
-            console.log(skustr);
+            // console.log(skustr);
             $.ajax({
                 type:"GET",
                 url:"/sku/{{$goods->id}}/"+skustr,
@@ -1702,6 +1711,7 @@
 
         $(".btn-add-cart").click(function(){
             var gc = $("#cart-num").val();
+            // console.log(gc);
             // 如果已经确定skuid
             if(skuid)
             {
