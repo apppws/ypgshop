@@ -21,7 +21,10 @@ class BeGoodsController extends Controller
         // 图片
         $pic = $goods->pics();
         // dd($goods->specs);
-        // return $goods->specs;
+        // return $goods;
+        // 品牌
+        $brand = $goods->brands();
+        // dd($brand);
         return view('begoods/index',[
             'goods'=>$goods,
             'catData'=>$c,
@@ -29,11 +32,13 @@ class BeGoodsController extends Controller
             'cat2'=>$cat2,
             'cat3'=>$cat3,
             'pic'=>$pic,
+            'brand'=>$brand
         ]);
     }
 
     // 获取sku
     public function sku($goods_id,$skustr){
+        // dd($goods_id,$skustr);
         $sku = GoodsStock::where('goods_attr_list',$skustr)
                         ->where('goods_id',$goods_id)
                         ->select('sku_id','stock','price')

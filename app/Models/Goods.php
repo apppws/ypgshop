@@ -8,7 +8,7 @@ use DB;
 class Goods extends Model
 {
     protected $table="goods";
-    protected $fillable = ['goods_name','cat_id1','cat_id2','cat_id3','brand_id','is_on_sale','goods_desc','weigth','maprice','shprice','height','width'];
+    protected $fillable = ['goods_name','cat_id1','cat_id2','cat_id3','brand_id','is_on_sale','goods_desc','weight','length','maprice','shprice','height','width'];
 
     public function goodsattrs(){
         return $this->belongToMany('App\models\GoodsAttr','goods_sku','goods_id','attr_id');
@@ -65,6 +65,16 @@ class Goods extends Model
 
     public function specs(){
         return $this->hasMany('App\Models\GoodsSpec','goods_id');
+    }
+
+    // 品牌
+    public function brands(){
+        $brand = DB::table('goods')
+            ->select('goods_brand.name','goods_brand.id')
+            ->leftJoin('goods_brand','goods.brand_id','=','goods_brand.id')
+            ->groupBy('goods.brand_id')
+            ->get();
+        return $brand;
     }
 
 }

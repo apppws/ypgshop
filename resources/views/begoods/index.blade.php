@@ -1145,11 +1145,14 @@
 						<div class="attr mt15">
 							<ul>
 								<li><span>商品名称：</span>{{ $goods->goods_name }}</li>
-								<li><span>商品编号：</span>979631</li>
-								<li><span>品牌：</span>联想（Thinkpad）</li>
-								<li><span>上架时间：</span>2013-09-18 17:58:12</li>
-								<li><span>商品毛重：</span>2.47kg</li>
-								<li><span>商品产地：</span>中国大陆</li>
+								<li><span>商品编号：</span>{{ $goods->id }}</li>
+                                <li><span>品牌：</span>
+                                    @foreach ($brand as $v1)
+                                        @if($goods->brand_id == $v1->id) {{$v1->name}}  @endif
+                                    @endforeach
+                                </li>
+								<li><span>上架时间：</span>{{ $goods->created_at }}</li>
+								<li><span>商品毛重：</span>{{ $goods->weight }}kg</li>
 								<li><span>显卡：</span>集成显卡</li>
 								<li><span>触控：</span>非触控</li>
 								<li><span>厚度：</span>正常厚度（>25mm）</li>

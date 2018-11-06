@@ -1,156 +1,162 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta content="IE=Edge" http-equiv="X-UA-Compatible">
-<meta content="webkit" name="renderer">
-<meta content="no-transform" http-equiv="Cache-Control">
-<meta content="no-siteapp" http-equiv="Cache-Control">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<meta content="CHECKOUT_HOME.0" name="tp_page">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta content="webkit" name="renderer">
+    <meta content="no-transform" http-equiv="Cache-Control">
+    <meta content="no-siteapp" http-equiv="Cache-Control">
+
+    <meta content="CHECKOUT_HOME.0" name="tp_page">
 
 
-	<title>结算</title>
+    <title>结算</title>
 
 
-<!--css start-->
-<link type="text/css" rel="stylesheet" href="css/global_site_simple.css?1551385">
+    <!--css start-->
+    <link type="text/css" rel="stylesheet" href="css/global_site_simple.css?1551385">
     <link type="text/css" rel="stylesheet" href="css/checkoutV3.css?1551385">
-<!--css end-->
+    <!--css end-->
 
-<!--js start-->
-<script type="text/javascript">
-var URLPrefix = {"shop":"http://shop.yhd.com","TipDate":"2012-09-29","busystock":"http://busystock.i.yihaodian.com","b2beam":"http://b2beam.yhd.com","mallImgDomain":".yihaodianimg.com","shoping_pms":"http://pms.yhd.com","search":"http://www.yhd.com/ctg","shopping_gemini":"http://gemini.yhd.com","commentZoneMall":"http://e.yhd.com/front-pe","productDetailHost":"http://www.yhd.com","central":"http://www.yhd.com","yhmall":"http://mall.yhd.com","centralShop":"http://shop.yhd.com","shoping_my_statics":"http://image.yihaodianimg.com/member","yaowang":"http://www.111.com.cn","shoping_search":"http://www.yhd.com/ctg","image":"http://image.yihaodian.com","shoping_central":"http://www.yhd.com","shoping_1mall":"http://www.yhd.com","search_keyword":"http://search.yhd.com","shoping_detail":"http://item.yhd.com","shopping_p4p":"http://p4p.yhd.com","sitedomainmall":".yhd.com","products_stock":"http://busystock.i.yihaodian.com/busystock","commentZoneYhd":"http://e.yhd.com/front-pe","centralImgDomain":".yihaodianimg.com","statics":"http://image.yihaodianimg.com/shopping","shoping_checkout_self":"http://buy.yhd.com","shoping_statics":"http://image.yihaodianimg.com/shopping","pms":"http://pms.yhd.com","my_statics":"http://image.yihaodianimg.com/member","passportmall":"https://passport.yhd.com","shoping_cart_self":"http://cart.yhd.com","seoLinkMaxSize":"20","shoping_shop":"http://shop.yhd.com","sitedomain":".yhd.com","shoping_try":"http://interface.yhd.com","shoping_self":"http://www.yhd.com","coupon_url":"http://coupon.yhd.com","tracker":"tracker.yhd.com","footFriendLink":"http://www.yhd.com/friendlink/index.do","shoping_passport":"https://passport.yhd.com","shoping_yhd":"http://www.yhd.com","uploadPostUrl":"http://upload.yihaodian.com/upload/UploadAction","shoping_my":"http://my.yhd.com","shoping_opposite":"http://www.yhd.com","my":"http://my.yhd.com","mymall":"http://my.yhd.com","selfroot":"http://www.yhd.com","yiwangauth":"http://mall.yiwang.cn","productDetailUrl":"http://www.yhd.com","passport":"https://passport.yhd.com","mall":"http://www.yhd.com"};
-var headerType="simple";
-var favorite="1号店，只为更好的生活";
-var hostUrl="www.yhd.com";
-var httpUrl="http://www.yhd.com";
-var no3wUrl="yhd.com";
-var simpleUrl="yhd";
-var chineseUrl="1号店";
-var imagePath="http://image.yihaodianimg.com/shopping/global/images";
-var currSiteId=1;
-var currBsSiteId=1;
-var currSiteType=1;
-var siteStyle=1;
-var siteFlag=1;
-var currDomain="http://www.yhd.com";
-var oppositeDomain="http://www.yhd.com";
-var busystock = "http://busystock.i.yihaodian.com";
-var multiSearch="true";
-var globalShowMarketPrice="0";
-var isIndex = 0;
-var currVersionNum= 1551385;
-var projectVersionNum = "0";
-var currProvinceId=6;
-var lazyLoadImageObjArry = lazyLoadImageObjArry || [];
-var isFixTopNav = false;
+    <!--js start-->
+    <script type="text/javascript">
+        var URLPrefix = { "shop": "http://shop.yhd.com", "TipDate": "2012-09-29", "busystock": "http://busystock.i.yihaodian.com", "b2beam": "http://b2beam.yhd.com", "mallImgDomain": ".yihaodianimg.com", "shoping_pms": "http://pms.yhd.com", "search": "http://www.yhd.com/ctg", "shopping_gemini": "http://gemini.yhd.com", "commentZoneMall": "http://e.yhd.com/front-pe", "productDetailHost": "http://www.yhd.com", "central": "http://www.yhd.com", "yhmall": "http://mall.yhd.com", "centralShop": "http://shop.yhd.com", "shoping_my_statics": "http://image.yihaodianimg.com/member", "yaowang": "http://www.111.com.cn", "shoping_search": "http://www.yhd.com/ctg", "image": "http://image.yihaodian.com", "shoping_central": "http://www.yhd.com", "shoping_1mall": "http://www.yhd.com", "search_keyword": "http://search.yhd.com", "shoping_detail": "http://item.yhd.com", "shopping_p4p": "http://p4p.yhd.com", "sitedomainmall": ".yhd.com", "products_stock": "http://busystock.i.yihaodian.com/busystock", "commentZoneYhd": "http://e.yhd.com/front-pe", "centralImgDomain": ".yihaodianimg.com", "statics": "http://image.yihaodianimg.com/shopping", "shoping_checkout_self": "http://buy.yhd.com", "shoping_statics": "http://image.yihaodianimg.com/shopping", "pms": "http://pms.yhd.com", "my_statics": "http://image.yihaodianimg.com/member", "passportmall": "https://passport.yhd.com", "shoping_cart_self": "http://cart.yhd.com", "seoLinkMaxSize": "20", "shoping_shop": "http://shop.yhd.com", "sitedomain": ".yhd.com", "shoping_try": "http://interface.yhd.com", "shoping_self": "http://www.yhd.com", "coupon_url": "http://coupon.yhd.com", "tracker": "tracker.yhd.com", "footFriendLink": "http://www.yhd.com/friendlink/index.do", "shoping_passport": "https://passport.yhd.com", "shoping_yhd": "http://www.yhd.com", "uploadPostUrl": "http://upload.yihaodian.com/upload/UploadAction", "shoping_my": "http://my.yhd.com", "shoping_opposite": "http://www.yhd.com", "my": "http://my.yhd.com", "mymall": "http://my.yhd.com", "selfroot": "http://www.yhd.com", "yiwangauth": "http://mall.yiwang.cn", "productDetailUrl": "http://www.yhd.com", "passport": "https://passport.yhd.com", "mall": "http://www.yhd.com" };
+        var headerType = "simple";
+        var favorite = "1号店，只为更好的生活";
+        var hostUrl = "www.yhd.com";
+        var httpUrl = "http://www.yhd.com";
+        var no3wUrl = "yhd.com";
+        var simpleUrl = "yhd";
+        var chineseUrl = "1号店";
+        var imagePath = "http://image.yihaodianimg.com/shopping/global/images";
+        var currSiteId = 1;
+        var currBsSiteId = 1;
+        var currSiteType = 1;
+        var siteStyle = 1;
+        var siteFlag = 1;
+        var currDomain = "http://www.yhd.com";
+        var oppositeDomain = "http://www.yhd.com";
+        var busystock = "http://busystock.i.yihaodian.com";
+        var multiSearch = "true";
+        var globalShowMarketPrice = "0";
+        var isIndex = 0;
+        var currVersionNum = 1551385;
+        var projectVersionNum = "0";
+        var currProvinceId = 6;
+        var lazyLoadImageObjArry = lazyLoadImageObjArry || [];
+        var isFixTopNav = false;
 
-var globalSearchSelectFlag = "1";
-var globalSearchHotkeywordsFlag = "1";
-var globalTopPrismFlag = "1";
-var globalTpCheckFlag = "1";
+        var globalSearchSelectFlag = "1";
+        var globalSearchHotkeywordsFlag = "1";
+        var globalTopPrismFlag = "1";
+        var globalTpCheckFlag = "1";
 
-var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"TURN_PAGE":8,"SETTLEMENT":7},"CHECKOUT_HOME":"9","SPM_DATA_TYPE":{"ADVANCED_TAG":33,"MINGPIN_CAT":32,"COMMENT_TAG":28,"SEARCH_SCENE_AD":36,"KEYWORD":25,"BASICS_TAG":34,"TRACKER_CODE":16,"SMARTBOX_ATTR":23,"CATEGORY":9,"SEARCH_TURN_PAGE":20,"LANDING":6,"SEARCH_BRAND_SHOP":35,"PROMOTION":8,"MSG_TYPE":31,"PRODUCT":5,"SEARCH_FILTER":21,"AD":12,"SHOP":26,"TUAN":11,"SMARTBOX_KW":22,"MINGPIN":17,"PROVINCE":14,"SEARCH_WORD":15,"COUPON":7,"BRAND":10,"SEARCH_SORT":19,"SMARTBOX_CATE":24},"SPM_SYSTEM_TYPE":{"PMS":4,"EDM":30,"AD":13,"CATEGORY":29,"SEARCH":3,"MANUAL":2,"TRY":27,"STORE":18,"AUTO":1},"SPM_AREA":{"SAVE_NEW_REAL_NAME_AUTH":2645,"LINKRTN_TO_HOME_BY_SESSIONINVALID":1358,"TITLE_TO_CART":1345,"YHD_GLOBAl_PRISM":22,"YHD_GLOBAl_HEADER_RIGHT_AD":18,"YHD_GLOBAl_HEADER_CATEGORY_0":156,"NORMALBUY_DEL_GOODS":1353,"YHD_GLOBAl_HEADER_CATEGORY_1":157,"YHD_GLOBAl_HEADER_CATEGORY_2":158,"YHD_GLOBAl_HEADER_CATEGORY_3":159,"YHD_GLOBAl_HEADER_CATEGORY_4":160,"YHD_GLOBAl_HEADER_CATEGORY_5":161,"YHD_GLOBAl_HEADER_CATEGORY_6":162,"YHD_GLOBAl_HEADER_ORDER":155,"YHD_GLOBAl_HEADER_CATEGORY_7":163,"YHD_GLOBAl_HEADER_CATEGORY_8":164,"YHD_GLOBAl_HEADER_CATEGORY_9":165,"AREA_PRICE_BACKTOCART":1349,"INVOICE_INFO":2040,"COMMODITY_INFO":2042,"SAVE_MODIFY_REAL_NAME_AUTH":2644,"STATISTICS_INFO":2043,"DELIVERY_INFO":2039,"YHD_GLOBAl_TOP_PROVINCE":153,"PAYMENT_INFO":2041,"YHD_GLOBAl_FOOTER_BROWSE_RELATED":19,"YHD_GLOBAl_HEADER_CATEGORY":15,"YHD_GLOBAl_HEADER_LOGO":11,"YHD_GLOBAl_FOOTER":20,"RECEIPT_INFO":2038,"YHD_GLOBAl_TOP_UNLOGIN":150,"YHD_GLOBAl_HEADER_CATEGORY_13":169,"EDIT_ADDRESS_SUBMITORDER":1359,"YHD_GLOBAl_HEADER_CATEGORY_12":168,"FASTBUY_CHANGE_ADDRESS":1351,"YHD_GLOBAl_HEADER_CATEGORY_11":167,"LINKRTN_TO_CART_BY_SESSION_INVALID":1357,"YHD_GLOBAl_HEADER_MOBILE":14,"YHD_GLOBAl_HEADER_CATEGORY_10":166,"AREA_PRICE_CHANGE_ADDRESS":1350,"YHD_GLOBAl_TOP_USER":7,"YHD_GLOBAl_HEADER_CATEGORY_15":595,"YHD_GLOBAl_HEADER_CATEGORY_14":170,"YHD_GLOBAl_HEADER_CART":149,"POPWINCLOSE":1348,"YHD_GLOBAl_TOP_BANNER":9,"TITLE_GO_YHD_INDEX":1344,"YHD_GLOBAl_HEADER_HOT_SEARCH":13,"YHD_GLOBAl_LEFT_CNY":2655,"YHD_GLOBAl_HEADER_SEARCH":12,"CONTRACTPHONEUSERINFO_SENDVERIFYCODE":1346,"YHD_GLOBAl_TOP_MENU":8,"YHD_GLOBAl_HEADER_SEARCHSHOP":2058,"USE_GIFTCARD_AMOUNT":1355,"YHD_GLOBAl_TOP_MSG":2549,"YHD_GLOBAl_HEADER_MINICART":17,"SUBMIT_ORDER":1347,"YHD_GLOBAl_TOP_MESSAGE":152,"YHD_GLOBAl_HEADER_WELFARE":154,"NORMALBUY_CHANGE_ADDRESS":1354,"YHD_GLOBAl_HEADER_NAV":16,"YHD_GLOBAl_FOOTER_HELP":21,"YHD_GLOBAl_TOP_LOGIN":151,"FASTBUY_GO_DETAIL":1352,"YHD_GLOBAl_TOP_CURTAIN":10,"USE_ACCOUNT_AMOUNT":1356}};
+        var _globalSpmDataModelJson = { "SPM_COM": { "ADD_CART": 1, "ADD_FAV": 2, "DELETE": 6, "TURN_PAGE": 8, "SETTLEMENT": 7 }, "CHECKOUT_HOME": "9", "SPM_DATA_TYPE": { "ADVANCED_TAG": 33, "MINGPIN_CAT": 32, "COMMENT_TAG": 28, "SEARCH_SCENE_AD": 36, "KEYWORD": 25, "BASICS_TAG": 34, "TRACKER_CODE": 16, "SMARTBOX_ATTR": 23, "CATEGORY": 9, "SEARCH_TURN_PAGE": 20, "LANDING": 6, "SEARCH_BRAND_SHOP": 35, "PROMOTION": 8, "MSG_TYPE": 31, "PRODUCT": 5, "SEARCH_FILTER": 21, "AD": 12, "SHOP": 26, "TUAN": 11, "SMARTBOX_KW": 22, "MINGPIN": 17, "PROVINCE": 14, "SEARCH_WORD": 15, "COUPON": 7, "BRAND": 10, "SEARCH_SORT": 19, "SMARTBOX_CATE": 24 }, "SPM_SYSTEM_TYPE": { "PMS": 4, "EDM": 30, "AD": 13, "CATEGORY": 29, "SEARCH": 3, "MANUAL": 2, "TRY": 27, "STORE": 18, "AUTO": 1 }, "SPM_AREA": { "SAVE_NEW_REAL_NAME_AUTH": 2645, "LINKRTN_TO_HOME_BY_SESSIONINVALID": 1358, "TITLE_TO_CART": 1345, "YHD_GLOBAl_PRISM": 22, "YHD_GLOBAl_HEADER_RIGHT_AD": 18, "YHD_GLOBAl_HEADER_CATEGORY_0": 156, "NORMALBUY_DEL_GOODS": 1353, "YHD_GLOBAl_HEADER_CATEGORY_1": 157, "YHD_GLOBAl_HEADER_CATEGORY_2": 158, "YHD_GLOBAl_HEADER_CATEGORY_3": 159, "YHD_GLOBAl_HEADER_CATEGORY_4": 160, "YHD_GLOBAl_HEADER_CATEGORY_5": 161, "YHD_GLOBAl_HEADER_CATEGORY_6": 162, "YHD_GLOBAl_HEADER_ORDER": 155, "YHD_GLOBAl_HEADER_CATEGORY_7": 163, "YHD_GLOBAl_HEADER_CATEGORY_8": 164, "YHD_GLOBAl_HEADER_CATEGORY_9": 165, "AREA_PRICE_BACKTOCART": 1349, "INVOICE_INFO": 2040, "COMMODITY_INFO": 2042, "SAVE_MODIFY_REAL_NAME_AUTH": 2644, "STATISTICS_INFO": 2043, "DELIVERY_INFO": 2039, "YHD_GLOBAl_TOP_PROVINCE": 153, "PAYMENT_INFO": 2041, "YHD_GLOBAl_FOOTER_BROWSE_RELATED": 19, "YHD_GLOBAl_HEADER_CATEGORY": 15, "YHD_GLOBAl_HEADER_LOGO": 11, "YHD_GLOBAl_FOOTER": 20, "RECEIPT_INFO": 2038, "YHD_GLOBAl_TOP_UNLOGIN": 150, "YHD_GLOBAl_HEADER_CATEGORY_13": 169, "EDIT_ADDRESS_SUBMITORDER": 1359, "YHD_GLOBAl_HEADER_CATEGORY_12": 168, "FASTBUY_CHANGE_ADDRESS": 1351, "YHD_GLOBAl_HEADER_CATEGORY_11": 167, "LINKRTN_TO_CART_BY_SESSION_INVALID": 1357, "YHD_GLOBAl_HEADER_MOBILE": 14, "YHD_GLOBAl_HEADER_CATEGORY_10": 166, "AREA_PRICE_CHANGE_ADDRESS": 1350, "YHD_GLOBAl_TOP_USER": 7, "YHD_GLOBAl_HEADER_CATEGORY_15": 595, "YHD_GLOBAl_HEADER_CATEGORY_14": 170, "YHD_GLOBAl_HEADER_CART": 149, "POPWINCLOSE": 1348, "YHD_GLOBAl_TOP_BANNER": 9, "TITLE_GO_YHD_INDEX": 1344, "YHD_GLOBAl_HEADER_HOT_SEARCH": 13, "YHD_GLOBAl_LEFT_CNY": 2655, "YHD_GLOBAl_HEADER_SEARCH": 12, "CONTRACTPHONEUSERINFO_SENDVERIFYCODE": 1346, "YHD_GLOBAl_TOP_MENU": 8, "YHD_GLOBAl_HEADER_SEARCHSHOP": 2058, "USE_GIFTCARD_AMOUNT": 1355, "YHD_GLOBAl_TOP_MSG": 2549, "YHD_GLOBAl_HEADER_MINICART": 17, "SUBMIT_ORDER": 1347, "YHD_GLOBAl_TOP_MESSAGE": 152, "YHD_GLOBAl_HEADER_WELFARE": 154, "NORMALBUY_CHANGE_ADDRESS": 1354, "YHD_GLOBAl_HEADER_NAV": 16, "YHD_GLOBAl_FOOTER_HELP": 21, "YHD_GLOBAl_TOP_LOGIN": 151, "FASTBUY_GO_DETAIL": 1352, "YHD_GLOBAl_TOP_CURTAIN": 10, "USE_ACCOUNT_AMOUNT": 1356 } };
 
-</script>
-   	<script charset="utf-8" src="js/global_simple_tracker_jq11.js?11" type="text/javascript"></script>
-	<script charset="utf-8" src="js/global_simple_top.js?1551385" type="text/javascript"></script>
-	<script charset="utf-8" src="js/checkoutV3N.js?1551385" type="text/javascript"></script>
-<!--js end-->
-<script type="text/javascript" async="" src="js/captcha.js?20160114"></script><link rel="stylesheet" type="text/css" href="css/global_yhdLib.css?1551385"></head>
+    </script>
+    <script charset="utf-8" src="js/global_simple_tracker_jq11.js?11" type="text/javascript"></script>
+    <script charset="utf-8" src="js/global_simple_top.js?1551385" type="text/javascript"></script>
+    <script charset="utf-8" src="js/checkoutV3N.js?1551385" type="text/javascript"></script>
+    <!--js end-->
+    <script type="text/javascript" async="" src="js/captcha.js?20160114"></script>
+    <link rel="stylesheet" type="text/css" href="css/global_yhdLib.css?1551385">
+</head>
 
-<body data-param="{"globalPageCode":"-1","currPageId":"0"}" id="comParamId">
-<div style="display:none;" id="yhd_pop_win" class="pop_win"></div>
+<body data-param="{" globalPageCode":"-1","currPageId":"0"}" id="comParamId">
+    <div style="display:none;" id="yhd_pop_win" class="pop_win"></div>
 
-<div id="provinceboxDiv">
-<!--切换省份展开   --> 
-  <div style="display:none" id="allProvinces" class="ap_area ">
-  <div class="a_title"><a class="fr popwinClose" onclick="javascript:closeProvinces(1);return false;" href="###">关闭</a>请选择您的收货省份</div>
+    <div id="provinceboxDiv">
+        <!--切换省份展开   -->
+        <div style="display:none" id="allProvinces" class="ap_area ">
+            <div class="a_title"><a class="fr popwinClose" onclick="javascript:closeProvinces(1);return false;" href="###">关闭</a>请选择您的收货省份</div>
 
-  <dl class="first">
-    <dt>华东地区</dt>
-    <dd>
-	    <a href="javascript:setAddressCity(1)" id="p_1">上海</a>
-	    <a href="javascript:setAddressCity(5)" id="p_5">江苏</a>
-	    <a href="javascript:setAddressCity(6)" id="p_6">浙江</a>
-	    <a href="javascript:setAddressCity(13)" id="p_13">安徽</a>
-	    <a href="javascript:setAddressCity(16)" id="p_16">山东</a>
-    </dd>
+            <dl class="first">
+                <dt>华东地区</dt>
+                <dd>
+                    <a href="javascript:setAddressCity(1)" id="p_1">上海</a>
+                    <a href="javascript:setAddressCity(5)" id="p_5">江苏</a>
+                    <a href="javascript:setAddressCity(6)" id="p_6">浙江</a>
+                    <a href="javascript:setAddressCity(13)" id="p_13">安徽</a>
+                    <a href="javascript:setAddressCity(16)" id="p_16">山东</a>
+                </dd>
 
-  </dl>
-  <dl>
-    <dt>华北东北</dt>
-    <dd>
-	    <a href="javascript:setAddressCity(2)" id="p_2">北京</a>
-	    <a href="javascript:setAddressCity(3)" id="p_3">天津</a>
-	    <a href="javascript:setAddressCity(4)" id="p_4">河北</a>
-	    <a href="javascript:setAddressCity(32)" id="p_32">山西</a>
-	    <a href="javascript:setAddressCity(8)" id="p_8">内蒙古</a>
-	    <a href="javascript:setAddressCity(9)" id="p_9">辽宁</a>
-	    <a href="javascript:setAddressCity(10)" id="p_10">吉林</a>
-	    <a href="javascript:setAddressCity(11)" id="p_11">黑龙江</a>
-    </dd>
+            </dl>
+            <dl>
+                <dt>华北东北</dt>
+                <dd>
+                    <a href="javascript:setAddressCity(2)" id="p_2">北京</a>
+                    <a href="javascript:setAddressCity(3)" id="p_3">天津</a>
+                    <a href="javascript:setAddressCity(4)" id="p_4">河北</a>
+                    <a href="javascript:setAddressCity(32)" id="p_32">山西</a>
+                    <a href="javascript:setAddressCity(8)" id="p_8">内蒙古</a>
+                    <a href="javascript:setAddressCity(9)" id="p_9">辽宁</a>
+                    <a href="javascript:setAddressCity(10)" id="p_10">吉林</a>
+                    <a href="javascript:setAddressCity(11)" id="p_11">黑龙江</a>
+                </dd>
 
-  </dl>
-  <dl>
-    <dt>华南西南</dt>
-    <dd>
-	    <a href="javascript:setAddressCity(20)" id="p_20">广东</a>
-	    <a href="javascript:setAddressCity(21)" id="p_21">广西</a>
-	    <a href="javascript:setAddressCity(22)" id="p_22">海南</a>
-	    <a href="javascript:setAddressCity(14)" id="p_14">福建</a>
-	    <a href="javascript:setAddressCity(12)" id="p_12">四川</a>
-	    <a href="javascript:setAddressCity(7)" id="p_7">重庆</a>
-	    <a href="javascript:setAddressCity(23)" id="p_23">贵州</a>
-	    <a href="javascript:setAddressCity(24)" id="p_24">云南</a>
-	    <a href="javascript:setAddressCity(25)" id="p_25">西藏</a>
-    </dd>
+            </dl>
+            <dl>
+                <dt>华南西南</dt>
+                <dd>
+                    <a href="javascript:setAddressCity(20)" id="p_20">广东</a>
+                    <a href="javascript:setAddressCity(21)" id="p_21">广西</a>
+                    <a href="javascript:setAddressCity(22)" id="p_22">海南</a>
+                    <a href="javascript:setAddressCity(14)" id="p_14">福建</a>
+                    <a href="javascript:setAddressCity(12)" id="p_12">四川</a>
+                    <a href="javascript:setAddressCity(7)" id="p_7">重庆</a>
+                    <a href="javascript:setAddressCity(23)" id="p_23">贵州</a>
+                    <a href="javascript:setAddressCity(24)" id="p_24">云南</a>
+                    <a href="javascript:setAddressCity(25)" id="p_25">西藏</a>
+                </dd>
 
-  </dl>
-  <dl class="last">
-    <dt>华中西北</dt>
-    <dd class="nobor">
-	    <a href="javascript:setAddressCity(18)" id="p_18">湖北</a>
-	    <a href="javascript:setAddressCity(19)" id="p_19">湖南</a>
-	    <a href="javascript:setAddressCity(17)" id="p_17">河南</a>
-	    <a href="javascript:setAddressCity(15)" id="p_15">江西</a>
-	    <a href="javascript:setAddressCity(26)" id="p_26">陕西</a>
-	    <a href="javascript:setAddressCity(27)" id="p_27">甘肃</a>
-	    <a href="javascript:setAddressCity(28)" id="p_28">青海</a>
-	    <a href="javascript:setAddressCity(30)" id="p_30">宁夏</a>
-	    <a href="javascript:setAddressCity(29)" id="p_29">新疆</a>
-    </dd>
+            </dl>
+            <dl class="last">
+                <dt>华中西北</dt>
+                <dd class="nobor">
+                    <a href="javascript:setAddressCity(18)" id="p_18">湖北</a>
+                    <a href="javascript:setAddressCity(19)" id="p_19">湖南</a>
+                    <a href="javascript:setAddressCity(17)" id="p_17">河南</a>
+                    <a href="javascript:setAddressCity(15)" id="p_15">江西</a>
+                    <a href="javascript:setAddressCity(26)" id="p_26">陕西</a>
+                    <a href="javascript:setAddressCity(27)" id="p_27">甘肃</a>
+                    <a href="javascript:setAddressCity(28)" id="p_28">青海</a>
+                    <a href="javascript:setAddressCity(30)" id="p_30">宁夏</a>
+                    <a href="javascript:setAddressCity(29)" id="p_29">新疆</a>
+                </dd>
 
-  </dl>
-  <p style="display:none" class="poptips" id="provincesPoptips">因各省份所售商品不同，如果您切换省份，部分商品可能会从购物车中移除</p>
-  <p class="ip_tips">
+            </dl>
+            <p style="display:none" class="poptips" id="provincesPoptips">因各省份所售商品不同，如果您切换省份，部分商品可能会从购物车中移除</p>
+            <p class="ip_tips">
 
-  </p>
-</div>
-  
-</div> 
- <!--content start-->
-	  <!--content start-->
-   <script type="text/javascript">
-    var resJsonData={};
-    if (typeof (JSON) == 'undefined'){
-    	resJsonData = (new Function("return " + '{"shopping.completeUI.bankTipOne1":"请于下单9天内支付您的款项","shopping.deliveryUI.weight":"重量(kg)","shopping.main.yipoyisuiProduct":"易损易破商品","shopping.receiverUI.phone":"或  固定电话","shopping.completeUI.bankTipTwo2":"天内转帐，若逾期未付款订单将被取消，需重新下单","shopping.main.yudingProduct":"预定商品","shopping.invoiceUI.btnSaveReceiptInfo":"保存发票信息","shopping.completeUI.bankTipTwo1":"为保证及时处理您的订单，请于","shopping.common.yihaodian":"1号店","shopping.paymentUI.bankTransfer":"银行转账","shopping.submitUI.needPay":"您需为订单支付","shopping.deliveryUI.title":"配送信息","shopping.invoiceUI.standardReceipt":"普通发票","shopping.receiverUI.receiverAddress":"收货地址","shopping.receiverUI.title":"收货信息","shopping.completeUI.netTipOne1":"为了保证及时处理您的订单，请于下单","shopping.deliveryUI.freeDeliveryFee":"免运费","shopping.deliveryUI.packages":"包裹(个)","shopping.completeUI.netTipOne2":"内付款，若逾期未付款订单将被取消，需重新下单。","shopping.invoiceUI.title":"发票信息","shopping.main.message":"温馨提示：商品列表中含<em>{0}<\/em>，该订单将拆分多个包裹配送给您","shopping.paymentUI.applyAccountBalance":"使用账户余额","shopping.completeUI.accountNumber":"账&#12288;号","shopping.common.modify":"修改","shopping.receiverUI.askDelAddress":"确定删除该收货地址？","shopping.main.lipingkaProduct":"礼品卡","shopping.completeUI.bankTipOne2":"元，祝您购物愉快！","shopping.deliveryUI.totalValue":"商品金额","shopping.common.cancelApply1":"取消","shopping.common.cancelApply2":"取消使用","shopping.submitUI.needPayBox":"您需支付","shopping.main.shangjiaSendProduct":"多个商家直送商品","shopping.paymentUI.swipCard":"货到刷卡","shopping.common.cancel":"取消","shopping.common.confirm":"确定","shopping.paymentUI.useGiftCard":"使用礼品卡激活","shopping.common.1mall":"1号商城","shopping.receiverUI.commonAddress":"常用地址","shopping.completeUI.tipRememberToPay":"您的订单已生成，请尽快支付订单！","shopping.deliveryUI.deliveryFeeGuide":"运费说明","shopping.invoiceUI.header":"发票抬头","shopping.receiverUI.newAddress":"使用新地址","shopping.completeUI.continueShopping":"继续购物","shopping.receiverUI.detailAddress":"详细地址","shopping.common.delete":"删除","shopping.common.apply":"使用","shopping.completeUI.mobileApp":"掌上1号店","shopping.submitUI.submitOrder":"提交订单","shopping.completeUI.seeOrderDetails":"查看订单详情","shopping.completeUI.otherPay":"选择其他网银支付方式","shopping.deliveryUI.standardDelivery":"普通快递","shopping.deliveryUI.deliveryFee":"运费","shopping.main.title":"填写核对订单信息","shopping.common.tipRemember":"温馨提示","shopping.receiverUI.useAlipayAddress":"使用支付宝地址","shopping.deliveryUI.saveDeliveryInfo":"保存配送信息","shopping.receiverUI.allAddress":"展开全部地址","shopping.common.yuan":"元","shopping.deliveryUI.preArrangedDelivery":"预约送货","shopping.commodityUI.title":"商品信息","shopping.paymentUI.title":"支付信息","shopping.paymentUI.cod":"货到付款","shopping.receiverUI.packupAddress":"收起地址","shopping.receiverUI.postSearchAddress":"邮编查询所在地区","shopping.paymentUI.applyDiscountCoupon":"使用抵用券","shopping.invoiceUI.content":"发票内容","shopping.receiverUI.receiverName":"收&nbsp;&nbsp;货 人","shopping.main.gysSendProduct":"供应商直送商品","shopping.invoiceUI.tipOne":"若您订购的是数码、手机、家电类商品、为了保证您能充分享受厂家提供的售后服务，我们将根据您订购商品的全称和型号开具内容并随单发送。","shopping.completeUI.bank":"开户行","shopping.receiverUI.deliveryGuide":"配送说明","shopping.receiverUI.mobile":"手机号码","shopping.common.close":"关闭","shopping.paymentUI.haveGiftCard":"已有礼品卡？","shopping.completeUI.accountName":"户&#12288;名","shopping.invoiceUI.btnCancelReceipt":"暂不要发票","shopping.completeUI.codTipOne":"元，请在收货时向送货员支付您的款项，祝您购物愉快，谢谢。","shopping.receiverUI.saveReceiverInfo":"保存收货信息","shopping.receiverUI.setCommonAddress":"设为常用地址","shopping.invoiceUI.vatReceipt":"增值税发票","shopping.invoiceUI.receiptType":"发票类型","shopping.completeUI.checkoutSurvey":"新版结算流程使用调查","shopping.common.edit":"编辑","shopping.paymentUI.payOnline":"网上支付"}'))();
-    }else{
-    	resJsonData = JSON.parse('{"shopping.completeUI.bankTipOne1":"请于下单9天内支付您的款项","shopping.deliveryUI.weight":"重量(kg)","shopping.main.yipoyisuiProduct":"易损易破商品","shopping.receiverUI.phone":"或  固定电话","shopping.completeUI.bankTipTwo2":"天内转帐，若逾期未付款订单将被取消，需重新下单","shopping.main.yudingProduct":"预定商品","shopping.invoiceUI.btnSaveReceiptInfo":"保存发票信息","shopping.completeUI.bankTipTwo1":"为保证及时处理您的订单，请于","shopping.common.yihaodian":"1号店","shopping.paymentUI.bankTransfer":"银行转账","shopping.submitUI.needPay":"您需为订单支付","shopping.deliveryUI.title":"配送信息","shopping.invoiceUI.standardReceipt":"普通发票","shopping.receiverUI.receiverAddress":"收货地址","shopping.receiverUI.title":"收货信息","shopping.completeUI.netTipOne1":"为了保证及时处理您的订单，请于下单","shopping.deliveryUI.freeDeliveryFee":"免运费","shopping.deliveryUI.packages":"包裹(个)","shopping.completeUI.netTipOne2":"内付款，若逾期未付款订单将被取消，需重新下单。","shopping.invoiceUI.title":"发票信息","shopping.main.message":"温馨提示：商品列表中含<em>{0}<\/em>，该订单将拆分多个包裹配送给您","shopping.paymentUI.applyAccountBalance":"使用账户余额","shopping.completeUI.accountNumber":"账&#12288;号","shopping.common.modify":"修改","shopping.receiverUI.askDelAddress":"确定删除该收货地址？","shopping.main.lipingkaProduct":"礼品卡","shopping.completeUI.bankTipOne2":"元，祝您购物愉快！","shopping.deliveryUI.totalValue":"商品金额","shopping.common.cancelApply1":"取消","shopping.common.cancelApply2":"取消使用","shopping.submitUI.needPayBox":"您需支付","shopping.main.shangjiaSendProduct":"多个商家直送商品","shopping.paymentUI.swipCard":"货到刷卡","shopping.common.cancel":"取消","shopping.common.confirm":"确定","shopping.paymentUI.useGiftCard":"使用礼品卡激活","shopping.common.1mall":"1号商城","shopping.receiverUI.commonAddress":"常用地址","shopping.completeUI.tipRememberToPay":"您的订单已生成，请尽快支付订单！","shopping.deliveryUI.deliveryFeeGuide":"运费说明","shopping.invoiceUI.header":"发票抬头","shopping.receiverUI.newAddress":"使用新地址","shopping.completeUI.continueShopping":"继续购物","shopping.receiverUI.detailAddress":"详细地址","shopping.common.delete":"删除","shopping.common.apply":"使用","shopping.completeUI.mobileApp":"掌上1号店","shopping.submitUI.submitOrder":"提交订单","shopping.completeUI.seeOrderDetails":"查看订单详情","shopping.completeUI.otherPay":"选择其他网银支付方式","shopping.deliveryUI.standardDelivery":"普通快递","shopping.deliveryUI.deliveryFee":"运费","shopping.main.title":"填写核对订单信息","shopping.common.tipRemember":"温馨提示","shopping.receiverUI.useAlipayAddress":"使用支付宝地址","shopping.deliveryUI.saveDeliveryInfo":"保存配送信息","shopping.receiverUI.allAddress":"展开全部地址","shopping.common.yuan":"元","shopping.deliveryUI.preArrangedDelivery":"预约送货","shopping.commodityUI.title":"商品信息","shopping.paymentUI.title":"支付信息","shopping.paymentUI.cod":"货到付款","shopping.receiverUI.packupAddress":"收起地址","shopping.receiverUI.postSearchAddress":"邮编查询所在地区","shopping.paymentUI.applyDiscountCoupon":"使用抵用券","shopping.invoiceUI.content":"发票内容","shopping.receiverUI.receiverName":"收&nbsp;&nbsp;货 人","shopping.main.gysSendProduct":"供应商直送商品","shopping.invoiceUI.tipOne":"若您订购的是数码、手机、家电类商品、为了保证您能充分享受厂家提供的售后服务，我们将根据您订购商品的全称和型号开具内容并随单发送。","shopping.completeUI.bank":"开户行","shopping.receiverUI.deliveryGuide":"配送说明","shopping.receiverUI.mobile":"手机号码","shopping.common.close":"关闭","shopping.paymentUI.haveGiftCard":"已有礼品卡？","shopping.completeUI.accountName":"户&#12288;名","shopping.invoiceUI.btnCancelReceipt":"暂不要发票","shopping.completeUI.codTipOne":"元，请在收货时向送货员支付您的款项，祝您购物愉快，谢谢。","shopping.receiverUI.saveReceiverInfo":"保存收货信息","shopping.receiverUI.setCommonAddress":"设为常用地址","shopping.invoiceUI.vatReceipt":"增值税发票","shopping.invoiceUI.receiptType":"发票类型","shopping.completeUI.checkoutSurvey":"新版结算流程使用调查","shopping.common.edit":"编辑","shopping.paymentUI.payOnline":"网上支付"}');//全局的资源的json数据
-    }
-     
-     function getResPageInfo(strKey){
-     	return resJsonData[strKey];
-     }
-   </script>
-<script src="http://api.map.baidu.com/api?v=2.0&ak=Ani8myMl2yth7hTNKoBZE0OW" type="text/javascript"></script><script src="http://api.map.baidu.com/getscript?v=2.0&ak=Ani8myMl2yth7hTNKoBZE0OW&services=&t=20160224094302" type="text/javascript"></script>
-<div id="checkoutV3HeadDiv" class="headBCST_box headBCST_yhd cfx">
-    <div class="headBCST_Main cfx">
-        <a data-tpa="TITLE_GO_YHD_INDEX" href="index.html" class="headBCST_logo"></a>
-			<div class="headBCST_step step2_headBCST"><a data-tpa="TITLE_TO_CART" title="返回购物车" href="cart.html" onclick="addTrackPositionToCookie(1,'checkoutBackToCart');">查看购物车</a></div>
+            </p>
+        </div>
+
     </div>
-</div>
-<div class="templateBox">
-	<textarea id="checkoutV3HeadTemplate">			<div class="headBCST_Main cfx" >
+    <!--content start-->
+    <!--content start-->
+    <script type="text/javascript">
+        var resJsonData = {};
+        if (typeof (JSON) == 'undefined') {
+            resJsonData = (new Function("return " + '{"shopping.completeUI.bankTipOne1":"请于下单9天内支付您的款项","shopping.deliveryUI.weight":"重量(kg)","shopping.main.yipoyisuiProduct":"易损易破商品","shopping.receiverUI.phone":"或  固定电话","shopping.completeUI.bankTipTwo2":"天内转帐，若逾期未付款订单将被取消，需重新下单","shopping.main.yudingProduct":"预定商品","shopping.invoiceUI.btnSaveReceiptInfo":"保存发票信息","shopping.completeUI.bankTipTwo1":"为保证及时处理您的订单，请于","shopping.common.yihaodian":"1号店","shopping.paymentUI.bankTransfer":"银行转账","shopping.submitUI.needPay":"您需为订单支付","shopping.deliveryUI.title":"配送信息","shopping.invoiceUI.standardReceipt":"普通发票","shopping.receiverUI.receiverAddress":"收货地址","shopping.receiverUI.title":"收货信息","shopping.completeUI.netTipOne1":"为了保证及时处理您的订单，请于下单","shopping.deliveryUI.freeDeliveryFee":"免运费","shopping.deliveryUI.packages":"包裹(个)","shopping.completeUI.netTipOne2":"内付款，若逾期未付款订单将被取消，需重新下单。","shopping.invoiceUI.title":"发票信息","shopping.main.message":"温馨提示：商品列表中含<em>{0}<\/em>，该订单将拆分多个包裹配送给您","shopping.paymentUI.applyAccountBalance":"使用账户余额","shopping.completeUI.accountNumber":"账&#12288;号","shopping.common.modify":"修改","shopping.receiverUI.askDelAddress":"确定删除该收货地址？","shopping.main.lipingkaProduct":"礼品卡","shopping.completeUI.bankTipOne2":"元，祝您购物愉快！","shopping.deliveryUI.totalValue":"商品金额","shopping.common.cancelApply1":"取消","shopping.common.cancelApply2":"取消使用","shopping.submitUI.needPayBox":"您需支付","shopping.main.shangjiaSendProduct":"多个商家直送商品","shopping.paymentUI.swipCard":"货到刷卡","shopping.common.cancel":"取消","shopping.common.confirm":"确定","shopping.paymentUI.useGiftCard":"使用礼品卡激活","shopping.common.1mall":"1号商城","shopping.receiverUI.commonAddress":"常用地址","shopping.completeUI.tipRememberToPay":"您的订单已生成，请尽快支付订单！","shopping.deliveryUI.deliveryFeeGuide":"运费说明","shopping.invoiceUI.header":"发票抬头","shopping.receiverUI.newAddress":"使用新地址","shopping.completeUI.continueShopping":"继续购物","shopping.receiverUI.detailAddress":"详细地址","shopping.common.delete":"删除","shopping.common.apply":"使用","shopping.completeUI.mobileApp":"掌上1号店","shopping.submitUI.submitOrder":"提交订单","shopping.completeUI.seeOrderDetails":"查看订单详情","shopping.completeUI.otherPay":"选择其他网银支付方式","shopping.deliveryUI.standardDelivery":"普通快递","shopping.deliveryUI.deliveryFee":"运费","shopping.main.title":"填写核对订单信息","shopping.common.tipRemember":"温馨提示","shopping.receiverUI.useAlipayAddress":"使用支付宝地址","shopping.deliveryUI.saveDeliveryInfo":"保存配送信息","shopping.receiverUI.allAddress":"展开全部地址","shopping.common.yuan":"元","shopping.deliveryUI.preArrangedDelivery":"预约送货","shopping.commodityUI.title":"商品信息","shopping.paymentUI.title":"支付信息","shopping.paymentUI.cod":"货到付款","shopping.receiverUI.packupAddress":"收起地址","shopping.receiverUI.postSearchAddress":"邮编查询所在地区","shopping.paymentUI.applyDiscountCoupon":"使用抵用券","shopping.invoiceUI.content":"发票内容","shopping.receiverUI.receiverName":"收&nbsp;&nbsp;货 人","shopping.main.gysSendProduct":"供应商直送商品","shopping.invoiceUI.tipOne":"若您订购的是数码、手机、家电类商品、为了保证您能充分享受厂家提供的售后服务，我们将根据您订购商品的全称和型号开具内容并随单发送。","shopping.completeUI.bank":"开户行","shopping.receiverUI.deliveryGuide":"配送说明","shopping.receiverUI.mobile":"手机号码","shopping.common.close":"关闭","shopping.paymentUI.haveGiftCard":"已有礼品卡？","shopping.completeUI.accountName":"户&#12288;名","shopping.invoiceUI.btnCancelReceipt":"暂不要发票","shopping.completeUI.codTipOne":"元，请在收货时向送货员支付您的款项，祝您购物愉快，谢谢。","shopping.receiverUI.saveReceiverInfo":"保存收货信息","shopping.receiverUI.setCommonAddress":"设为常用地址","shopping.invoiceUI.vatReceipt":"增值税发票","shopping.invoiceUI.receiptType":"发票类型","shopping.completeUI.checkoutSurvey":"新版结算流程使用调查","shopping.common.edit":"编辑","shopping.paymentUI.payOnline":"网上支付"}'))();
+        } else {
+            resJsonData = JSON.parse('{"shopping.completeUI.bankTipOne1":"请于下单9天内支付您的款项","shopping.deliveryUI.weight":"重量(kg)","shopping.main.yipoyisuiProduct":"易损易破商品","shopping.receiverUI.phone":"或  固定电话","shopping.completeUI.bankTipTwo2":"天内转帐，若逾期未付款订单将被取消，需重新下单","shopping.main.yudingProduct":"预定商品","shopping.invoiceUI.btnSaveReceiptInfo":"保存发票信息","shopping.completeUI.bankTipTwo1":"为保证及时处理您的订单，请于","shopping.common.yihaodian":"1号店","shopping.paymentUI.bankTransfer":"银行转账","shopping.submitUI.needPay":"您需为订单支付","shopping.deliveryUI.title":"配送信息","shopping.invoiceUI.standardReceipt":"普通发票","shopping.receiverUI.receiverAddress":"收货地址","shopping.receiverUI.title":"收货信息","shopping.completeUI.netTipOne1":"为了保证及时处理您的订单，请于下单","shopping.deliveryUI.freeDeliveryFee":"免运费","shopping.deliveryUI.packages":"包裹(个)","shopping.completeUI.netTipOne2":"内付款，若逾期未付款订单将被取消，需重新下单。","shopping.invoiceUI.title":"发票信息","shopping.main.message":"温馨提示：商品列表中含<em>{0}<\/em>，该订单将拆分多个包裹配送给您","shopping.paymentUI.applyAccountBalance":"使用账户余额","shopping.completeUI.accountNumber":"账&#12288;号","shopping.common.modify":"修改","shopping.receiverUI.askDelAddress":"确定删除该收货地址？","shopping.main.lipingkaProduct":"礼品卡","shopping.completeUI.bankTipOne2":"元，祝您购物愉快！","shopping.deliveryUI.totalValue":"商品金额","shopping.common.cancelApply1":"取消","shopping.common.cancelApply2":"取消使用","shopping.submitUI.needPayBox":"您需支付","shopping.main.shangjiaSendProduct":"多个商家直送商品","shopping.paymentUI.swipCard":"货到刷卡","shopping.common.cancel":"取消","shopping.common.confirm":"确定","shopping.paymentUI.useGiftCard":"使用礼品卡激活","shopping.common.1mall":"1号商城","shopping.receiverUI.commonAddress":"常用地址","shopping.completeUI.tipRememberToPay":"您的订单已生成，请尽快支付订单！","shopping.deliveryUI.deliveryFeeGuide":"运费说明","shopping.invoiceUI.header":"发票抬头","shopping.receiverUI.newAddress":"使用新地址","shopping.completeUI.continueShopping":"继续购物","shopping.receiverUI.detailAddress":"详细地址","shopping.common.delete":"删除","shopping.common.apply":"使用","shopping.completeUI.mobileApp":"掌上1号店","shopping.submitUI.submitOrder":"提交订单","shopping.completeUI.seeOrderDetails":"查看订单详情","shopping.completeUI.otherPay":"选择其他网银支付方式","shopping.deliveryUI.standardDelivery":"普通快递","shopping.deliveryUI.deliveryFee":"运费","shopping.main.title":"填写核对订单信息","shopping.common.tipRemember":"温馨提示","shopping.receiverUI.useAlipayAddress":"使用支付宝地址","shopping.deliveryUI.saveDeliveryInfo":"保存配送信息","shopping.receiverUI.allAddress":"展开全部地址","shopping.common.yuan":"元","shopping.deliveryUI.preArrangedDelivery":"预约送货","shopping.commodityUI.title":"商品信息","shopping.paymentUI.title":"支付信息","shopping.paymentUI.cod":"货到付款","shopping.receiverUI.packupAddress":"收起地址","shopping.receiverUI.postSearchAddress":"邮编查询所在地区","shopping.paymentUI.applyDiscountCoupon":"使用抵用券","shopping.invoiceUI.content":"发票内容","shopping.receiverUI.receiverName":"收&nbsp;&nbsp;货 人","shopping.main.gysSendProduct":"供应商直送商品","shopping.invoiceUI.tipOne":"若您订购的是数码、手机、家电类商品、为了保证您能充分享受厂家提供的售后服务，我们将根据您订购商品的全称和型号开具内容并随单发送。","shopping.completeUI.bank":"开户行","shopping.receiverUI.deliveryGuide":"配送说明","shopping.receiverUI.mobile":"手机号码","shopping.common.close":"关闭","shopping.paymentUI.haveGiftCard":"已有礼品卡？","shopping.completeUI.accountName":"户&#12288;名","shopping.invoiceUI.btnCancelReceipt":"暂不要发票","shopping.completeUI.codTipOne":"元，请在收货时向送货员支付您的款项，祝您购物愉快，谢谢。","shopping.receiverUI.saveReceiverInfo":"保存收货信息","shopping.receiverUI.setCommonAddress":"设为常用地址","shopping.invoiceUI.vatReceipt":"增值税发票","shopping.invoiceUI.receiptType":"发票类型","shopping.completeUI.checkoutSurvey":"新版结算流程使用调查","shopping.common.edit":"编辑","shopping.paymentUI.payOnline":"网上支付"}');//全局的资源的json数据
+        }
+
+        function getResPageInfo(strKey) {
+            return resJsonData[strKey];
+        }
+    </script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=Ani8myMl2yth7hTNKoBZE0OW" type="text/javascript"></script>
+    <script src="http://api.map.baidu.com/getscript?v=2.0&ak=Ani8myMl2yth7hTNKoBZE0OW&services=&t=20160224094302" type="text/javascript"></script>
+    <div id="checkoutV3HeadDiv" class="headBCST_box headBCST_yhd cfx">
+        <div class="headBCST_Main cfx">
+            <a data-tpa="TITLE_GO_YHD_INDEX" href="index.html" class="headBCST_logo"></a>
+            <div class="headBCST_step step2_headBCST"><a data-tpa="TITLE_TO_CART" title="返回购物车" href="cart.html"
+                    onclick="addTrackPositionToCookie(1,'checkoutBackToCart');">查看购物车</a></div>
+        </div>
+    </div>
+    <div class="templateBox">
+        <textarea id="checkoutV3HeadTemplate">			<div class="headBCST_Main cfx" >
 		    	<a class="headBCST_logo" href="index.html" data-tpa="TITLE_GO_YHD_INDEX"></a>
 				{#if $P.getIsFlashFastBuy()}
 					<div class="headBCST_step headBCST_flashfast" ></div>
@@ -189,373 +195,611 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 				</div>
 			{#/if}
 	</textarea>
-</div>
-&#65279;&#65279;<div xmlns="http://www.w3.org/1999/html" class="containerBox clearfix" id="SettlementProcess">
-    <h1>填写核对订单信息</h1>
-    <div id="haigouSplitMsg"></div>
-    <div id="1mallHaigouSplitMsg"></div>
-    <div id="splitMsg"></div>
-    <div data-tpa="RECEIPT_INFO" class="checkInforBox" id="ReceiptInfo"><!--newUser-->
-        <h2>收货信息
-        <div id="receiverAD" class="adverPositon none"></div></h2>
-        <div class="addressListBox showRow1" id="addressList">
-           <ul>               <li selffetch="false" addressid="76567122" class="slt">                   <p><b name="receiverName">素材火</b>收</p>                   <p class="listAddressShow">上海 黄浦区</p>                   <p class="listAddressShow">斜土路768号大厦5F座</p>                   <p>1800*****38</p>                   <div class="operaNav"><span class="editBt">编缉</span><em class="defaultAddressTag">常用地址</em></div>                   <sup class="closeSTB"></sup><sub></sub>               </li>        </ul> 
-           <div id="scrollBarMap">
-               <p> </p>
-           </div>
+    </div>
+    &#65279;&#65279;<div xmlns="http://www.w3.org/1999/html" class="containerBox clearfix" id="SettlementProcess">
+        <h1>填写核对订单信息</h1>
+        <div id="haigouSplitMsg"></div>
+        <div id="1mallHaigouSplitMsg"></div>
+        <div id="splitMsg"></div>
+        <div data-tpa="RECEIPT_INFO" class="checkInforBox" id="ReceiptInfo">
+            <!--newUser-->
+            <h2>收货信息
+                <div id="receiverAD" class="adverPositon none"></div>
+            </h2>
+            <div class="addressListBox showRow1" id="addressList">
+                <ul>
+                    <li selffetch="false" addressid="76567122" class="slt">
+                        <p><b name="receiverName">素材火</b>收</p>
+                        <p class="listAddressShow">上海 黄浦区</p>
+                        <p class="listAddressShow">斜土路768号大厦5F座</p>
+                        <p>1800*****38</p>
+                        <div class="operaNav"><span class="editBt">编缉</span><em class="defaultAddressTag">常用地址</em></div>
+                        <sup class="closeSTB"></sup><sub></sub>
+                    </li>
+                </ul>
+                <div id="scrollBarMap">
+                    <p> </p>
+                </div>
+            </div>
+            <div id="showAddressOperatBt" style="display: none;"><span class="bLink">展开其他地址<s></s></span></div>
+            <div id="addAddressOperatBt"><span class="Bt Btw2">使用新地址<s></s></span> <span title="使用支付宝地址" class="usingAlipayAddressCss"
+                    id="usingAlipaySpecial" style="display: none;"></span>
+                <span id="usingSelfPickup" class="Bt Btw2 none" style="display: none;">使用自提服务<s></s></span>
+                <div id="usingSelfPickup_tip" class="none" style="display: none;">
+                    <i></i>
+                    <ins><s></s>温馨提示：</ins>
+                    <p>1号店现已推出自提服务，您可以选择将所购商品送到自提点，不再担心因外出而错失签收包裹</p>
+                </div>
+            </div>
+            <!-- 定金预售-->
+            <div style="display:none" id="bookedPreSell"></div>
         </div>
-        <div id="showAddressOperatBt" style="display: none;"><span class="bLink">展开其他地址<s></s></span></div>
-        <div id="addAddressOperatBt"><span class="Bt Btw2">使用新地址<s></s></span>  <span title="使用支付宝地址" class="usingAlipayAddressCss" id="usingAlipaySpecial" style="display: none;"></span>
-        <span id="usingSelfPickup" class="Bt Btw2 none" style="display: none;">使用自提服务<s></s></span>
-        	<div id="usingSelfPickup_tip" class="none" style="display: none;">
-                <i></i>
-                <ins><s></s>温馨提示：</ins>
-                <p>1号店现已推出自提服务，您可以选择将所购商品送到自提点，不再担心因外出而错失签收包裹</p>
+        <div data-tpa="DELIVERY_INFO" class="distrInfo checkInforBox" id="deliveryUI">
+            <h2 class="infoTitle">配送信息
+                <span id="deliveryInfoTip" class="adverPositon" style="display: none;">包裹信息可能已修改，请重新确定配送方式 </span>
+                <div id="deliveryAD" class="adverPositon none"></div>
+            </h2>
+            <div class="showInfoOrder" id="DeliveryDisplayDiv">
+                <h3>1号店自营</h3>
+                <table cellspacing="0" cellpadding="0" border="0" class="showInfoOrder inshop">
+                    <tbody>
+                        <tr>
+                            <th>包裹</th>
+                            <th class="slow_service"> 配送方式 </th>
+                            <th>运费</th>
+                            <th> 备注 </th>
+                        </tr>
+                        <tr>
+                            <td class="DeliveryShowTd">
+                                <div class="DeliveryShowBox"> 包裹1<i>(查看)</i>
+                                    <div class="DeliveryInfoBox">
+                                        <table cellspacing="0" cellpadding="0" border="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>商品名称</th>
+                                                    <th class="num">数量(个)</th>
+                                                    <th class="weight">重量(kg)</th>
+                                                    <th class="sum">金额小计</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tit"> 双汇 王中王 优级火腿肠 400g/袋 </td>
+                                                    <td> 1 </td>
+                                                    <td> 0.422 </td>
+                                                    <td> ¥13.9 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tit"> Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口 </td>
+                                                    <td> 1 </td>
+                                                    <td> 0.26 </td>
+                                                    <td> ¥9.9 </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="sellment">重量(kg)：0.682&#12288;&#12288;商品金额：<em>23.8</em>元</div>
+                                        <sub class="singleSup"><sup class="sgbd"></sup><sup></sup></sub> <span title="关闭"
+                                            class="closeDeliveryPop"></span> <s class="boxBdBg"></s>
+                                    </div>
+                                </div>
+                            </td>
+                            <td rowspan="1" class="deliverMethod">
+                                <table cellspacing="0" cellpadding="0" border="0" class="delivMehoedSltBox">
+                                    <tbody>
+                                        <tr>
+                                            <td class="delivMehoedSlt"> <input type="radio" onclick="gotracker('2','deliveryTypeNormal',null);"
+                                                    class="hidden" selected="true" checked="checked" name="1_1_1" value="10001">
+                                            </td>
+                                            <td valign="middle" class="delivMehoedSltTxt">
+                                                <div style="z-index:19" class="mod_selectDate">
+                                                    <div ordermark="1_1_1" class="timedDelivery_btn_input">
+                                                        <div class="timedDelivery_input clearfix"> <span class="text">
+                                                                任意日期<em>（普通快递）</em> </span> <i class="icon data_icon"></i>
+                                                        </div>
+                                                        <div class="freeTips" style="display: block;">
+                                                            <div class="text"><i></i><span class="onTimeFee">点击这里选择收货时间</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sel_list_box clearfix none">
+                                                        <div class="sel_list sel1">
+                                                            <div class="ul_box scroll-pane">
+                                                                <ul>
+                                                                    <li>任意日期<i class="icon free"></i></li>
+                                                                    <li class="t dis">周二<span>03-01<i class="icon right_arrow"></i></span></li>
+                                                                    <li class="t">周三<span>03-02<i class="icon right_arrow"></i></span></li>
+                                                                    <li class="t">周四<span>03-03<i class="icon right_arrow"></i></span></li>
+                                                                    <li class="t">周五<span>03-04<i class="icon right_arrow"></i></span></li>
+                                                                    <li class="t">周六<span>03-05<i class="icon right_arrow"></i></span></li>
+                                                                    <li class="t">周日<span>03-06<i class="icon right_arrow"></i></span></li>
+                                                                    <li class="t">周一<span>03-07<i class="icon right_arrow"></i></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td rowspan="1" class="freight"> <b> <b>¥10</b> </b>
+                                <div class="freightInfo">
+                                    <p> </p>
+                                </div>
+                            </td>
+                            <td rowspan="1" class="remark"> 预计商品下单后明日送达 </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rece_box editeDeliveryBt"><button type="button" class="bt_yrt6 saveOrderDelivery">保存配送信息</button>
+                <!--<small class="PromptInfo">储蓄卡单笔最高限额¥1000,000,信用卡单笔最高限额¥1000</small>-->
             </div>
         </div>
-        <!-- 定金预售-->
-        <div style="display:none" id="bookedPreSell"></div>
-    </div>
-    <div data-tpa="DELIVERY_INFO" class="distrInfo checkInforBox" id="deliveryUI">
-        <h2 class="infoTitle">配送信息
-	        <span id="deliveryInfoTip" class="adverPositon" style="display: none;">包裹信息可能已修改，请重新确定配送方式 </span>
-	        <div id="deliveryAD" class="adverPositon none"></div>
-        </h2>
-        <div class="showInfoOrder" id="DeliveryDisplayDiv">        <h3>1号店自营</h3>        <table cellspacing="0" cellpadding="0" border="0" class="showInfoOrder inshop">            <tbody>                <tr>                    <th>包裹</th>                    <th class="slow_service">                                                    配送方式                                            </th>                    <th>运费</th>                    <th>                                                                                备注                                        </th>                </tr>                                                        <tr>                        <td class="DeliveryShowTd">                           <div class="DeliveryShowBox">                                                                                      包裹1<i>(查看)</i>                                <div class="DeliveryInfoBox">                                    <table cellspacing="0" cellpadding="0" border="0">                                        <thead><tr><th>商品名称</th><th class="num">数量(个)</th><th class="weight">重量(kg)</th><th class="sum">金额小计</th></tr></thead>                                        <tbody>                                                                                        <tr>                                                <td class="tit">                                                	                                                                                                        双汇 王中王 优级火腿肠 400g/袋                                                                                                                                                                                                            </td>                                                <td>                                                    1                                                </td>                                                <td>                                                    0.422                                                </td>                                                <td>                                                                                                            ¥13.9                                                                                                    </td>                                            </tr>                                                                                                                                    <tr>                                                <td class="tit">                                                	                                                                                                        Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口                                                                                                                                                                                                            </td>                                                <td>                                                    1                                                </td>                                                <td>                                                    0.26                                                </td>                                                <td>                                                                                                            ¥9.9                                                                                                    </td>                                            </tr>                                                                                                                                </tbody>                                    </table>                                    <div class="sellment">重量(kg)：0.682&#12288;&#12288;商品金额：<em>23.8</em>元</div>                                    <sub class="singleSup"><sup class="sgbd"></sup><sup></sup></sub>                                    <span title="关闭" class="closeDeliveryPop"></span>                                    <s class="boxBdBg"></s>                                </div>                            </div>                        </td>                                                                        <td rowspan="1" class="deliverMethod">                            <table cellspacing="0" cellpadding="0" border="0" class="delivMehoedSltBox">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <tbody><tr>                                            <td class="delivMehoedSlt">                                                <input type="radio" onclick="gotracker('2','deliveryTypeNormal',null);" class="hidden" selected="true" checked="checked" name="1_1_1" value="10001">                                            </td>                                            <td valign="middle" class="delivMehoedSltTxt">                                                <div style="z-index:19" class="mod_selectDate">                                                    <div ordermark="1_1_1" class="timedDelivery_btn_input">                                                        <div class="timedDelivery_input clearfix">                                                            <span class="text">                                                                                                                                                                                                                          任意日期<em>（普通快递）</em>                                                                                                                        </span>                                                            <i class="icon data_icon"></i>                                                        </div>                                                        <div class="freeTips" style="display: block;"><div class="text"><i></i><span class="onTimeFee">点击这里选择收货时间</span></div></div>                                                    </div><div class="sel_list_box clearfix none"><div class="sel_list sel1"><div class="ul_box scroll-pane"><ul><li>任意日期<i class="icon free"></i></li><li class="t dis">周二<span>03-01<i class="icon right_arrow"></i></span></li><li class="t">周三<span>03-02<i class="icon right_arrow"></i></span></li><li class="t">周四<span>03-03<i class="icon right_arrow"></i></span></li><li class="t">周五<span>03-04<i class="icon right_arrow"></i></span></li><li class="t">周六<span>03-05<i class="icon right_arrow"></i></span></li><li class="t">周日<span>03-06<i class="icon right_arrow"></i></span></li><li class="t">周一<span>03-07<i class="icon right_arrow"></i></span></li></ul></div></div></div>                                                </div>                                                </td>                                        </tr>                                                                                                                                                                                                                                                                                                                </tbody></table>                        </td>                                                                        			                        <td rowspan="1" class="freight">		                            <b>		                            		<b>¥10</b>		                            	</b>		                            <div class="freightInfo">		                                <p>		                                    		                                </p>		                            </div>		                        </td>                        	                                                                                                <td rowspan="1" class="remark">                                                        		                            	                                	                                                                                                                  预计商品下单后明日送达                                        	                                	                                	                                	                                                                                </td>                                            </tr>                         	                    </tbody>        </table>        </div>
-        <div class="rece_box editeDeliveryBt"><button type="button" class="bt_yrt6 saveOrderDelivery">保存配送信息</button><!--<small class="PromptInfo">储蓄卡单笔最高限额¥1000,000,信用卡单笔最高限额¥1000</small>--></div>
-    </div>
-    <div data-tpa="INVOICE_INFO" class="Invoice checkInforBox" id="invoiceUI">
-        <h2 class="infoTitle">发票信息   <label><a id="invoiceModify" href="javascript:void(0);">[修改]</a></label>
-        </h2>
-        <ul class="showInfoOrder" id="InvoiceDisplayDiv">	    					<li><b>发票类型：</b>普通发票</li>									<li><b>开票方式：</b>电子发票</li>                       <li><b>手机号码：</b>1800*****38</li>																	<li><b>发票内容：</b>					日用品					<span class="ml20">需要商品清单</span>					</li>				            						           <div id="displayNormalInvoiceNotice" class="msgBx">              		<ins><s></s>温馨提示：</ins>	               	<p>  发票金额为现金支付金额（扣除礼品卡金额，抵用券，返利金额等）。</p>	               		               		<p class="mt5"> 电子发票是税务局认可的有效付款凭证，支持企业报销，请先确认所属公司是否支持。</p>	               		               		               		           </div>						<input type="hidden" value="1" id="displayNeedProductDetail">		</ul>
-        <div class="invoiceForm clearfix" id="InvoiceEditDiv"></div>
-    </div>
-    <div data-tpa="PAYMENT_INFO" class="payInfo checkInforBox" id="paymentUI">
-        <h2 class="infoTitle">支付及抵用券信息
-            <!-- deleted by YinQifang on 2013-7-26 <span class="btTit none">[修改]</span> -->
-			<span id="paymentInfoTip" class="adverPositon none" style="display: none;">收货地址或配送方式已修改，请重新确定支付方式 </span>
-        	<div id="paymentAD" class="adverPositon none" style="display: block;"><small>"货到支付宝扫码支付"暂不支持信用卡付款，给您带来不便敬请谅解</small></div>
-        </h2>
-        <ul class="showInfoOrder" id="paymentDisplayLayout" style="display: none;">请先确认"发票信息"</ul>
-        <div class="payment_box" id="coupon_payment">        <div id="vouchers" class="vouchers voucherListHide">            <p class="mt10 seeVoucherNum"><a target="_blank" href="http://coupon.yhd.com/active" class="addVoucherBt">激活抵用券</a><s class="ico_ocVoucher"></s><b>使用抵用券</b>（您当前订单无可用抵用券）</p>                           <div style="" id="noVoucherCanList" class="noVoucherCanList">您当前无可用抵用券</div>                                            </div></div>
-		<div class="payment_box headPayment" id="account_payment">        <div class="card_account_payment clearfix">            <div class="voucher lpk cardAccount fl">                                <label for="paidByCardAccount">使用礼品卡余额</label> (仅限1号店自营商品)            </div>            <div class="voucher lpk cardAccount fr">                <span class="usingGifcard">已有礼品卡？                    <b class="gcardRechage" onclick="popGiftcard();gotracker('2','useCard',null);">使用礼品卡激活充值</b>                </span>            </div>        </div>        <div class="card_account_payment clearfix">            <div class="voucher lpk cardAccount fl">                                您当前可用余额<strong>¥0</strong>，最多可用<strong>¥0</strong>            </div>            <div class="account_ded fl" id="zh_card">                                                                                                       您礼品卡可用余额为零，无法使用礼品卡余额支付                                                </div>            <div class="voucher_list likCont fl" id="lpkDisplay">                                            已使用<b>¥0</b>                <a href="javascript:void(0);" onclick="showPaidByAccountButton('card');gotracker('2','editGiftCardAmount',null);">修改</a>            </div>        </div>                <div class="cash_account_payment clearfix">            <div class="voucher lpk cashAccount fl">                                <label for="paidByCashAccount">使用账户余额</label>            </div>        </div>        <div class="cash_account_payment clearfix">            <div class="voucher lpk cashAccount fl">                您当前有<strong id="balance">¥0</strong>可用余额            </div>            <div class="account_ded fl" id="zh">                                                您账户余额为零，无法使用账户余额                                        </div>            <div class="voucher_list likCont fl" id="zhDisplay">已使用余额<b>¥0</b> &nbsp;已使用返利<b>¥0</b>                <a href="javascript:void(0);" onclick="showPaidByAccountButton('cash');gotracker('2','editAccountAmount',null);">修改金额</a>            </div>        </div></div>
-        <div class="payment_box shadow_border" id="inputUI_payment" style="display: block;"><div class="radio_select none">    	</div>    	    		    		    		    		    		    			<div id="pAlipay" class="radio_select pay_method_item not_support">    				<input type="radio" name="payment" id="radio_alipay" methodtype="12" methodid="0" disabled="">    				<label for="radio_alipay">货到支付宝扫码支付                                            </label>	                						<span class="text_sorry">                            			                			                	订单中                                <span class="product">                                    <em>下列商品                                        <s></s>    				            	</em>        			                <span style="display: none;" class="product_win">        			                    <span class="product_list">        			                   		                                            <span style="margin-bottom: 0px; border: 0px none;" class="product_item">                                                <img height="56" width="56" src="images/CgQCr1M5L72AXNXPAALcS7bN_zU67901_40x40.jpg" alt="">                                                <span class="product_info">                                                    <a>双汇 王中王 优级火腿肠 400g/袋</a>                                                </span>                                            </span>        	                            	                                            <span style="margin-bottom: 0px; border: 0px none;" class="product_item">                                                <img height="56" width="56" src="images/CgQCr1PXDfuAXm4EAAQVONKdI6438001_40x40.jpg" alt="">                                                <span class="product_info">                                                    <a>Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口</a>                                                </span>                                            </span>        	                            	        			                    </span>        			                </span>                                </span>金额小于¥50不支持货到支付宝扫码支付			                				                                                                        			                			                						</span>	                	            </div>    		    		    		                		    		    	    						<div id="pCod" class="radio_select pay_method_item not_support">				    <input type="radio" name="payment" id="radio_money" methodtype="2" methodid="0" disabled="">	   				<label for="radio_money">货到付现金</label>	   										<span class="text_sorry">                            			                			                	订单中                                <span class="product">                                    <em>下列商品                                        <s></s>    				            	</em>    				                <span style="display: none;" class="product_win">    				                    <span class="product_list">    				                   		    	                                    <span style="margin-bottom: 0px; border: 0px none;" class="product_item">    	                                        <img height="56" width="56" src="images/CgQCr1M5L72AXNXPAALcS7bN_zU67901_40x40.jpg" alt="">    	                                        <span class="product_info">    	                                            <a>双汇 王中王 优级火腿肠 400g/袋</a>    	                                        </span>    	                                    </span>    		                            	    	                                    <span style="margin-bottom: 0px; border: 0px none;" class="product_item">    	                                        <img height="56" width="56" src="images/CgQCr1PXDfuAXm4EAAQVONKdI6438001_40x40.jpg" alt="">    	                                        <span class="product_info">    	                                            <a>Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口</a>    	                                        </span>    	                                    </span>    		                            	    				                    </span>    				                </span>                                </span>金额小于¥50不支持货到付现金			                				                			                                            			                			                						</span>	                	            </div>    		    		    		    		    		    		    		                		    		    	    		    		    			<div id="pPos" class="radio_select pay_method_item not_support">    				<input type="radio" name="payment" id="radio_pos" methodtype="5" methodid="0" disabled="">    				<label for="radio_pos">货到刷卡</label>	                						<span class="text_sorry">                            			                			                	订单中                                <span class="product">                                    <em>下列商品                                        <s></s>    				            	</em>        			                <span style="display: none;" class="product_win">        			                    <span class="product_list">        			                   		                                            <span style="margin-bottom: 0px; border: 0px none;" class="product_item">                                                <img height="56" width="56" src="images/CgQCr1M5L72AXNXPAALcS7bN_zU67901_40x40.jpg" alt="">                                                <span class="product_info">                                                    <a>双汇 王中王 优级火腿肠 400g/袋</a>                                                </span>                                            </span>        	                            	                                            <span style="margin-bottom: 0px; border: 0px none;" class="product_item">                                                <img height="56" width="56" src="images/CgQCr1PXDfuAXm4EAAQVONKdI6438001_40x40.jpg" alt="">                                                <span class="product_info">                                                    <a>Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口</a>                                                </span>                                            </span>        	                            	        			                    </span>        			                </span>                                </span>金额小于¥50不支持货到刷卡			                				                                                                        			                			                						</span>	                	            </div>    		    		    		    		    		    		                		    		    	    		    		    		    		    		    		    		                			    		<div id="pNet" class="radio_select pay_method_item on_click">	                <input type="radio" name="payment" id="radio_int_bank" methodtype="1" methodid="50" checked="checked">	                <label for="radio_int_bank">网上支付</label>	                <span class="des">	                    	                    	为了保证及时处理您的订单，请您下单<em>24小时内</em>付款。	                    	                 </span>	            </div>    		    		    	    		    		    		    		    		    		    		                		    		                <div id="pBank" class="radio_select pay_method_item not_support">                    <input type="radio" name="payment" id="radio_bank" disabled="" methodtype="4" methodid="0">                    <label for="radio_bank">银行转账</label>                                        <span class="text_sorry">                            	                    	                	订单金额小于¥5000，不支持银行转账    	                                            				</span>                                    </div>    		    	</div>
-		<div class="payment_box shadow_border" id="fully_paid" style="display: none;"><p>已全额支付订单</p></div>
-    </div>
-    <div class="iphoneDisplayUI checkInforBox none" id="iphoneDisplayUI">
-    	<h2 class="infoTitle">合约计划信息</h2>
-    	<ul class="showInfoOrder" id="iphoneDisplayDiv"></ul>
-    </div>
-    <div class="iphoneDisplayUI checkInforBox none" id="contractPhoneDisplayUI">
-    	<h2 class="infoTitle">合约计划信息</h2>
-    	<div class="showInfoOrder" id="contractPhoneDisplayDiv"></div>
-    </div>
-    <!-- 新合约机机用户信息模块 -->
-    <div class="userInfo checkInforBox none" id="contractPhoneUserInfo">
-		<h2 class="infoTitle">用户信息</h2>
-	    <div class="info_wrapper">
-            <div class="clearfix">
-    	        <div class="info_l">
-                    <div class="info_c1 clearfix none" id="mobilePhoneNoShowDiv"><div class="info_c1_l fl">
-                            <span class="star">*</span>
-                            <span class="info_title">手机号码：</span>
-                        </div>
-                        <div class="info_idCard fl clearfix"></div>
-                    </div>
-    	            <div class="info_c1 clearfix none" id="mobilePhoneNoDiv">
-    	                <div class="info_c1_l fl">
-    	                    <span class="star">*</span>
-    	                    <span class="info_title">手机号码：</span>
-    	                </div>
-    	                <div class="info_idCard fl clearfix">
-    	                    <input type="text" value="" name="mobilePhoneNo" id="mobilePhoneNo" class="fl">
-    	                    <a data-tpa="CONTRACTPHONEUSERINFO_SENDVERIFYCODE" class="send_num_btn fl none" onclick="onSendVerifyCode();return false;" href="javascript:void(0);" id="sendVerifyCode">发送验证码</a>
-    	                    <span class="send_sixty fl none" id="waitSixtySecond">已发送，<span id="sixtySecond">60s</span>可重试</span>
-    	                    <div class="info_tip fl none" id="mobilePhoneNoErrorDiv">
-    	                        <div class="tip_msg">
-    	                            <i class="icon_jiao"></i>
-    	                            <i class="icon_biao"></i>
-    	                            <span>手机号码不能为空</span>
-    	                        </div>
-    	                    </div>
-    	                </div>
-    	            </div>
-    	            
-    	            <div class="info_c1 clearfix none" id="verifyCodeDiv">
-    	                <div class="info_c1_l fl">
-    	                    <span class="star">*</span>
-    	                    <span class="info_title">验证码：</span>
-    	                </div>
-    	                <div class="info_idCard fl clearfix">
-    	                    <input type="text" onchange="checkVerifyCode();return false;" name="verifyCode" id="verifyCode" class="fl">
-    		                <div class="info_tip_dark fl" id="verifyCodeInitDiv">
-    		                    <div class="tip_msg">
-    		                        <i class="icon_jiao"></i>
-    		                        <i class="icon_biao"></i>
-    		                        <span>请输入以短信形式发送至您手机号码的验证码</span>
-    		                    </div>
-    		                </div>
-    	                    <div class="info_tip fl none" id="verifyCodeErrorDiv">
-    	                        <div class="tip_msg">
-    	                            <i class="icon_jiao"></i>
-    	                            <i class="icon_biao"></i>
-    	                            <span>验证码输入有误，请仔细核对手机短信</span>
-    	                        </div>
-    	                    </div>
-    	                </div>
-    	            </div>
-    	            
-    	            <div class="info_c1 clearfix" id="cardNumDiv">
-    	                <div class="info_c1_l fl">
-    	                    <span class="star">*</span>
-    	                    <span class="info_title">身份证号码：</span>
-    	                </div>
-    	                <div class="info_idCard fl clearfix">
-    	                    <input type="text" value="" name="cardNum" id="cardNum" class="w180 fl">
-    	                    <div class="info_tip fl none" id="cardNumErrorDiv">
-    	                        <div class="tip_msg">
-    	                            <i class="icon_jiao"></i>
-    	                            <i class="icon_biao"></i>
-    	                            <span>身份证号码有误，请重新输入</span>
-    	                        </div>
-    	                    </div>
-    	                </div>
-    	            </div>
-                    <div class="info_c1 clearfix">
-                        <div class="info_c1_l fl">
-                            <span class="star">*</span>
-                            <span class="info_title">机主姓名：</span>
-                        </div>
-                        <div class="info_idCard fl clearfix">
-                            <input type="text" value="" name="hostName" id="hostName" class="w180 fl">
-                            <div id="hostNameError" class="info_tip fl none">
-                                <div class="tip_msg">
-                                    <i class="icon_jiao"></i>
-                                    <i class="icon_biao"></i>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info_c1 clearfix">
-                        <div class="info_c1_l fl">
-                            <span class="star">*</span>
-                            <span class="info_title">证件地址：</span>
-                        </div>
-                        <div class="info_idCard fl clearfix">
-                            <input type="text" value="" name="credentialsAddress" id="credentialsAddress" class="w180 fl">
-                            <div id="credentialsAddressError" class="info_tip fl none">
-                                <div class="tip_msg">
-                                    <i class="icon_jiao"></i>
-                                    <i class="icon_biao"></i>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="mobileNetwokDealDiv" class="info_c2 clearfix none">
-                        <div class="info_c1_l fl">
-                            <span class="star"></span>
-                        </div>
-                        <div class="info_idCard fl clearfix">
-                            <label class="fl"><input type="checkbox" id="mobileNetwokDeal">同意<a target="_blank"></a></label>
-                            <div id="mobileNetwokDealError" class="info_tip fl none">
-                                <div class="tip_msg">
-                                    <i class="icon_jiao"></i>
-                                    <i class="icon_biao"></i>
-                                    <span>请仔细阅读并同意合约机购买协议</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    	        </div>
-    	        <div class="idcard_example fr">
-    	            <span class="idcard_txt">身份证号码</span>
-    	            <img src="images/idcard_front.jpg">
-    	        </div>
+        <div data-tpa="INVOICE_INFO" class="Invoice checkInforBox" id="invoiceUI">
+            <h2 class="infoTitle">发票信息 <label><a id="invoiceModify" href="javascript:void(0);">[修改]</a></label>
+            </h2>
+            <ul class="showInfoOrder" id="InvoiceDisplayDiv">
+                <li><b>发票类型：</b>普通发票</li>
+                <li><b>开票方式：</b>电子发票</li>
+                <li><b>手机号码：</b>1800*****38</li>
+                <li><b>发票内容：</b> 日用品 <span class="ml20">需要商品清单</span> </li>
+                <div id="displayNormalInvoiceNotice" class="msgBx"> <ins><s></s>温馨提示：</ins>
+                    <p> 发票金额为现金支付金额（扣除礼品卡金额，抵用券，返利金额等）。</p>
+                    <p class="mt5"> 电子发票是税务局认可的有效付款凭证，支持企业报销，请先确认所属公司是否支持。</p>
+                </div> <input type="hidden" value="1" id="displayNeedProductDetail">
+            </ul>
+            <div class="invoiceForm clearfix" id="InvoiceEditDiv"></div>
+        </div>
+        <div data-tpa="PAYMENT_INFO" class="payInfo checkInforBox" id="paymentUI">
+            <h2 class="infoTitle">支付及抵用券信息
+                <!-- deleted by YinQifang on 2013-7-26 <span class="btTit none">[修改]</span> -->
+                <span id="paymentInfoTip" class="adverPositon none" style="display: none;">收货地址或配送方式已修改，请重新确定支付方式
+                </span>
+                <div id="paymentAD" class="adverPositon none" style="display: block;"><small>"货到支付宝扫码支付"暂不支持信用卡付款，给您带来不便敬请谅解</small></div>
+            </h2>
+            <ul class="showInfoOrder" id="paymentDisplayLayout" style="display: none;">请先确认"发票信息"</ul>
+            <div class="payment_box" id="coupon_payment">
+                <div id="vouchers" class="vouchers voucherListHide">
+                    <p class="mt10 seeVoucherNum"><a target="_blank" href="http://coupon.yhd.com/active" class="addVoucherBt">激活抵用券</a><s
+                            class="ico_ocVoucher"></s><b>使用抵用券</b>（您当前订单无可用抵用券）</p>
+                    <div style="" id="noVoucherCanList" class="noVoucherCanList">您当前无可用抵用券</div>
+                </div>
             </div>
-            <div id="notice" class="info_c3 none">【优惠提醒】
-                <br>1.优惠规则：本优惠活动返还话费规则、通话时长、短信条数、上网流量，详细规则请参见产品详情页文描内容。
-                <br>2.优惠生效：4G套餐、4G功能及优惠业务将在订单完成后48小时内开通；4G套餐成功办理后无法恢复2G/3G套餐；本订单办理后无法回退，请慎重选择。
-                <br>3.优惠提示：在优惠期内如出现机卡分离、降低或取消4G资费套餐将不再赠送流量及话费。取消后无法重新办理。
-                <br>【业务提醒】
-                <br>1.证件复印件收取：办理本优惠业务需要收取办理人身份证正反两面、清晰可见的复印件，请您在收取商品时交予物流配送人员。
-                <br>2.白卡激活提醒:如果您已开通动感畅聊包、一卡双号、手机羊城通、手机钱包NFC业务，升级本业务后将无法使用，优惠办理成功将无法回退，请谨慎选择办理。
-                <br>3.订单异常处理：如您因欠费等原因被列入移动黑名单，请前往营业厅解除黑名单后办理该业务，我司为你保留订单48小时，过时系统将自动取消订单。如遇其他互斥业务造成无法办理，我司客服人员将主动联系你预留的手机号取消订单。       
-                <br>            
+            <div class="payment_box headPayment" id="account_payment">
+                <div class="card_account_payment clearfix">
+                    <div class="voucher lpk cardAccount fl"> <label for="paidByCardAccount">使用礼品卡余额</label> (仅限1号店自营商品)
+                    </div>
+                    <div class="voucher lpk cardAccount fr"> <span class="usingGifcard">已有礼品卡？ <b class="gcardRechage"
+                                onclick="popGiftcard();gotracker('2','useCard',null);">使用礼品卡激活充值</b> </span> </div>
+                </div>
+                <div class="card_account_payment clearfix">
+                    <div class="voucher lpk cardAccount fl"> 您当前可用余额<strong>¥0</strong>，最多可用<strong>¥0</strong> </div>
+                    <div class="account_ded fl" id="zh_card"> 您礼品卡可用余额为零，无法使用礼品卡余额支付 </div>
+                    <div class="voucher_list likCont fl" id="lpkDisplay"> 已使用<b>¥0</b> <a href="javascript:void(0);"
+                            onclick="showPaidByAccountButton('card');gotracker('2','editGiftCardAmount',null);">修改</a>
+                    </div>
+                </div>
+                <div class="cash_account_payment clearfix">
+                    <div class="voucher lpk cashAccount fl"> <label for="paidByCashAccount">使用账户余额</label> </div>
+                </div>
+                <div class="cash_account_payment clearfix">
+                    <div class="voucher lpk cashAccount fl"> 您当前有<strong id="balance">¥0</strong>可用余额 </div>
+                    <div class="account_ded fl" id="zh"> 您账户余额为零，无法使用账户余额 </div>
+                    <div class="voucher_list likCont fl" id="zhDisplay">已使用余额<b>¥0</b> &nbsp;已使用返利<b>¥0</b> <a href="javascript:void(0);"
+                            onclick="showPaidByAccountButton('cash');gotracker('2','editAccountAmount',null);">修改金额</a>
+                    </div>
+                </div>
             </div>
-            <div id="shanghaiNotice" class="info_c3 none">【注意事项】
-                <br>1.非4G飞享套餐客户签署该合约，将更改您的资费套餐为相应档次的4G飞享套餐，套餐与合约同期生效。
-                <br>2.若您原有4G飞享套餐档次高于本次签约所选的飞享套餐合约承诺档次的，原4G飞享套餐档次将保持不变。原有4G飞享套餐档次低于本次签约所选的飞享套餐合约承诺档次的，将更改您的资费套餐为相应档次的4G飞享套餐，套餐与合约同期生效。
-                <br>【特别提醒】
-                <br>1.若您没有办理飞享4G套餐，1号店将按照您所选择的合约档次办理飞享套餐。
-                <br>2.若您已经有飞享4G套餐，所承诺的档次消费会按照您的套餐与合约档次就高原则消费，比如：您本身已有58元的飞享套餐，现在选择了88元的合约档次，那最低消费会按照88元收取，同步，一号店将把您的58元飞享套餐，升档为88元的飞享套餐。具体可以参见产品文描[合约生效]第二点。
-                <br>3.合约档次是每月的最低消费，可冲抵您飞享套餐的相应金额，不会形成叠加消费；如您参加了移动其他最低消费活动，消费会叠加，具体可以参见产品文描[合约生效]第三点。
-                <br>4.1号店在给您操作合约时，如果您的号码不能办理此合约，将会在一个工作日内通知您取消订单；若您没空取消，一号店将在通知您后十分钟内帮您取消订单。            
-                <br>            
+            <div class="payment_box shadow_border" id="inputUI_payment" style="display: block;">
+                <div class="radio_select none"> </div>
+                <div id="pAlipay" class="radio_select pay_method_item not_support"> <input type="radio" name="payment"
+                        id="radio_alipay" methodtype="12" methodid="0" disabled=""> <label for="radio_alipay">货到支付宝扫码支付
+                    </label> <span class="text_sorry"> 订单中 <span class="product"> <em>下列商品 <s></s> </em> <span style="display: none;"
+                                class="product_win"> <span class="product_list"> <span style="margin-bottom: 0px; border: 0px none;"
+                                        class="product_item"> <img height="56" width="56" src="images/CgQCr1M5L72AXNXPAALcS7bN_zU67901_40x40.jpg"
+                                            alt=""> <span class="product_info"> <a>双汇 王中王 优级火腿肠 400g/袋</a> </span>
+                                    </span> <span style="margin-bottom: 0px; border: 0px none;" class="product_item">
+                                        <img height="56" width="56" src="images/CgQCr1PXDfuAXm4EAAQVONKdI6438001_40x40.jpg"
+                                            alt=""> <span class="product_info"> <a>Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口</a>
+                                        </span> </span> </span> </span> </span>金额小于¥50不支持货到支付宝扫码支付 </span> </div>
+                <div id="pCod" class="radio_select pay_method_item not_support"> <input type="radio" name="payment" id="radio_money"
+                        methodtype="2" methodid="0" disabled=""> <label for="radio_money">货到付现金</label> <span class="text_sorry">
+                        订单中 <span class="product"> <em>下列商品 <s></s> </em> <span style="display: none;" class="product_win">
+                                <span class="product_list"> <span style="margin-bottom: 0px; border: 0px none;" class="product_item">
+                                        <img height="56" width="56" src="images/CgQCr1M5L72AXNXPAALcS7bN_zU67901_40x40.jpg"
+                                            alt=""> <span class="product_info"> <a>双汇 王中王 优级火腿肠 400g/袋</a> </span>
+                                    </span> <span style="margin-bottom: 0px; border: 0px none;" class="product_item">
+                                        <img height="56" width="56" src="images/CgQCr1PXDfuAXm4EAAQVONKdI6438001_40x40.jpg"
+                                            alt=""> <span class="product_info"> <a>Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口</a>
+                                        </span> </span> </span> </span> </span>金额小于¥50不支持货到付现金 </span> </div>
+                <div id="pPos" class="radio_select pay_method_item not_support"> <input type="radio" name="payment" id="radio_pos"
+                        methodtype="5" methodid="0" disabled=""> <label for="radio_pos">货到刷卡</label> <span class="text_sorry">
+                        订单中 <span class="product"> <em>下列商品 <s></s> </em> <span style="display: none;" class="product_win">
+                                <span class="product_list"> <span style="margin-bottom: 0px; border: 0px none;" class="product_item">
+                                        <img height="56" width="56" src="images/CgQCr1M5L72AXNXPAALcS7bN_zU67901_40x40.jpg"
+                                            alt=""> <span class="product_info"> <a>双汇 王中王 优级火腿肠 400g/袋</a> </span>
+                                    </span> <span style="margin-bottom: 0px; border: 0px none;" class="product_item">
+                                        <img height="56" width="56" src="images/CgQCr1PXDfuAXm4EAAQVONKdI6438001_40x40.jpg"
+                                            alt=""> <span class="product_info"> <a>Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口</a>
+                                        </span> </span> </span> </span> </span>金额小于¥50不支持货到刷卡 </span> </div>
+                <div id="pNet" class="radio_select pay_method_item on_click"> <input type="radio" name="payment" id="radio_int_bank"
+                        methodtype="1" methodid="50" checked="checked"> <label for="radio_int_bank">网上支付</label> <span
+                        class="des"> 为了保证及时处理您的订单，请您下单<em>24小时内</em>付款。 </span> </div>
+                <div id="pBank" class="radio_select pay_method_item not_support"> <input type="radio" name="payment" id="radio_bank"
+                        disabled="" methodtype="4" methodid="0"> <label for="radio_bank">银行转账</label> <span class="text_sorry">
+                        订单金额小于¥5000，不支持银行转账 </span> </div>
             </div>
-	    </div>
-	</div>
-	
-	
-	<!-- sam会员卡信息模块 start-->
-    <div class="userInfo checkInforBox none" id="samCardUserInfo">
-		<h2 class="infoTitle">Sam’s会员卡用户信息</h2>
-	    <div class="info_wrapper">
-            <div class="clearfix">
-    	        <div class="info_l">
-    	        	<div class="info_c1 clearfix">
-                        <div class="info_c1_l fl">
-                            <span class="star">*</span>
-                            <span class="info_title">会员姓名：</span>
+            <div class="payment_box shadow_border" id="fully_paid" style="display: none;">
+                <p>已全额支付订单</p>
+            </div>
+        </div>
+        <div class="iphoneDisplayUI checkInforBox none" id="iphoneDisplayUI">
+            <h2 class="infoTitle">合约计划信息</h2>
+            <ul class="showInfoOrder" id="iphoneDisplayDiv"></ul>
+        </div>
+        <div class="iphoneDisplayUI checkInforBox none" id="contractPhoneDisplayUI">
+            <h2 class="infoTitle">合约计划信息</h2>
+            <div class="showInfoOrder" id="contractPhoneDisplayDiv"></div>
+        </div>
+        <!-- 新合约机机用户信息模块 -->
+        <div class="userInfo checkInforBox none" id="contractPhoneUserInfo">
+            <h2 class="infoTitle">用户信息</h2>
+            <div class="info_wrapper">
+                <div class="clearfix">
+                    <div class="info_l">
+                        <div class="info_c1 clearfix none" id="mobilePhoneNoShowDiv">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">手机号码：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix"></div>
                         </div>
-                        <div class="info_idCard fl clearfix">
-                            <input type="text" name="samCardHostName" id="samCardHostName" class="w180 fl">
-                            <div id="samCardHostNameError" class="info_tip fl none">
-                                <div class="tip_msg">
-                                    <i class="icon_jiao"></i>
-                                    <i class="icon_biao"></i>
-                                    <span></span>
+                        <div class="info_c1 clearfix none" id="mobilePhoneNoDiv">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">手机号码：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <input type="text" value="" name="mobilePhoneNo" id="mobilePhoneNo" class="fl">
+                                <a data-tpa="CONTRACTPHONEUSERINFO_SENDVERIFYCODE" class="send_num_btn fl none" onclick="onSendVerifyCode();return false;"
+                                    href="javascript:void(0);" id="sendVerifyCode">发送验证码</a>
+                                <span class="send_sixty fl none" id="waitSixtySecond">已发送，<span id="sixtySecond">60s</span>可重试</span>
+                                <div class="info_tip fl none" id="mobilePhoneNoErrorDiv">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>手机号码不能为空</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info_c1 clearfix none" id="verifyCodeDiv">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">验证码：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <input type="text" onchange="checkVerifyCode();return false;" name="verifyCode" id="verifyCode"
+                                    class="fl">
+                                <div class="info_tip_dark fl" id="verifyCodeInitDiv">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>请输入以短信形式发送至您手机号码的验证码</span>
+                                    </div>
+                                </div>
+                                <div class="info_tip fl none" id="verifyCodeErrorDiv">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>验证码输入有误，请仔细核对手机短信</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info_c1 clearfix" id="cardNumDiv">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">身份证号码：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <input type="text" value="" name="cardNum" id="cardNum" class="w180 fl">
+                                <div class="info_tip fl none" id="cardNumErrorDiv">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>身份证号码有误，请重新输入</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_c1 clearfix">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">机主姓名：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <input type="text" value="" name="hostName" id="hostName" class="w180 fl">
+                                <div id="hostNameError" class="info_tip fl none">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_c1 clearfix">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">证件地址：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <input type="text" value="" name="credentialsAddress" id="credentialsAddress" class="w180 fl">
+                                <div id="credentialsAddressError" class="info_tip fl none">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mobileNetwokDealDiv" class="info_c2 clearfix none">
+                            <div class="info_c1_l fl">
+                                <span class="star"></span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <label class="fl"><input type="checkbox" id="mobileNetwokDeal">同意<a target="_blank"></a></label>
+                                <div id="mobileNetwokDealError" class="info_tip fl none">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>请仔细阅读并同意合约机购买协议</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    	        
-                    
-    	            <div class="info_c1 clearfix" id="samCardMobilePhone">
-    	                <div class="info_c1_l fl">
-    	                    <span class="star">*</span>
-    	                    <span class="info_title">手机号码：</span>
-    	                </div>
-    	                <div class="info_idCard fl clearfix">
-    	                    <input type="text" name="samCardMobilePhoneNo" id="samCardMobilePhoneNo" class="fl">
-    	                    <a class="send_num_btn fl" onclick="samCardOnSendVerifyCode();return false;" href="javascript:void(0);" id="samCardSendVerifyCode">发送验证码</a>
-    	                    <span class="send_sixty fl none" id="samCardWaitSixtySecond">已发送，<span id="samCardSixtySecond">60s</span>可重试</span>
-    	                    <div class="info_tip fl none" id="samCardMobilePhoneNoErrorDiv">
-    	                        <div class="tip_msg">
-    	                            <i class="icon_jiao"></i>
-    	                            <i class="icon_biao"></i>
-    	                            <span>手机号码不能为空</span>
-    	                        </div>
-    	                    </div>
-    	                </div>
-    	            </div>
-    	            
-    	            <div class="info_c1 clearfix" id="samCardVerifyCodeDiv">
-    	                <div class="info_c1_l fl">
-    	                    <span class="star">*</span>
-    	                    <span class="info_title">验证码：</span>
-    	                </div>
-    	                <div class="info_idCard fl clearfix">
-    	                    <input type="text" onchange="samCardCheckVerifyCode();return false;" name="verifyCode" id="samCardVerifyCode" class="fl">
-    		                <div class="info_tip_dark fl" id="samCardVerifyCodeInitDiv">
-    		                    <div class="tip_msg">
-    		                        <i class="icon_jiao"></i>
-    		                        <i class="icon_biao"></i>
-    		                        <span>请输入以短信形式发送至您手机号码的验证码</span>
-    		                    </div>
-    		                </div>
-    	                    <div class="info_tip fl none" id="samCardVerifyCodeErrorDiv">
-    	                        <div class="tip_msg">
-    	                            <i class="icon_jiao"></i>
-    	                            <i class="icon_biao"></i>
-    	                            <span>验证码输入有误，请仔细核对手机短信</span>
-    	                        </div>
-    	                    </div>
-    	                </div>
-    	            </div>
-    	            
-    	            <div class="info_c1 clearfix" id="samCardCardNumDiv">
-    	                <div class="info_c1_l fl">
-    	                    <span class="star">*</span>
-    	                    <span class="info_title">身份证号码：</span>
-    	                </div>
-    	                <div class="info_idCard fl clearfix">
-    	                    <input type="text" name="samCardCardNum" id="samCardCardNum" class="w180 fl">
-    	                    <div class="info_tip fl none" id="samCardCardNumErrorDiv">
-    	                        <div class="tip_msg">
-    	                            <i class="icon_jiao"></i>
-    	                            <i class="icon_biao"></i>
-    	                            <span>身份证号码有误，请重新输入</span>
-    	                        </div>
-    	                    </div>
-    	                </div>
-    	            </div>
-                    
-                    <div id="samCardDealDiv" class="info_c2 clearfix">
-                        <div class="info_c1_l fl">
-                            <span class="star"></span>
+                    <div class="idcard_example fr">
+                        <span class="idcard_txt">身份证号码</span>
+                        <img src="images/idcard_front.jpg">
+                    </div>
+                </div>
+                <div id="notice" class="info_c3 none">【优惠提醒】
+                    <br>1.优惠规则：本优惠活动返还话费规则、通话时长、短信条数、上网流量，详细规则请参见产品详情页文描内容。
+                    <br>2.优惠生效：4G套餐、4G功能及优惠业务将在订单完成后48小时内开通；4G套餐成功办理后无法恢复2G/3G套餐；本订单办理后无法回退，请慎重选择。
+                    <br>3.优惠提示：在优惠期内如出现机卡分离、降低或取消4G资费套餐将不再赠送流量及话费。取消后无法重新办理。
+                    <br>【业务提醒】
+                    <br>1.证件复印件收取：办理本优惠业务需要收取办理人身份证正反两面、清晰可见的复印件，请您在收取商品时交予物流配送人员。
+                    <br>2.白卡激活提醒:如果您已开通动感畅聊包、一卡双号、手机羊城通、手机钱包NFC业务，升级本业务后将无法使用，优惠办理成功将无法回退，请谨慎选择办理。
+                    <br>3.订单异常处理：如您因欠费等原因被列入移动黑名单，请前往营业厅解除黑名单后办理该业务，我司为你保留订单48小时，过时系统将自动取消订单。如遇其他互斥业务造成无法办理，我司客服人员将主动联系你预留的手机号取消订单。
+                    <br>
+                </div>
+                <div id="shanghaiNotice" class="info_c3 none">【注意事项】
+                    <br>1.非4G飞享套餐客户签署该合约，将更改您的资费套餐为相应档次的4G飞享套餐，套餐与合约同期生效。
+                    <br>2.若您原有4G飞享套餐档次高于本次签约所选的飞享套餐合约承诺档次的，原4G飞享套餐档次将保持不变。原有4G飞享套餐档次低于本次签约所选的飞享套餐合约承诺档次的，将更改您的资费套餐为相应档次的4G飞享套餐，套餐与合约同期生效。
+                    <br>【特别提醒】
+                    <br>1.若您没有办理飞享4G套餐，1号店将按照您所选择的合约档次办理飞享套餐。
+                    <br>2.若您已经有飞享4G套餐，所承诺的档次消费会按照您的套餐与合约档次就高原则消费，比如：您本身已有58元的飞享套餐，现在选择了88元的合约档次，那最低消费会按照88元收取，同步，一号店将把您的58元飞享套餐，升档为88元的飞享套餐。具体可以参见产品文描[合约生效]第二点。
+                    <br>3.合约档次是每月的最低消费，可冲抵您飞享套餐的相应金额，不会形成叠加消费；如您参加了移动其他最低消费活动，消费会叠加，具体可以参见产品文描[合约生效]第三点。
+                    <br>4.1号店在给您操作合约时，如果您的号码不能办理此合约，将会在一个工作日内通知您取消订单；若您没空取消，一号店将在通知您后十分钟内帮您取消订单。
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- sam会员卡信息模块 start-->
+        <div class="userInfo checkInforBox none" id="samCardUserInfo">
+            <h2 class="infoTitle">Sam’s会员卡用户信息</h2>
+            <div class="info_wrapper">
+                <div class="clearfix">
+                    <div class="info_l">
+                        <div class="info_c1 clearfix">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">会员姓名：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <input type="text" name="samCardHostName" id="samCardHostName" class="w180 fl">
+                                <div id="samCardHostNameError" class="info_tip fl none">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="info_idCard fl clearfix">
-                            <label class="fl"><input type="checkbox" id="samCardDeal">同意<a id="samCardDealHref" href="http://shop.yhd.com/dpzx/cms-188160-12073809.html" target="_blank">《Sam’s会籍使用条款》</a></label>
-                            <div id="samCardDealError" class="info_tip fl none">
-                                <div class="tip_msg">
-                                    <i class="icon_jiao"></i>
-                                    <i class="icon_biao"></i>
-                                    <span>请仔细阅读并同意Sam’s会籍使用条款</span>
+
+
+                        <div class="info_c1 clearfix" id="samCardMobilePhone">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">手机号码：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <input type="text" name="samCardMobilePhoneNo" id="samCardMobilePhoneNo" class="fl">
+                                <a class="send_num_btn fl" onclick="samCardOnSendVerifyCode();return false;" href="javascript:void(0);"
+                                    id="samCardSendVerifyCode">发送验证码</a>
+                                <span class="send_sixty fl none" id="samCardWaitSixtySecond">已发送，<span id="samCardSixtySecond">60s</span>可重试</span>
+                                <div class="info_tip fl none" id="samCardMobilePhoneNoErrorDiv">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>手机号码不能为空</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info_c1 clearfix" id="samCardVerifyCodeDiv">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">验证码：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <input type="text" onchange="samCardCheckVerifyCode();return false;" name="verifyCode"
+                                    id="samCardVerifyCode" class="fl">
+                                <div class="info_tip_dark fl" id="samCardVerifyCodeInitDiv">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>请输入以短信形式发送至您手机号码的验证码</span>
+                                    </div>
+                                </div>
+                                <div class="info_tip fl none" id="samCardVerifyCodeErrorDiv">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>验证码输入有误，请仔细核对手机短信</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info_c1 clearfix" id="samCardCardNumDiv">
+                            <div class="info_c1_l fl">
+                                <span class="star">*</span>
+                                <span class="info_title">身份证号码：</span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <input type="text" name="samCardCardNum" id="samCardCardNum" class="w180 fl">
+                                <div class="info_tip fl none" id="samCardCardNumErrorDiv">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>身份证号码有误，请重新输入</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="samCardDealDiv" class="info_c2 clearfix">
+                            <div class="info_c1_l fl">
+                                <span class="star"></span>
+                            </div>
+                            <div class="info_idCard fl clearfix">
+                                <label class="fl"><input type="checkbox" id="samCardDeal">同意<a id="samCardDealHref"
+                                        href="http://shop.yhd.com/dpzx/cms-188160-12073809.html" target="_blank">《Sam’s会籍使用条款》</a></label>
+                                <div id="samCardDealError" class="info_tip fl none">
+                                    <div class="tip_msg">
+                                        <i class="icon_jiao"></i>
+                                        <i class="icon_biao"></i>
+                                        <span>请仔细阅读并同意Sam’s会籍使用条款</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    	        </div>
-    	        <div class="idcard_example fr">
-    	            <span class="idcard_txt">身份证号码</span>
-    	            <img src="images/idcard_front.jpg">
-    	        </div>
+                    <div class="idcard_example fr">
+                        <span class="idcard_txt">身份证号码</span>
+                        <img src="images/idcard_front.jpg">
+                    </div>
+                </div>
+
             </div>
-            
-	    </div>
-	</div>
-	<!-- sam会员卡信息模块 end-->
-	
-    <div class="none" id="userAuthDiv"></div>
-    <div data-tpa="COMMODITY_INFO" class="commodityInfor checkInforBox">
-    	<h2 class="infoTitle">商品信息
-        	<div id="confirmAD" class="adverPositon none"></div>
-    	</h2>
-    	<div id="confirmUI">        	<table cellspacing="0" cellpadding="0" border="0" width="100%" class="showInfoOrder orderProductListInfo">	        	<tbody><tr><th width="60">包裹</th><th width="520" class="txtl">商品名称</th><th>数 量(个)</th><th>重 量(kg)</th><th>金额小计</th></tr>						           																  					<tr class="btTD">		  						                                    <td rowspan="2">                                                                                                            包裹1&nbsp;&nbsp;&nbsp;                                    </td>                                		  						<td class="txtl">		  									  						   		  						   	双汇 王中王 优级火腿肠 400g/袋	                                	                                <a class="tuihuo tuihuo_no"><em>不支持无理由退货<i></i></em></a>		  						   		  						</td>								<td>								1	                            </td>								<td>								0.422								</td>								<td>	                                	                                    ¥13.9	                                								</td>							</tr>	                        									  					<tr>		  								  						<td class="txtl">		  									  						   		  						   	Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口	                                	                                <a class="tuihuo tuihuo_no"><em>不支持无理由退货<i></i></em></a>		  						   		  						</td>								<td>								1	                            </td>								<td>								0.26								</td>								<td>	                                	                                    ¥9.9	                                								</td>							</tr>	                        																										</tbody></table>        	        </div>
-		<p class="tuihuo_title">
-			<span><i class="tuihuo">&nbsp;&nbsp;</i>&nbsp;&nbsp;支持无理由退货（支持天数详见具体商品）</span>
-			<span><i class="tuihuo_no"></i>不支持无理由退货</span>
-        </p>
+        </div>
+        <!-- sam会员卡信息模块 end-->
+
+        <div class="none" id="userAuthDiv"></div>
+        <div data-tpa="COMMODITY_INFO" class="commodityInfor checkInforBox">
+            <h2 class="infoTitle">商品信息
+                <div id="confirmAD" class="adverPositon none"></div>
+            </h2>
+            <div id="confirmUI">
+                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="showInfoOrder orderProductListInfo">
+                    <tbody>
+                        <tr>
+                            <th width="60">包裹</th>
+                            <th width="520" class="txtl">商品名称</th>
+                            <th>数 量(个)</th>
+                            <th>重 量(kg)</th>
+                            <th>金额小计</th>
+                        </tr>
+                        <tr class="btTD">
+                            <td rowspan="2"> 包裹1&nbsp;&nbsp;&nbsp; </td>
+                            <td class="txtl"> 双汇 王中王 优级火腿肠 400g/袋 <a class="tuihuo tuihuo_no"><em>不支持无理由退货<i></i></em></a>
+                            </td>
+                            <td> 1 </td>
+                            <td> 0.422 </td>
+                            <td> ¥13.9 </td>
+                        </tr>
+                        <tr>
+                            <td class="txtl"> Viviga倍之味 特浓紫薯薄饼 280g 菲律宾进口 <a class="tuihuo tuihuo_no"><em>不支持无理由退货<i></i></em></a>
+                            </td>
+                            <td> 1 </td>
+                            <td> 0.26 </td>
+                            <td> ¥9.9 </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="tuihuo_title">
+                <span><i class="tuihuo">&nbsp;&nbsp;</i>&nbsp;&nbsp;支持无理由退货（支持天数详见具体商品）</span>
+                <span><i class="tuihuo_no"></i>不支持无理由退货</span>
+            </p>
+        </div>
+        <div data-tpa="STATISTICS_INFO" class="mallsettelment">
+            <div class="payTotal" id="statisticsUI">
+                <p class="fr">商品金额<label>23.8</label>元 + 运费<label>10</label>元 </p>
+                <p>包裹(个)：1&#12288;&#12288;重量(kg)：0.682 </p> <strong>您需为订单支付<b>33.8</b>元</strong>
+                <div class="userPrivilege clearfix"></div>
+                <div class="mallsettelment_address"> 素材火 上海 黄浦区 斜土路768号大厦5F座 1800*****38 <a data-tpa="EDIT_ADDRESS_SUBMITORDER"
+                        onclick="returnToEdit();" href="#"> 修改</a></div>
+            </div>
+            <div class="money_tips">
+                <div class="tips_box">
+                    <label for="BookedPayFix"><input type="checkbox" name="bookedPay" id="BookedPayFix">同意支付<em></em>元定金</label>
+                    <span>(预售商品定金恕不退还，请同意支付定金)</span>
+                </div>
+                <p class="tips_txt"></p>
+            </div>
+            <div class="btOrderConfig">
+                <div class="submitOrderValidCode"></div>
+                <button data-tpa="SUBMIT_ORDER" class="btSubOrder1" type="button" onclick="location.href='pay.html'">提交订单</button>
+            </div>
+        </div>
     </div>
-    <div data-tpa="STATISTICS_INFO" class="mallsettelment">
-	    <div class="payTotal" id="statisticsUI">    	    <p class="fr">商品金额<label>23.8</label>元	        		        	 + 运费<label>10</label>元	        		            	            	            	            	                    	</p>        	<p>包裹(个)：1&#12288;&#12288;重量(kg)：0.682 </p>        	<strong>您需为订单支付<b>33.8</b>元</strong>    	        <div class="userPrivilege clearfix"></div>        <div class="mallsettelment_address"> 素材火 上海 黄浦区 斜土路768号大厦5F座 1800*****38 <a data-tpa="EDIT_ADDRESS_SUBMITORDER" onclick="returnToEdit();" href="#"> 修改</a></div>                </div>
+    <input type="hidden" id="validCodeSig" name="validCodeSig">
+    <div style="" class="clearfix shadow" id="SellCountFixBox">
+        <p><span> 素材火 上海 黄浦区 斜土路768号大厦5F座 1800*****38 <a onclick="returnToEdit();" href="#"> 修改</a></span></p>
         <div class="money_tips">
-            <div class="tips_box">
-                <label for="BookedPayFix"><input type="checkbox" name="bookedPay" id="BookedPayFix">同意支付<em></em>元定金</label> <span>(预售商品定金恕不退还，请同意支付定金)</span>
-            </div>
+            <div class="tips_box"> <label for="bookedPayFloat"><input type="checkbox" name="bookedPay" id="bookedPayFloat">同意支付<em></em>元定金</label>
+                <span>(预售商品定金恕不退还，请同意支付定金)</span> </div>
             <p class="tips_txt"></p>
         </div>
-	    <div class="btOrderConfig">
-	    	<div class="submitOrderValidCode"></div>
-	        <button data-tpa="SUBMIT_ORDER" class="btSubOrder1" type="button" onclick="location.href='pay.html'">提交订单</button>
-	    </div>
+        <div class="totalCount mt10">
+            <div class="userPrivilege userPrivilege_float"></div> <i>您需支付：<b>33.8</b>元</i>
+            <div class="submitOrderValidCode submitOrderValidCode_float"></div> <button data-tpa="SUBMIT_ORDER" type="button"
+                class="btSubOrder1">提交订单</button>
+        </div>
     </div>
-</div>
-<input type="hidden" id="validCodeSig" name="validCodeSig">
-<div style="" class="clearfix shadow" id="SellCountFixBox"><p><span> 素材火 上海 黄浦区 斜土路768号大厦5F座 1800*****38 <a onclick="returnToEdit();" href="#"> 修改</a></span></p>            <div class="money_tips">                <div class="tips_box">                    <label for="bookedPayFloat"><input type="checkbox" name="bookedPay" id="bookedPayFloat">同意支付<em></em>元定金</label> <span>(预售商品定金恕不退还，请同意支付定金)</span>                </div>                <p class="tips_txt"></p>            </div>                                                <div class="totalCount mt10">                <div class="userPrivilege userPrivilege_float"></div>		        <i>您需支付：<b>33.8</b>元</i>		        <div class="submitOrderValidCode submitOrderValidCode_float"></div>		        <button data-tpa="SUBMIT_ORDER" type="button" class="btSubOrder1">提交订单</button>		    </div></div>
-<div class="none" id="paymentPrivilegeDiv"></div>
-<div class="templateBox">
-	<textarea id="1mallHaigouSplitMsgTemplate">		<div class="mod_yelTextTips">
+    <div class="none" id="paymentPrivilegeDiv"></div>
+    <div class="templateBox">
+        <textarea id="1mallHaigouSplitMsgTemplate">		<div class="mod_yelTextTips">
 			<i class="pointIcon"></i>
 			您购买的商品因海关审查，将被拆成多个包裹送达。
 		</div>
 	</textarea>
-	
-	<!--
+
+        <!--
 		本身应该在--haigouSplitMsgTemplate--里边
 		<div class="mod_yelTextTips">
 				<i class="pointIcon"></i>
 				因监管部门对海购的单笔订单有限额要求，所以您的商品被拆分为<b>{$T}</b>笔订单分别支付。
 		</div>
 	-->
-	<textarea id="haigouSplitMsgTemplate">	</textarea>
-	<textarea id="splitMsgTemplate">    	<ul class="msgList mt14">
+        <textarea id="haigouSplitMsgTemplate">	</textarea>
+        <textarea id="splitMsgTemplate">    	<ul class="msgList mt14">
 			<li>{$T}</li>
 		</ul>
 	</textarea>
-    <textarea id="tempAddress">        {#foreach $T.receiverDTOs as reciv}
+        <textarea id="tempAddress">        {#foreach $T.receiverDTOs as reciv}
                <li{#if $T.receiverDTO.id==$T.reciv.id} class="slt"{#/if} addressid="{$T.reciv.id}" selfFetch={$T.reciv.selfPickUp>0}>
                    <p><b name="receiverName">{$P.getShortName($T.reciv.name)}</b>收</p>
                    <p class="listAddressShow">{#if $T.reciv.selfPickUp > 0}<em>自提</em> {#/if}{$T.reciv.recAddressWithNoName}</p>
@@ -566,7 +810,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                </li>
         {#/for}
     </textarea>
-    <textarea id="tempBookedPreSell">        <div class="mod_number" >
+        <textarea id="tempBookedPreSell">        <div class="mod_number" >
             <p class="number_txt">由于您的订单内包含预售商品，请确认以下手机号码是否正确，我们将用其来通知预售进度和状态</p>
             <p class="number_txt">尾款支付时间：{$T.bookedPreSellVo.needPayTimeStr}，商品预计发货时间：{$T.bookedPreSellVo.deliverTimeStr}</p>
             <p class="number_input">
@@ -574,7 +818,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
             </p>
         </div>
     </textarea>
-    <textarea id="tempAddressForm">        <form id="addressForm" class="addressForm editAddressForm">
+        <textarea id="tempAddressForm">        <form id="addressForm" class="addressForm editAddressForm">
             <p>
                 <b class="useNewAddress">使用新地址</b><span class="usingAlipayAddressCss" title="使用支付宝地址"></span>
             </p>
@@ -615,7 +859,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
             <input type="hidden" id="receiverID" name="receiverID" value=""/>
         </form>
     </textarea>
-    <textarea id="tempSelfPickupForm">        <form id="selfPickupForm" class="addressForm editAddressForm mod_coll">
+        <textarea id="tempSelfPickupForm">        <form id="selfPickupForm" class="addressForm editAddressForm mod_coll">
 			<div class="content">
 				<h3>查找可自提包裹的地点</h3>
 				<a href="javascript:;" class="btn_close">关闭</a>
@@ -650,7 +894,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 			</div>
         </form>
     </textarea>
-    <textarea id="orderItemErrorTemplate">        <div class="ap_div">
+        <textarea id="orderItemErrorTemplate">        <div class="ap_div">
             <h3><a href="javascript:void(0);" class="popwinClose" data-tpa="POPWINCLOSE">关闭</a>温馨提示</h3>
             <table class="sorry">
                 <tr>
@@ -694,7 +938,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
             </p>
         </div>
     </textarea>
-    <textarea id="DeliveryDisplayTemp">    {#foreach $T.merchants as merchant}
+        <textarea id="DeliveryDisplayTemp">    {#foreach $T.merchants as merchant}
         <h3>{$T.merchant.name}</h3>
         <table class="showInfoOrder inshop" border="0" cellpadding="0" cellspacing="0">
             <tbody>
@@ -732,8 +976,8 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                                     <b>{#if $T.merchant.isDeliverySeparate}如果订单中部分商品缺货，优先配送有货商品{#else}等待订单中缺货商品到货后，一起配送包裹{#/if}</b>
                                     <span class="icosj"><i class="icosj1">angle</i><i class="icosj2">angle</i></span>
                                 </p>
-                            {#/if}       
-                        </div>            
+                            {#/if}
+                        </div>
                     {#/if}
                     </th>
                 </tr>
@@ -817,8 +1061,8 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                                     {#if $T.supportedDelivery.id==10001 && !$T.package.displayDeliveryTogether}
                                         <tr>
                                             <td class="delivMehoedSlt">
-                                                 <input type="radio" value="{$T.supportedDelivery.id}" id="{$T.supportedDelivery.orderMark}_10001" name="{$T.supportedDelivery.orderMark}" 
-                                                    {#if $T.package.selectedDelivery.deliveryMethodId==$T.supportedDelivery.id}checked="checked" selected="true"{#/if}  
+                                                 <input type="radio" value="{$T.supportedDelivery.id}" id="{$T.supportedDelivery.orderMark}_10001" name="{$T.supportedDelivery.orderMark}"
+                                                    {#if $T.package.selectedDelivery.deliveryMethodId==$T.supportedDelivery.id}checked="checked" selected="true"{#/if}
                                                     {#if !$T.package.displayDeliverySelectionRadio}class="hidden"{#/if}
                                                     onclick="gotracker('2','deliveryTypeNormal',null);">
                                             </td>
@@ -832,7 +1076,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                                         <tr>
                                             <td class="delivMehoedSlt">
                                                 <input type="radio" value="{#if $T.package.displayDeliveryTogether}10001{#else}10005{#/if}" name="{$T.supportedDelivery.orderMark}"
-                                                    {#if $T.package.selectedDelivery.deliveryMethodId==10005 || $T.package.selectedDelivery.deliveryMethodId==10001|| $T.package.selectedDelivery.deliveryMethodId==10003|| $T.package.selectedDelivery.deliveryMethodId==10004}checked="checked" selected="true"{#/if}  
+                                                    {#if $T.package.selectedDelivery.deliveryMethodId==10005 || $T.package.selectedDelivery.deliveryMethodId==10001|| $T.package.selectedDelivery.deliveryMethodId==10003|| $T.package.selectedDelivery.deliveryMethodId==10004}checked="checked" selected="true"{#/if}
                                                     {#if !$T.package.displayDeliverySelectionRadio}class="hidden"{#/if}
                                                     onclick="gotracker('2','deliveryTypeNormal',null);">
                                             </td>
@@ -864,14 +1108,14 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                                                         </div>
                                                         <div class="freeTips"><div class="text"><i></i><span></span></div></div>
                                                     </div>
-                                                </div>    
+                                                </div>
                                             </td>
                                         </tr>
                                     {#/if}
                                     {#if $T.supportedDelivery.id==20001}
                                         <tr>
                                             <td class="delivMehoedSlt">
-                                                 <input type="radio" value="{$T.supportedDelivery.id}" id="{$T.supportedDelivery.orderMark}_20001" name="{$T.supportedDelivery.orderMark}"  
+                                                 <input type="radio" value="{$T.supportedDelivery.id}" id="{$T.supportedDelivery.orderMark}_20001" name="{$T.supportedDelivery.orderMark}"
                                                     {#if $T.package.selectedDelivery.deliveryMethodId==$T.supportedDelivery.id}checked="checked"{#/if}
                                                     {#if !$T.package.displayDeliverySelectionRadio}class="hidden"{#/if}
                                                     onclick="gotracker('2','deliveryTypeEMS',null);">
@@ -901,7 +1145,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                                         <tr>
                                             <td class="delivMehoedSlt"><input class="hidden"  type="radio" checked="checked" value="{$T.supportedDelivery.id}" name="{$T.supportedDelivery.orderMark}"></td>
                                             <td valign="middle" class="delivMehoedSltTxt">
-                                                  {$T.supportedDelivery.name}，{$T.package.selectedDelivery.description}                                                                     
+                                                  {$T.supportedDelivery.name}，{$T.package.selectedDelivery.description}
                                             </td>
                                         </tr>
                                     {#/if}
@@ -941,7 +1185,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                         				¥{$T.package.selectedDelivery.fee}
                         			{#/if}
                         		</b>
-                        		
+
                         	</td>
                         {#else}
                         	{#if $T.deliveryGroup$first && $T.package$first}
@@ -963,7 +1207,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 		                        </td>
                         	{#/if}
                         {#/if}
-                        
+
                         {#if $T.merchant.isDeliveryByYhd && $T.package$first
                             ||
                            !$T.merchant.isDeliveryByYhd && $T.deliveryGroup$first && $T.package$first
@@ -999,7 +1243,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
         </table>
         {#/for}{*merchant*}
     </textarea>
-    <textarea id="AccountEditTemplate">        {*礼品卡账户*}
+        <textarea id="AccountEditTemplate">        {*礼品卡账户*}
         <div class="card_account_payment clearfix">
             <div class="voucher lpk cardAccount fl">
                 {*<i class="fold"></i>*}
@@ -1017,7 +1261,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
             </div>
             <div id="zh_card" class="account_ded fl">
                 {#if $P.getContainCard()}
-                                                         您购买商品中含有礼品卡，无法使用礼品卡余额支付                                   
+                                                         您购买商品中含有礼品卡，无法使用礼品卡余额支付
                 {#elseif  $P.getIsOrderContainPreSellProduct()}
                                                           您购买商品中含有预售商品，无法使用礼品卡余额支付
                 {#elseif  $P.getIsContainBookdPreSellProduct()}
@@ -1067,8 +1311,8 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
             </div>
         </div>
     </textarea>
-    
-    <textarea id="CouponTemplate">        {* 抵用券支付 *}
+
+        <textarea id="CouponTemplate">        {* 抵用券支付 *}
         <div class="vouchers {#if $T.useableCouponNum == 0}voucherListHide{#/if}" id="vouchers">
             <p class="mt10 seeVoucherNum"><a class="addVoucherBt" href="http://coupon.yhd.com/active" target="_blank">激活抵用券</a><s class="ico_ocVoucher"></s><b>使用抵用券</b>（{#if $T.useableCouponNum > 0}您当前订单共有<em>{$T.useableCouponNum}</em>张抵用券可用{#else}您当前订单无可用抵用券{#/if}）</p>
             {#if $T.useableCouponNum == 0}
@@ -1095,12 +1339,12 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                     <table cellspacing="0" cellpadding="0" class="tableTitVoucher">
                         <tr><th class="titVoucher">面值</th><th class="code">活动编码</th><th class="timeVoucher">有效期</th><th>使用说明</th></tr>
                 {#elseif $T.couponGroup.couponType=='22_merchant'}
-                    {#if !$T.couponGroup$first}</table>{#/if}  
+                    {#if !$T.couponGroup$first}</table>{#/if}
                     <p class="mt10 seeVoucherNum merchantName"><b>{$T.couponGroup.couponTypeDesc}</b></p>
                     <table cellspacing="0" cellpadding="0" class="tableTitVoucher">
                         <tr><th class="titVoucher">面值</th><th class="code">活动编码</th><th class="timeVoucher">有效期</th><th>使用说明</th></tr>
                 {#/if}
-                
+
                 {#foreach $T.couponGroup.multipleCouponList as coupon}
                 <tr couponnumber="{$T.coupon.couponNumber}" {#if $T.coupon.hideFlag == 1}class="trdisable"{#/if}>
                     <td class="titVoucher tdCol1">
@@ -1133,7 +1377,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                                     </span>
                                 {#/if}
                               </span>
-                              <div class="speciBrannd_text">  
+                              <div class="speciBrannd_text">
                             {#/if}
                         {#/for}
                         </div>
@@ -1175,18 +1419,18 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                                     </span>
                                 {#/if}
                               </span>
-                              <div class="speciBrannd_text">  
+                              <div class="speciBrannd_text">
                             {#/if}
                         {#/for}
                         </div>
                     </td>
                 </tr>
-                {#/for}    
+                {#/for}
             {#/for}
             </table>
         </div>
     </textarea>
-    <textarea id="PaymentEditTemp">    	<div class="radio_select none">
+        <textarea id="PaymentEditTemp">    	<div class="radio_select none">
     	</div>
     	{#foreach $T.payments as payment}
     		{#if $T.payment.type==2}
@@ -1438,10 +1682,10 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 			             	 </span>仅支持带银联标志的银行卡、信用卡和借记卡</span>
 	                	{#elseif globalOrder.receiverDTOList.receiverDTO.selfPickUp==1}
                             <span class="des">订单中含有自提商品，仅支持带银联标志的银行卡、信用卡和借记卡。 </span>
-                        {#else}    
+                        {#else}
 	                		<span class="des">支持斯玛特(smart)卡，杉德巍康卡及有银联标志的银行卡、信用卡、借记卡。</span>
 	                	{#/if}
-	                	
+
 	                {#else}
 						<span class="text_sorry">
                             {#if $T.payment.error.code=='003006700006'}订单中
@@ -1654,13 +1898,13 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 	                {#/if}
 	            </div>
     		{#/if}
-    		
+
     		{* 货到支付宝扫码支付开始 *}
     		{#if $T.payment.type==12 && $T.payment.codType==1}
     			<div class="radio_select pay_method_item {#if !$T.payment.isSupport}not_support{#/if}" id="pAlipay">
     				<input type="radio" {#if !$T.payment.isSupport}disabled=""{#/if} {#if $T.payment.type==$T.selectedPayment.payment.type && $T.payment.isSupport}checked="checked"{#/if} methodid="{$T.payment.id}" methodtype="{$T.payment.type}" id="radio_alipay" name="payment"/>
     				<label for="radio_alipay">货到支付宝扫码支付
-                        
+
                     </label>
 	                {#if $T.payment.isSupport}
 	                	<span class="des">
@@ -1879,7 +2123,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 	            </div>
     		{#/if}
     		{* 货到支付宝扫码支付结束 *}
-    		
+
             {* 网上支付*}
     		{#if $T.payment.type==1}
 	    		<div class="radio_select pay_method_item" id="pNet">
@@ -2000,7 +2244,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
     		{#/if}
     	{#/for}
     </textarea>
-    <textarea id="InvoiceEditTemplate">      {#if $T.invoiceShowVo.isContainMust && $T.invoiceShowVo.isContainComm && ($P.getReceiver().provinceId != 1 || ($P.getReceiver().provinceId == 1 && $P.getContainYhdProduct()==false))}
+        <textarea id="InvoiceEditTemplate">      {#if $T.invoiceShowVo.isContainMust && $T.invoiceShowVo.isContainComm && ($P.getReceiver().provinceId != 1 || ($P.getReceiver().provinceId == 1 && $P.getContainYhdProduct()==false))}
            <p class="invoiceCheckboxBx"><label for="otherInvProd" id="otherInvProdLabel"><input type="checkbox" value="1" id="otherInvProd"/>非数码家电类商品需要发票</label></p>
 	  {#/if}
            <div class="invoiceType clearfix">
@@ -2085,7 +2329,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 				       			<span class="checkForm ml5 none"></span>
 		               		</div>
 	           	   		</div>
-		                 
+
 	                 {#else}
 	                 	由商家直接开具
 	                 {#/if}
@@ -2106,8 +2350,8 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 	           </div>
                 {#/if}
                {#if $P.getContainCard()}
-               <!-- 
-               <p id="needSinglePost"  class="invoiceCheckboxBx"><input type="checkbox" id="needSinglePostInvoiceChk" 
+               <!--
+               <p id="needSinglePost"  class="invoiceCheckboxBx"><input type="checkbox" id="needSinglePostInvoiceChk"
                name="needSinglePostInvoiceChk" value="1"/><label for="needSinglePostInvoiceChk">需要单独寄送礼品卡发票</label></p>
                <ul class="getInvoiceInfo none">
                    <li>
@@ -2166,7 +2410,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
             {#/if}
             {#/if}
 		</div>
-		
+
          <div class="msgBx" id="editInvoiceNotice">
 	    	<ins><s></s>温馨提示：</ins>
  	        <p id="editInvoiceNormalNotice"> 发票金额为现金支付金额（扣除礼品卡金额，抵用券，返利金额等）。</p>
@@ -2190,9 +2434,9 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
              </div>
            	{#/if}
          </div>
-      
+
     </textarea>
-    <textarea id="InvoiceDisplayTemplate">    	{#if $T.invoices.need}
+        <textarea id="InvoiceDisplayTemplate">    	{#if $T.invoices.need}
 	    	{#if $T.invoices.invoiceType == 2}
 				<li><b>发票类型：</b>普通发票</li>
 				{#if $T.invoices.electronic==1}
@@ -2283,12 +2527,12 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 	        {#/if}
        {#/if}
     </textarea>
-    <textarea id="confirmGoodsTemplate">        	{#if globalOrder.haigouFlag==1 || (globalOrder.ext && globalOrder.ext.authType && globalOrder.ext.authType == 'OVERSEAS')}
+        <textarea id="confirmGoodsTemplate">        	{#if globalOrder.haigouFlag==1 || (globalOrder.ext && globalOrder.ext.authType && globalOrder.ext.authType == 'OVERSEAS')}
        			{#foreach $T.merchants as merchant}
 		           	{#foreach $T.merchant.deliveryGroups as deliveryGroup}
 						{#foreach $T.deliveryGroup.packages as package}
 							<div class="mod_orderTable">
-								<h3>订单{$T.package.index} - 商品信息</h3>	
+								<h3>订单{$T.package.index} - 商品信息</h3>
 								<table>
 									<tbody>
 									<tr><th width="48">订单</th><th width="520" class="txtl">商品名称</th><th>数 量(个)</th><th>重 量(kg)</th><th>金额小计</th><th>进口税</th></tr>
@@ -2397,7 +2641,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
         	{#/if}
         </table>
     </textarea>
-    <textarea id="confirmGoodsTemplateWithoutSplit">        <table class="showInfoOrder orderProductListInfo" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <textarea id="confirmGoodsTemplateWithoutSplit">        <table class="showInfoOrder orderProductListInfo" width="100%" cellspacing="0" cellpadding="0" border="0">
             <tr><th width="568" class="txtl">商品名称</th><th>数 量(个)</th><th>重 量(kg)</th><th>金额小计</th></tr>
 			{#foreach $T as productId}
 			<tr {#if $T.productId$first}class="btTD"{#/if}>
@@ -2444,7 +2688,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 			{#/for}
         </table>
     </textarea>
-    <textarea id="statisticsTemplate">    	{#if globalOrder.haigouFlag == 1}
+        <textarea id="statisticsTemplate">    	{#if globalOrder.haigouFlag == 1}
     		<div class="mod_totalOrderNum">共 {$P.getOrderStatistics().packageNum}笔订单</div>
     		<div class="mod_totalAmout">您共需为该订单支付<span>{$T.amountNeed2Pay}</span>元</div>
     	{#else}
@@ -2474,7 +2718,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
     	{#/if}
         <div class="userPrivilege clearfix"></div>
         {#if $P.getReceiver()}<div class="mallsettelment_address">{#if $P.getReceiver().selfPickUp >0}包裹将被配送到自提点：{#/if} {$P.getReceiver().receiverInfo} <a href="#" onclick="returnToEdit();" data-tpa="EDIT_ADDRESS_SUBMITORDER"> 修改</a></div>{#/if}
-        
+
         {#if globalOrder.ext && globalOrder.ext.authType && globalOrder.ext.authType !='NONE'}
         	{#if globalOrder.ext.authType=="OVERSEAS"}
         		<div class="mod_1mallxieyi mt10">
@@ -2491,9 +2735,9 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                 </div>
         	{#/if}
         {#/if}
-                
+
     </textarea>
-    <textarea id="SellCountFixBoxTemplate">			<p>{#if $P.getReceiver()}<span>{#if $P.getReceiver().selfPickUp >0}包裹将被配送到自提点：{#/if} {$P.getReceiver().receiverInfo} <a href="#" onclick="returnToEdit();"> 修改</a></span>{#/if}</p>
+        <textarea id="SellCountFixBoxTemplate">			<p>{#if $P.getReceiver()}<span>{#if $P.getReceiver().selfPickUp >0}包裹将被配送到自提点：{#/if} {$P.getReceiver().receiverInfo} <a href="#" onclick="returnToEdit();"> 修改</a></span>{#/if}</p>
             <div class="money_tips">
                 <div class="tips_box">
                     <label for="bookedPayFloat"><input type="checkbox" id="bookedPayFloat" name="bookedPay">同意支付<em></em>元定金</label> <span>(预售商品定金恕不退还，请同意支付定金)</span>
@@ -2514,8 +2758,8 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                 <span class="tips">请同意合约机订单的身份信息授权协议</span><i class="cb"></i>您同意为运营商订单提交身份信息，并授权1号店在您的合约业务相关流程办理中使用。
             </div>
             {#/if}
-            
-            
+
+
             <div class="totalCount mt10">
                 <div class="userPrivilege userPrivilege_float"></div>
 		        <i>{#if globalOrder.haigouFlag == 1}共{$P.getOrderStatistics().packageNum}笔订单，{#/if}您需支付：<b>{$T.amountNeed2Pay}</b>元</i>
@@ -2523,7 +2767,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 		        <button class="btSubOrder1" type="button" data-tpa="SUBMIT_ORDER">提交订单</button>
 		    </div>
     </textarea>
-    <textarea id="errorTemplate">	    <div class="errorPop">
+        <textarea id="errorTemplate">	    <div class="errorPop">
 		    <h3 class="title">温馨提示</h3>
 		    <div class="sa_popup_box ">
 		        <p class="text">十分抱歉，由于网络原因，您当前登录信息已失效。</p>
@@ -2534,7 +2778,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 		    </div>
 		</div>
     </textarea>
-    <textarea id="errorCommTemplateWithoutProduct">		<div class="sys_popbox" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
+        <textarea id="errorCommTemplateWithoutProduct">		<div class="sys_popbox" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
 		    <div class="pop_content">
 			    <div class="pop_tips">
 			        <p>
@@ -2551,11 +2795,11 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 		    </div>
 		</div>
     </textarea>
-    <textarea id="errorCommTemplateNewContractPhone">		<div class="sys_popbox d_tips" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
+        <textarea id="errorCommTemplateNewContractPhone">		<div class="sys_popbox d_tips" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
 		    <div class="pop_content">
 			    <div class="pop_tips">
 			        <p class="text"><strong>{$T.message}</strong></p>
-<!-- 			        <p class="text t_samll">详情请咨询10086</p>		 -->	        
+<!-- 			        <p class="text t_samll">详情请咨询10086</p>		 -->
 			    </div>
 			    <div align="center" class="cartbutton">
 		            <span id="closeBtnWithoutProduct" class="Bt Btw"  onclick="contractPopTipClose();return false;">关闭<s></s></span>
@@ -2564,11 +2808,11 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 		    </div>
 		</div>
     </textarea>
-     <textarea id="errorCommTemplateContractPhone">		<div class="sys_popbox d_tips" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
+        <textarea id="errorCommTemplateContractPhone">		<div class="sys_popbox d_tips" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
 		    <div class="pop_content">
 			    <div class="pop_tips">
 			        <p class="text"><strong>当前业务号码不符合办理当前合约的条件，请更换业务号码或合约！</strong></p>
-			        <p class="text t_samll">详情请咨询10086</p>			        
+			        <p class="text t_samll">详情请咨询10086</p>
 			    </div>
 			    <div align="center" class="cartbutton">
 		            <span id="closeBtnWithoutProduct" class="Bt Btw"  onclick="contractPopTipClose();return false;">关闭<s></s></span>
@@ -2577,11 +2821,11 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 		    </div>
 		</div>
     </textarea>
-    <textarea id="errorMutexCommTemplateContractPhone">		<div class="sys_popbox d_tips" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
+        <textarea id="errorMutexCommTemplateContractPhone">		<div class="sys_popbox d_tips" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
 		    <div class="pop_content">
 			    <div class="pop_tips">
 			        <p class="text"><strong>手机号码已参加过终端活动捆绑！</strong></p>
-			        <p class="text t_samll">详情请咨询10086</p>			        
+			        <p class="text t_samll">详情请咨询10086</p>
 			    </div>
 			    <div align="center" class="cartbutton">
 		            <span id="closeBtnWithoutProduct" class="Bt Btw"  onclick="contractPopTipClose();return false;">关闭<s></s></span>
@@ -2590,7 +2834,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 		    </div>
 		</div>
     </textarea>
-    <textarea id="errorbindingCommTemplateContractPhone">		<div class="sys_popbox d_tips" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
+        <textarea id="errorbindingCommTemplateContractPhone">		<div class="sys_popbox d_tips" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
 		    <div class="pop_content">
 			    <div class="pop_tips">
 			        <p class="text"><strong>套餐办理失败，请稍后重试！</strong></p>
@@ -2601,7 +2845,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 		    </div>
 		</div>
     </textarea>
-    <textarea id="contractPhoneSlectFlowsetMeal">	    <div class="outside sys_popbox">
+        <textarea id="contractPhoneSlectFlowsetMeal">	    <div class="outside sys_popbox">
             <div class="inside">
                 <h2 class="main-title">业务办理<span class="">（流量套餐）</span><a class="close" href="javascript:;"></a></h2>
                 <div class="main-box">
@@ -2617,7 +2861,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
             </div>
        	</div>
     </textarea>
-    <textarea id="errorCommTemplateWithProduct">		<div class="sys_popbox" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
+        <textarea id="errorCommTemplateWithProduct">		<div class="sys_popbox" style="height:auto;background:#FFF; position:static; left:0; top:0; margin-left:0;">
 			<h3 class="title">温馨提示</h3>
 		    <div class="pop_content">
 			    <div class="pop_tips">
@@ -2661,9 +2905,9 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 		    </div>
 		</div>
     </textarea>
-    <textarea id="adTemplate">		<small>{$T.displayContent}{#if $T.linkUrl}<a href="{$T.linkUrl}" target="_balank">了解详情</a>{#/if}</small>
+        <textarea id="adTemplate">		<small>{$T.displayContent}{#if $T.linkUrl}<a href="{$T.linkUrl}" target="_balank">了解详情</a>{#/if}</small>
     </textarea>
-   <textarea id="iphoneDisplayDivTemplate">		<li><b>机主姓名：</b>{$T.hostName}</li>
+        <textarea id="iphoneDisplayDivTemplate">		<li><b>机主姓名：</b>{$T.hostName}</li>
 		<li><b>手机号码：</b>{$T.phoneNo}</li>
 		<li><b>证件类型：</b>{#if $T.credentialsType == 1}身份证{#else}其他{#/if}</li>
 		<li><b>证件号码：</b>{$T.credentialsNum}</li>
@@ -2684,31 +2928,31 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
 			<li><b>每月赠费金额：</b>{$T.monthlyGivenMoney}元</li>
 		{#/if}
     </textarea>
-<!--    <textarea id="contractPhoneDisplayDivTemplate"> -->
-<!-- 		<li><b>城市：</b>{#if $T.cityName}{$T.cityName}{#else}-{#/if}</li> -->
-<!-- 		<li><b>计划名称：</b>{$T.mealName}</li> -->
-<!-- 		<li><b>承诺消费：</b>{$T.monthRent}元/月</li> -->
-<!-- 		<li><b>合约期：</b>{#if $T.monthNum}{$T.monthNum}个月{#else}-{#/if}</li> -->
-		0元购机
-<!-- 		{#if $T.contractType == 0} -->
-<!-- 			<li><b>购机款：</b>{$T.phoneMoney}元</li> -->
-<!-- 			<li><b>预存款：</b>{$T.beforeHandMoney}元</li> -->
-<!--             {#if $T.firstMonthReturn} -->
-<!-- 			<li><b>首月返还金额：</b>{$T.firstMonthReturn}元</li> -->
-<!--             {#/if} -->
-<!-- 			<li><b>每月返还金额：</b>{$T.monthyRefundMoney}元</li> -->
-<!--             {#if $T.lastMonthReturn} -->
-<!-- 			<li><b>最后一个月返还金额：</b>{$T.lastMonthReturn}元</li> -->
-<!--             {#/if} -->
-<!-- 		{#elseif $T.contractType == 1} -->
-			购机送话费
-<!-- 			<li><b>手机款：</b>{$T.bsProductPrice}元</li> -->
-<!-- 			<li><b>合约期赠费金额：</b>{$T.contractGiveMoney}元</li> -->
-<!-- 			<li><b>每月赠费金额：</b>{$T.monthlyGiveMoney}元</li> -->
-<!-- 		{#/if} -->
-<!--     </textarea> -->
-    
-   <textarea id="contractPhoneDisplayDivTemplate">    	<div class="clearfix infoList">
+        <!--    <textarea id="contractPhoneDisplayDivTemplate"> -->
+        <!-- 		<li><b>城市：</b>{#if $T.cityName}{$T.cityName}{#else}-{#/if}</li> -->
+        <!-- 		<li><b>计划名称：</b>{$T.mealName}</li> -->
+        <!-- 		<li><b>承诺消费：</b>{$T.monthRent}元/月</li> -->
+        <!-- 		<li><b>合约期：</b>{#if $T.monthNum}{$T.monthNum}个月{#else}-{#/if}</li> -->
+        0元购机
+        <!-- 		{#if $T.contractType == 0} -->
+        <!-- 			<li><b>购机款：</b>{$T.phoneMoney}元</li> -->
+        <!-- 			<li><b>预存款：</b>{$T.beforeHandMoney}元</li> -->
+        <!--             {#if $T.firstMonthReturn} -->
+        <!-- 			<li><b>首月返还金额：</b>{$T.firstMonthReturn}元</li> -->
+        <!--             {#/if} -->
+        <!-- 			<li><b>每月返还金额：</b>{$T.monthyRefundMoney}元</li> -->
+        <!--             {#if $T.lastMonthReturn} -->
+        <!-- 			<li><b>最后一个月返还金额：</b>{$T.lastMonthReturn}元</li> -->
+        <!--             {#/if} -->
+        <!-- 		{#elseif $T.contractType == 1} -->
+        购机送话费
+        <!-- 			<li><b>手机款：</b>{$T.bsProductPrice}元</li> -->
+        <!-- 			<li><b>合约期赠费金额：</b>{$T.contractGiveMoney}元</li> -->
+        <!-- 			<li><b>每月赠费金额：</b>{$T.monthlyGiveMoney}元</li> -->
+        <!-- 		{#/if} -->
+        <!--     </textarea> -->
+
+        <textarea id="contractPhoneDisplayDivTemplate">    	<div class="clearfix infoList">
     		<dl class="infoLeft">
     			<dd>城市：{#if $T.cityName}{$T.cityName}{#else}-{#/if}</dd>
     			<dd>计划名称：{$T.mealName}</dd>
@@ -2747,14 +2991,14 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
     	</div>
     </textarea>
 
-    <textarea id="showNeedProductDetailTemplate">    </textarea>
-    <textarea id="userAuthTemplate">        {#if $T.code && $T.code==2}
+        <textarea id="showNeedProductDetailTemplate">    </textarea>
+        <textarea id="userAuthTemplate">        {#if $T.code && $T.code==2}
         <div class="checkUI checkInforBox clearfix">
             <h2 class="infoTitle">实名认证信息 <label>填写完毕，请<a class='refresh' href="#">刷新</a>本页面</label></h2>
             <p class="tips">
             {#if $T.authType=="OVERSEAS"}根据【海关总署令147号第二十二条】规定，海购包裹需提供身份证照片进行入关申报，第一次海购请填写：</p>
             {#elseif $T.authType=="CONTRACT_PHONE" || $T.authType=="NETWORK_CARD"}根据公安部、工信部要求，您所订购的运营商产品，需要您填写身份证信息，并同时上传身份证照片。
-            {#/if}         
+            {#/if}
             <dl class="clearfix">
                 <dt class="computer">
                     <h4>方法<i></i>在电脑上填写</h4>
@@ -2801,7 +3045,7 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
         </div>
         {#/if}
     </textarea>
-    <textarea id="simpleUserAuthTemplate">        <div class="userInfo checkInforBox">
+        <textarea id="simpleUserAuthTemplate">        <div class="userInfo checkInforBox">
             <h2 class="infoTitle">实名认证信息{#if $T.code && $T.code==3}<label><a id="userAuthModify" href="javascript:void(0);" data-tpa="MODIFY_REAL_NAME_AUTH">[修改]</a></label>{#/if}</h2>
             <h2 id="authorizedNameInconsistent">因海关规定，即日起购买海购商品需收货人、付款人和实名认证用户信息三者一致。</h2>
             <div class="info_wrapper">
@@ -2866,11 +3110,11 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
                         <span class="idcard_txt">身份证号码</span>
                         <img class="small" src="images/idcard_front.jpg" />
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </textarea>
-    <textarea id="paymentPrivilegeTemplete">        {#if $T&&$T.userPrivilege}
+        <textarea id="paymentPrivilegeTemplete">        {#if $T&&$T.userPrivilege}
             <div class="myzg">
             {#if $T.used}
                 <i class="cb select"></i><em>使用{$P.privilegeMonth}免邮资格 </em> <span>收货后3个工作日内返还运费<i class="red">{$T.rebateAmount}</i>元</span>
@@ -2880,142 +3124,162 @@ var _globalSpmDataModelJson = {"SPM_COM":{"ADD_CART":1,"ADD_FAV":2,"DELETE":6,"T
             </div>
         {#/if}
     </textarea>
-</div>
-<div id="deliveryNote" class="deliveryNote hide">
-	<strong>请您根据收货人地址选择正确的省、市、区/县后，系统会提示您可供选择的送货方式及相关配送信息</strong>
-    <p areaid2="0" countyid2="0" cityid2="0" provinceid2="1" id="placeSelector2"></p>
-	<div class="deliveryinfoStrTxt" id="deliveryinfo"></div>	
-	<dl class="delivery_bottom">
-		<dt><i></i>特别说明：</dt>
-		<dd>1. 如果您填写的是单位地址，周六周日和法定节假日的送货时间将相应顺延。</dd>
-		<dd>2. 配送时效指配送到县级城市，乡镇村配送时效顺迟1-2天（配送时效的计算从订单出库时算起）；不足1公斤 按1公斤计算。</dd>
-		<dd>3. 此配送说明只针对1号店的配送服务，不包括入驻店铺配送及供应商直送的情况。</dd>
-	</dl><!-- delivery_bottom -->
-</div>
-<div class="deliSumDescript none">
-    <h6><s></s>准时送</h6>
-    <p>1号店将根据您所在的区域提供不同的时间段配送服务，我们将在您所选择的时间段内为您进行配送，其中部分配送服务会依据不同的时间段收取相应的配送服务费。</p>
-    <h6><s></s>工作日送</h6>
-    <p>1号店将在您下单成功后，在工作日期间（周一到周五）给您配送。</p>
-    <h6><s></s>周末送货</h6>
-    <p>1号店将在您下单成功后，在最近的周末（周六和周日）给您配送。</p>
-    <h6><s></s>任意日期</h6>
-    <p>1号店将在您下单成功后，根据您所在地区最短的配送时间内给您配送。</p>
-    <br>
-    <p>1、如遇法定节假日、恶劣天气、大促、交通管制等情况，配送可能会有延误</p>
-    <p>2、准时送需要在截单之前完成支付，超过截单时间的不承诺准时送达</p>
-    <p>3、偏远地区的配送时效可能会延长1-2天</p>
-    <p>4、提供特色服务的地区可能会因业务发展变化调整，具体以下单时为准</p>
-    
-    <h6><s></s>特别说明：</h6>
-    <p>1.此配送说明只针对1号店的配送服务，不包括入驻店铺配送及供应商直送的情况。</p>
-    <p>2.如果您选择的地区不在送货上门范围，可以选择EMS配送。具体省市配送服务请参见：</p>
-    <p class="mt10"><a target="_blank" href="http://www.yhd.com/marketing/deliveryinfo/deliveryInfo.do">http://www.yhd.com/marketing/deliveryinfo/deliveryInfo.do</a></p>
-    <br>
-</div>
-<div id="couponAddTemplate">
-    <div class="addVoucherBx none" id="addVoucherBx">
-        <sup class="closeSTB" title="点击关闭"></sup>
-        <h3>添加抵用券</h3>
-        <p id="errorArea" class="inputBxP">
-            <input type="text" value="在此输入抵用券编码" msg="在此输入抵用券编码" class="w190 msgInput" id="couponNumberInput"><span id="addCouponBtn" class="Bt Btrt">使用<s></s></span>
-        </p>
-        <span class="formMsg errorMsg mt8"></span>
     </div>
-</div>
-<div id="activeCouponTemplate">
-  <div id="needValidateMb" class="dyqTc">
-    <small id="showContent">您需要验证手机号码才能获取该抵用券</small>
-    <p><label for="mobileCodeDyq">手机号码：</label><input type="text" value="" maxlength="11" size="12" name="mobile" id="verifyMobile" class="inputtext verifyMobile"></p>
-    <p><label for="checkCodeDyq">短信验证码：</label><input type="text" value="" maxlength="6" size="6" name="checkCode_active" id="checkCode" class="inputtext checkCode"><span onclick="getCheckCodeActive();" id="getCheckCodeMobile">获取验证码</span></p>
-    <p><label for="checkCodeDyq">抵用券激活码：</label><input type="text" value="" maxlength="10" size="12" name="active_coupon_check" id="active_coupon_check" class="inputtext active_coupon_check"></p>
-    <button class="bt_ykt2" onclick="verifyCheckCodeActive();" type="button" id="djqCheckBt">确 定</button>
-  </div>
-</div>
-<input type="hidden" id="4G_contractId">
-<input type="hidden" id="4G_offerId">
-<div id="temp"></div><!-- 临时存放页面元素用，不可删除 -->
-<div class="rechange_pop"></div><!-- 临时存放页面元素用，不可删除 -->
-<div id="marskPageBox"></div>
-<!--js start-->
-<script charset="utf-8" src="js/api.js?1456756737875" type="text/javascript"></script>
-<!--js end-->
-<input type="hidden" value="" id="rdCheck">
-<input type="hidden" value="" id="splitCheckout">
-<input type="hidden" value="30838751_0-2_0_0_1=1,1968751_0-1_0_0_1=1" id="cart2Checkbox">
-<input type="hidden" value="" id="cartSuppress">
-<input type="hidden" phonepmid="" value="" id="operateFlag">
-<form method="post" id="checkoutForm">
-            <input type="hidden" name="cart2Checkbox" id="checkoutForm_cart2Checkbox">
-</form>
-<input type="hidden" value="" id="returnUrl">
-	  <!--content end-->
- <!--content end-->
-	<div id="footer">
-		<div class="bordertop_solid mt20 pb10">
-<div class="sitemap2"><ul><li><a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">沪ICP备13044278号</a></li><li class="gray ml5 mr5">|</li><li><a target="_blank" href="http://d7.yihaodianimg.com/N06/M00/CC/B5/CgQIzlYwjGmAbQ-9AAHXHGHiMkU51700.jpg">营业执照</a></li></ul></div><div class="copyright">Copyright&copy; 1号店网上超市 2007-2016， All Rights Reserved</div>		</div>
-	</div>
-<!--js start-->
-<!--js end-->
-<div>
-<span style="color: #FFFFFF">
-				35!$
-				32%&
-				4#@
-				10!$
-		,
-</span> 
-<span style="color: #FFFFFF">1551385</span>
-</div><div class="error_info_show none hide">
-<p id="err_popwin">.........</p><p><button onclick="yhdLib.popclose();">确定</button></p>
-</div><script type="text/javascript">
-		     (function(){	
-	       
+    <div id="deliveryNote" class="deliveryNote hide">
+        <strong>请您根据收货人地址选择正确的省、市、区/县后，系统会提示您可供选择的送货方式及相关配送信息</strong>
+        <p areaid2="0" countyid2="0" cityid2="0" provinceid2="1" id="placeSelector2"></p>
+        <div class="deliveryinfoStrTxt" id="deliveryinfo"></div>
+        <dl class="delivery_bottom">
+            <dt><i></i>特别说明：</dt>
+            <dd>1. 如果您填写的是单位地址，周六周日和法定节假日的送货时间将相应顺延。</dd>
+            <dd>2. 配送时效指配送到县级城市，乡镇村配送时效顺迟1-2天（配送时效的计算从订单出库时算起）；不足1公斤 按1公斤计算。</dd>
+            <dd>3. 此配送说明只针对1号店的配送服务，不包括入驻店铺配送及供应商直送的情况。</dd>
+        </dl><!-- delivery_bottom -->
+    </div>
+    <div class="deliSumDescript none">
+        <h6><s></s>准时送</h6>
+        <p>1号店将根据您所在的区域提供不同的时间段配送服务，我们将在您所选择的时间段内为您进行配送，其中部分配送服务会依据不同的时间段收取相应的配送服务费。</p>
+        <h6><s></s>工作日送</h6>
+        <p>1号店将在您下单成功后，在工作日期间（周一到周五）给您配送。</p>
+        <h6><s></s>周末送货</h6>
+        <p>1号店将在您下单成功后，在最近的周末（周六和周日）给您配送。</p>
+        <h6><s></s>任意日期</h6>
+        <p>1号店将在您下单成功后，根据您所在地区最短的配送时间内给您配送。</p>
+        <br>
+        <p>1、如遇法定节假日、恶劣天气、大促、交通管制等情况，配送可能会有延误</p>
+        <p>2、准时送需要在截单之前完成支付，超过截单时间的不承诺准时送达</p>
+        <p>3、偏远地区的配送时效可能会延长1-2天</p>
+        <p>4、提供特色服务的地区可能会因业务发展变化调整，具体以下单时为准</p>
 
-try{
-document.getElementById("headerAllProvince").style.height="300px";(function(){var a=$(".headerNavWrap").find("a:contains('1号钱包')");if(a){var b=a.next();if(b){if(document.location.host=="www.yhd.com"){}}}})();
-}catch(err){}
+        <h6><s></s>特别说明：</h6>
+        <p>1.此配送说明只针对1号店的配送服务，不包括入驻店铺配送及供应商直送的情况。</p>
+        <p>2.如果您选择的地区不在送货上门范围，可以选择EMS配送。具体省市配送服务请参见：</p>
+        <p class="mt10"><a target="_blank" href="http://www.yhd.com/marketing/deliveryinfo/deliveryInfo.do">http://www.yhd.com/marketing/deliveryinfo/deliveryInfo.do</a></p>
+        <br>
+    </div>
+    <div id="couponAddTemplate">
+        <div class="addVoucherBx none" id="addVoucherBx">
+            <sup class="closeSTB" title="点击关闭"></sup>
+            <h3>添加抵用券</h3>
+            <p id="errorArea" class="inputBxP">
+                <input type="text" value="在此输入抵用券编码" msg="在此输入抵用券编码" class="w190 msgInput" id="couponNumberInput"><span
+                    id="addCouponBtn" class="Bt Btrt">使用<s></s></span>
+            </p>
+            <span class="formMsg errorMsg mt8"></span>
+        </div>
+    </div>
+    <div id="activeCouponTemplate">
+        <div id="needValidateMb" class="dyqTc">
+            <small id="showContent">您需要验证手机号码才能获取该抵用券</small>
+            <p><label for="mobileCodeDyq">手机号码：</label><input type="text" value="" maxlength="11" size="12" name="mobile"
+                    id="verifyMobile" class="inputtext verifyMobile"></p>
+            <p><label for="checkCodeDyq">短信验证码：</label><input type="text" value="" maxlength="6" size="6" name="checkCode_active"
+                    id="checkCode" class="inputtext checkCode"><span onclick="getCheckCodeActive();" id="getCheckCodeMobile">获取验证码</span></p>
+            <p><label for="checkCodeDyq">抵用券激活码：</label><input type="text" value="" maxlength="10" size="12" name="active_coupon_check"
+                    id="active_coupon_check" class="inputtext active_coupon_check"></p>
+            <button class="bt_ykt2" onclick="verifyCheckCodeActive();" type="button" id="djqCheckBt">确 定</button>
+        </div>
+    </div>
+    <input type="hidden" id="4G_contractId">
+    <input type="hidden" id="4G_offerId">
+    <div id="temp"></div><!-- 临时存放页面元素用，不可删除 -->
+    <div class="rechange_pop"></div><!-- 临时存放页面元素用，不可删除 -->
+    <div id="marskPageBox"></div>
+    <!--js start-->
+    <script charset="utf-8" src="js/api.js?1456756737875" type="text/javascript"></script>
+    <!--js end-->
+    <input type="hidden" value="" id="rdCheck">
+    <input type="hidden" value="" id="splitCheckout">
+    <input type="hidden" value="30838751_0-2_0_0_1=1,1968751_0-1_0_0_1=1" id="cart2Checkbox">
+    <input type="hidden" value="" id="cartSuppress">
+    <input type="hidden" phonepmid="" value="" id="operateFlag">
+    <form method="post" id="checkoutForm">
+        <input type="hidden" name="cart2Checkbox" id="checkoutForm_cart2Checkbox">
+    </form>
+    <input type="hidden" value="" id="returnUrl">
+    <!--content end-->
+    <!--content end-->
+    <div id="footer">
+        <div class="bordertop_solid mt20 pb10">
+            <div class="sitemap2">
+                <ul>
+                    <li><a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">沪ICP备13044278号</a></li>
+                    <li class="gray ml5 mr5">|</li>
+                    <li><a target="_blank" href="http://d7.yihaodianimg.com/N06/M00/CC/B5/CgQIzlYwjGmAbQ-9AAHXHGHiMkU51700.jpg">营业执照</a></li>
+                </ul>
+            </div>
+            <div class="copyright">Copyright&copy; 1号店网上超市 2007-2016， All Rights Reserved</div>
+        </div>
+    </div>
+    <!--js start-->
+    <!--js end-->
+    <div>
+        <span style="color: #FFFFFF">
+            35!$
+            32%&
+            4#@
+            10!$
+            ,
+        </span>
+        <span style="color: #FFFFFF">1551385</span>
+    </div>
+    <div class="error_info_show none hide">
+        <p id="err_popwin">.........</p>
+        <p><button onclick="yhdLib.popclose();">确定</button></p>
+    </div>
+    <script type="text/javascript">
+        (function () {
 
-try{
-(function(){if(location.href.indexOf("channel.yhd.com/lipinka")>=0){window.buyVirtualCard=function(e){var d="";var c=0;var b=0;jQuery("#SALE_Virtual_Card li[name='SALE_Gift_Card']").each(function(h){var k=jQuery(this).attr("productId");var j=jQuery(this).attr("pmInfoId");var g=jQuery("#prodNum_"+k).val();if(isNaN(g)||Number(g)<=0){g=0}g=parseFloat(g);if(g!=0&&!isNaN(g)){if(b==0){d="purchaseEcardProductVos["+b+"].productId="+k+"&purchaseEcardProductVos["+b+"].productNum="+g}else{d+="&purchaseEcardProductVos["+b+"].productId="+k+"&purchaseEcardProductVos["+b+"].productNum="+g}b++;c=Number(c)+Number(g)-0;gotracker(j,"SALE_Virtual_Card"+j,k)}});if(d!=""){if((c-0)>200){YHD.alert("购买的所有电子礼品卡总件数必须是0~200之间的数字！当前总数量为"+c);return false}else{var f=$(e);var a="http://buy.yhd.com/ecard/buyEGiftCard.do?"+d;f.attr("href",a)}}else{$("#SALE_Virtual_Card .fast_buy_btn .btn_buy").parent(".fast_buy_btn").prev(".buy_card_list").find(".cart_num_text").addClass("bd_red");setTimeout(function(){$(".cart_num_text").removeClass("bd_red")},1000);return false}}}})();
-}catch(err){}
 
-try{
-document.getElementById("headerAllProvince").style.height="300px";
-}catch(err){}
+            try {
+                document.getElementById("headerAllProvince").style.height = "300px"; (function () { var a = $(".headerNavWrap").find("a:contains('1号钱包')"); if (a) { var b = a.next(); if (b) { if (document.location.host == "www.yhd.com") { } } } })();
+            } catch (err) { }
 
-try{
-window.webPercent=60;
-}catch(err){}
+            try {
+                (function () { if (location.href.indexOf("channel.yhd.com/lipinka") >= 0) { window.buyVirtualCard = function (e) { var d = ""; var c = 0; var b = 0; jQuery("#SALE_Virtual_Card li[name='SALE_Gift_Card']").each(function (h) { var k = jQuery(this).attr("productId"); var j = jQuery(this).attr("pmInfoId"); var g = jQuery("#prodNum_" + k).val(); if (isNaN(g) || Number(g) <= 0) { g = 0 } g = parseFloat(g); if (g != 0 && !isNaN(g)) { if (b == 0) { d = "purchaseEcardProductVos[" + b + "].productId=" + k + "&purchaseEcardProductVos[" + b + "].productNum=" + g } else { d += "&purchaseEcardProductVos[" + b + "].productId=" + k + "&purchaseEcardProductVos[" + b + "].productNum=" + g } b++; c = Number(c) + Number(g) - 0; gotracker(j, "SALE_Virtual_Card" + j, k) } }); if (d != "") { if ((c - 0) > 200) { YHD.alert("购买的所有电子礼品卡总件数必须是0~200之间的数字！当前总数量为" + c); return false } else { var f = $(e); var a = "http://buy.yhd.com/ecard/buyEGiftCard.do?" + d; f.attr("href", a) } } else { $("#SALE_Virtual_Card .fast_buy_btn .btn_buy").parent(".fast_buy_btn").prev(".buy_card_list").find(".cart_num_text").addClass("bd_red"); setTimeout(function () { $(".cart_num_text").removeClass("bd_red") }, 1000); return false } } } })();
+            } catch (err) { }
 
-try{
-var global_menu=$("#global_menu");if(global_menu){var liObj=global_menu.find("li");if(typeof(isWidescreen)!="undefined"&&isWidescreen==true){if(liObj.length==10){liObj.eq(9).hide()}}else{if(liObj.length==9){liObj.eq(8).hide()}}};
-}catch(err){}
+            try {
+                document.getElementById("headerAllProvince").style.height = "300px";
+            } catch (err) { }
 
-try{
+            try {
+                window.webPercent = 60;
+            } catch (err) { }
 
-}catch(err){}
+            try {
+                var global_menu = $("#global_menu"); if (global_menu) { var liObj = global_menu.find("li"); if (typeof (isWidescreen) != "undefined" && isWidescreen == true) { if (liObj.length == 10) { liObj.eq(9).hide() } } else { if (liObj.length == 9) { liObj.eq(8).hide() } } };
+            } catch (err) { }
 
-try{
-$(function(){var a=setTimeout(function(){if(location.href.indexOf("list.html?")==0||location.href.indexOf("http://search.yhd.com")==0||location.href.indexOf("http://www.yhd.com/ctg/")==0){$("#footerQRcode,#footerIcon,#footer").lazyImg()}},5*1000)});
-}catch(err){}
+            try {
 
-try{
-$(function(){if($.fn.jquery!="1.11.3"){return}var c=$("#miniCart");if(c.size()==0||c.attr("data-version")=="1"){return}c.undelegate("div.hd_total_pro #miniCartPaybtn","click");var b=function(e,g){var d=e.find("div.hd_over_tips");var f=e.find("div.hd_cart_wrap");d.find("p").text(g);d.slideDown(500);f.css("z-index",1201);setTimeout(function(){d.slideUp(500);f.css("z-index",1200)},3000)};var a=function(){var h="http://buy.yhd.com/checkoutV3/index.do";var p=c.find("div.hd_cart_list dd[productId]");var d=0;var n=0;var k=0;var e=0;p.each(function(){var q=$(this);var r=false;if(q.get(0).getAttribute("checked")=="true"){r=true}n++;if(q.attr("productType")==4&&r&&q.attr("disable")=="false"){d++;k=q}if(r){e++}});if(d>0&&d!=n){if(k){var m=$("#miniCart div.hd_cart_list").position().top;var l=k.position().top;var j=$("#miniCart div.hd_cart_scrollwrap").scrollTop();$("#miniCart div.hd_cart_scrollwrap").scrollTop(m+l+j);b(k,"实体礼品卡不能和其他商品一起购买!")}return false}if(e==0){return false}var i=c.find("div.hd_cart_list dd a.hd_select_box");var g=[];i.each(function(){var q=$(this);var s=q.parents("dd").attr("cartItemId");var r=q.hasClass("hd_selected")?1:0;g.push(s+"="+r)});var f=$("#miniCartForm").get(0);f.action=h;f.cart2Checkbox.value=g.join(",");var o=function(q){if(q.result==1){f.submit()}else{if(yhdPublicLogin){var r=URLPrefix.passport;yhdPublicLogin.showLoginDivNone(r,false,"",function(s){if(s==0){$("#miniCartForm").submit()}})}}};loli.globalCheckLogin(o)};c.delegate("div.hd_total_pro #miniCartPaybtn","click",function(){a();return false})});
-}catch(err){}
+            } catch (err) { }
 
-try{
-loli.app.minicart.getJSON=function(b,e,d,a,c){if(c==null){c=3000}jQuery.ajax({url:b,data:e,dataType:"jsonp",jsonp:"callback",jsonpCallback:"jsonp"+new Date().getTime(),cache:false,timeout:c,success:function(f){if(d){d(f)}},error:function(f,h,g){if(b.indexOf("http://pms.yhd.com/pms/getRecommProductsByJson.do")>=0){return}if(a){a(f,h,g)}else{loli.app.minicart.errorCallback(f,h,g)}}})};
-}catch(err){}
+            try {
+                $(function () { var a = setTimeout(function () { if (location.href.indexOf("list.html?") == 0 || location.href.indexOf("http://search.yhd.com") == 0 || location.href.indexOf("http://www.yhd.com/ctg/") == 0) { $("#footerQRcode,#footerIcon,#footer").lazyImg() } }, 5 * 1000) });
+            } catch (err) { }
 
-try{
-function sendGtags(){var a=$.cookie("guid");var c=$.cookie("provinceId");if($.trim(a)!=""&&$.trim(c)!=""){var b=new Image();b.src="http://cms.gtags.net/p?a=13&xid="+a+"&yhd_cityid="+c}}$(function(){if(location.href.indexOf("http://cms.yhd.com/sale/")==0){setTimeout(sendGtags,30*1000)}});
-}catch(err){}
-	       
-	     })();	   
- </script>
- 
-<!--全局域cookie 白名单 add by lichao-->
+            try {
+                $(function () { if ($.fn.jquery != "1.11.3") { return } var c = $("#miniCart"); if (c.size() == 0 || c.attr("data-version") == "1") { return } c.undelegate("div.hd_total_pro #miniCartPaybtn", "click"); var b = function (e, g) { var d = e.find("div.hd_over_tips"); var f = e.find("div.hd_cart_wrap"); d.find("p").text(g); d.slideDown(500); f.css("z-index", 1201); setTimeout(function () { d.slideUp(500); f.css("z-index", 1200) }, 3000) }; var a = function () { var h = "http://buy.yhd.com/checkoutV3/index.do"; var p = c.find("div.hd_cart_list dd[productId]"); var d = 0; var n = 0; var k = 0; var e = 0; p.each(function () { var q = $(this); var r = false; if (q.get(0).getAttribute("checked") == "true") { r = true } n++; if (q.attr("productType") == 4 && r && q.attr("disable") == "false") { d++; k = q } if (r) { e++ } }); if (d > 0 && d != n) { if (k) { var m = $("#miniCart div.hd_cart_list").position().top; var l = k.position().top; var j = $("#miniCart div.hd_cart_scrollwrap").scrollTop(); $("#miniCart div.hd_cart_scrollwrap").scrollTop(m + l + j); b(k, "实体礼品卡不能和其他商品一起购买!") } return false } if (e == 0) { return false } var i = c.find("div.hd_cart_list dd a.hd_select_box"); var g = []; i.each(function () { var q = $(this); var s = q.parents("dd").attr("cartItemId"); var r = q.hasClass("hd_selected") ? 1 : 0; g.push(s + "=" + r) }); var f = $("#miniCartForm").get(0); f.action = h; f.cart2Checkbox.value = g.join(","); var o = function (q) { if (q.result == 1) { f.submit() } else { if (yhdPublicLogin) { var r = URLPrefix.passport; yhdPublicLogin.showLoginDivNone(r, false, "", function (s) { if (s == 0) { $("#miniCartForm").submit() } }) } } }; loli.globalCheckLogin(o) }; c.delegate("div.hd_total_pro #miniCartPaybtn", "click", function () { a(); return false }) });
+            } catch (err) { }
+
+            try {
+                loli.app.minicart.getJSON = function (b, e, d, a, c) { if (c == null) { c = 3000 } jQuery.ajax({ url: b, data: e, dataType: "jsonp", jsonp: "callback", jsonpCallback: "jsonp" + new Date().getTime(), cache: false, timeout: c, success: function (f) { if (d) { d(f) } }, error: function (f, h, g) { if (b.indexOf("http://pms.yhd.com/pms/getRecommProductsByJson.do") >= 0) { return } if (a) { a(f, h, g) } else { loli.app.minicart.errorCallback(f, h, g) } } }) };
+            } catch (err) { }
+
+            try {
+                function sendGtags() { var a = $.cookie("guid"); var c = $.cookie("provinceId"); if ($.trim(a) != "" && $.trim(c) != "") { var b = new Image(); b.src = "http://cms.gtags.net/p?a=13&xid=" + a + "&yhd_cityid=" + c } } $(function () { if (location.href.indexOf("http://cms.yhd.com/sale/") == 0) { setTimeout(sendGtags, 30 * 1000) } });
+            } catch (err) { }
+
+        })();
+    </script>
+
+    <!--全局域cookie 白名单 add by lichao-->
 
 
-<div id="__yct_container__" style="display: none; visibility: hidden;"><script src="http://captcha.yhd.com/public/getenv.do?f=MDOxEGM3IzMwY2N3gzYkhzYjNmY0ImZ4cTYlhTZiVWO&callback=captchaCallback&t=0.3131689522355128"></script></div><input type="hidden" id="__yct_str__" name="__yct_str__" value="%2Bj65HjAhbb7IA8oKgfuhxZXDYFY2khDzWybEmVSWeB1UkKfVfPF22fsVRxEjR0esrxE8z%2F%2FNSDBuM1teL0xUC1YxKUNWVjmwt0EivWb3oDYOfJGaoDj5N9gY37YWFtc83YlGgkMnJuepwbchikUXaSXvOE0CIzsk2EM%2B5PLHBqYAkF%2FGI7wtes53TORTVmy2DnVuKcSmbODheXxNg0oyewdGiSyV6zQMQkFFCIElVjc%3D"></body></html>
+    <div id="__yct_container__" style="display: none; visibility: hidden;">
+        <script src="http://captcha.yhd.com/public/getenv.do?f=MDOxEGM3IzMwY2N3gzYkhzYjNmY0ImZ4cTYlhTZiVWO&callback=captchaCallback&t=0.3131689522355128"></script>
+    </div><input type="hidden" id="__yct_str__" name="__yct_str__" value="%2Bj65HjAhbb7IA8oKgfuhxZXDYFY2khDzWybEmVSWeB1UkKfVfPF22fsVRxEjR0esrxE8z%2F%2FNSDBuM1teL0xUC1YxKUNWVjmwt0EivWb3oDYOfJGaoDj5N9gY37YWFtc83YlGgkMnJuepwbchikUXaSXvOE0CIzsk2EM%2B5PLHBqYAkF%2FGI7wtes53TORTVmy2DnVuKcSmbODheXxNg0oyewdGiSyV6zQMQkFFCIElVjc%3D">
+</body>
+
+</html>

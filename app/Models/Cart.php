@@ -15,14 +15,30 @@ class Cart extends Model
 
     public function add($skuid,$gocount){
         // dd($skuid);
+        $cartsku = self::get();
+        // dd($cartsku);
+        $casku = [];
+        $cascount = [];
+        foreach($cartsku as $v){
+           $casku[] = $v->sku_id;
+           $cascount[] = $v->goods_count;
+        }
+        // dd($cascount);
         // 判断是否登录
         if($user_id = session('userid')){
-            $this->sku_id = $skuid;
-            $this->goods_count = $gocount;
+            // 判断sku(商品规格)  是否是第一次 如果是第一次就插入数据库 如果不是就把商品数量++
+            if($casku==$skuid){
+                $this->goods_count = $cascount+$gocount;
+            }else{
+                $this->sku_id = $skuid;
+                $this->goods_count = $gocount;
+            }
             $this->user_id = $user_id;
-            // dd($skuid,$gocount,$user_id);
-            // 保存
+                // dd($skuid,$gocount,$user_id);
+                // 保存
             $this->save();
+
+
         }else{
             // 如果没有登录
             // 1 数据暂时放到cookie中
@@ -46,6 +62,7 @@ class Cart extends Model
                     ->leftJoin('goods','goods_stock.goods_id','=','goods.id')
                     ->leftJoin('goods_pic','goods_pic.goods_id','=','goods.id')
                     ->where('user_id',$user_id)
+                    // ->groupBy('cart.sku_id')
                     ->get();
             return $db;
         }else{

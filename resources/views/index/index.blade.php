@@ -479,8 +479,68 @@
                     <a data-ref="YHD_TOP_MINICART" href="{{ route('cart') }}" class="hd_prism_cart">
                         <em></em>购物车
                     </a>
+                    {{-- 购物车列表 S--}}
                     <div id="showMiniCartDetail" class="hd_cart_show none" style="display: none;">
+                            <div id="J_cart_pop" style="position: relative;z-index: 2;width: 100%;background: #fff;" class="cart_pop">
+                                <div class="cart_hd" style="height: 25px;padding: 6px 8px;line-height: 25px;">
+                                    <h4 class="cart_hd_title">最新加入的商品</h4>
+                                </div>
+                                <div class="cart_bd J_cart_bd" style="background: #fff;height: auto!important;height: 344px;max-height: 344px; overflow-y: auto;">
+                                <ul class="cart_singlelist" style="margin-top: -1px;"></ul>
+                                <ul class="cart_giftlist" style="margin-top: -1px;"></ul>
+                                <ul class="cart_suitlist" style="margin-top: -1px;"></ul>
+                                <ul class="cart_manjianlist" style="margin-top: -1px;"></ul>
+                                <ul class="cart_manzenglist">
+                                        <li class="cart_item" style="line-height: 17px; vertical-align: bottom;*zoom: 1;background: #fff;">
+                                            <div class="cart_item_hd" style="overflow: hidden;padding: 8px 10px;
+                                            border-top: 1px dotted #ccc;">
+                                                <div class="cart_item_hd_info" style="float: left;">
+                                                <span class="cart_tag cart_tag_orange" style="display: inline-block;margin-bottom: 2px;color: #fff;padding: 0 2px;line-height: 16px;
+                                                vertical-align: top;float: none;background:#f60;">换购</span>
+                                                    已购满1件，您可加价换购商品
+                                                </div>
+
+                                                <div class="cart_item_hd_price" style="float: right;margin-left: 10px;">小计：999</div>
+                                            </div>
+                                            <ul class="cart_item_bd">
+                                                    @foreach($cartdata as $v)
+                                                    <li class="cart_item"  style="line-height: 17px; vertical-align: bottom;*zoom: 1;background: #fff;">
+                                                        <div class="cart_item_inner" style="padding: 8px 10px;border-top: 1px dotted #ccc;overflow: hidden;">
+                                                            <div class="cart_img" style="    float: left;width: 50px; height: 50px;border: 1px solid #ddd;
+                                                            padding: 0; margin-right: 10px;font-size: 0;overflow: hidden;">
+                                                            <a class="cart_img_lk" href="//item.jd.com/8033411.html" target="_blank" style="display: block;">
+                                                                <img src="{{ '/upload/'.$v->mid_pic  }}" width="50" height="50" alt="">
+                                                            </a>
+                                                            </div>
+                                                            <div class="cart_name" style="float: left;width: 120px;height: 52px;overflow: hidden;">
+                                                                <a style="color: #666;text-decoration: none;" class="cart_name_lk" href="//item.jd.com/8033411.html" title="{{ $v->goods_name.' '.$v->goods_attr_list }}" target="_blank">{{ $v->goods_name.' '.$v->goods_attr_list }}</a>
+                                                            </div>
+                                                            <div class="cart_info" style="float: right;text-align: right; width: 85px;">
+                                                                <div class="cart_price" style="font-weight: 700;">¥{{$v->price>0?$v->price:$v->shprice}}</div>
+                                                                <a class="cart_delete J_delete" data-id="8033411|225520926" data-method="RemoveSuit" data-type="13" href="javascript:;"
+                                                                style="float: right;clear: both;max-width: 85px; white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis;overflow: hidden;">删除</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    @endforeach
+                                            </ul>
+                                        </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="cart_ft" style="padding: 14px;text-align: right;">
+                                    <div class="cart_ft_info" style="float: left;line-height: 29px;">共
+                                        <span class="cart_num" style="font-weight: 700;">2</span>件商品 共计
+                                        <span class="cart_num" style="font-weight: 700;">¥ 000</span>
+                                    </div>
+                                    <a class="cart_ft_lk"
+                                    style="float: right;height: 29px;padding: 0 10px;background: #e4393c;color: #fff;text-align: center;font-weight: 700;
+                                    line-height: 29px;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;" href="{{ route('cart') }}" title="去购物车">去购物车</a>
+                            </div>
+
+                        </div>
                     </div>
+                    {{-- 购物车列表 E --}}
                 </div>
                 <div class="hd_mobile_wrap">
                     {{-- <a data-tpa="YHD_GLOBAl_HEADER_RIGHT_AD" data-ref="17102_28453146_1" target="_blank" href="http://cms.yhd.com/sale/157119"

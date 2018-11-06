@@ -320,10 +320,18 @@
 								<input value="{{$v->sku_id}}" name="sku_id[]" type="checkbox" checked="checked" class="goods_checked gc">
 							</div>
 							<div class="col-xs-4">
-								<a href="/{{$v->goods_id}}.html">
+                                @if($v->is_on_sale=='n')
+								<a style="text-decoration:line-through;" href="/{{$v->goods_id}}.html">
 									<img src="{{'/upload/'.$v->mid_pic}}">
 									{{$v->goods_name}}
-								</a>
+                                </a>
+                                <span class="warning" style="color:red;">该商品已下架</span>
+                                @else
+                                <a  href="/{{$v->goods_id}}.html">
+									<img src="{{'/upload/'.$v->mid_pic}}">
+									{{$v->goods_name}}
+                                </a>
+                                @endif
 							</div>
 							<div class="col-xs-1">
 								{!! str_replace(['|','@'],[':','<br>'],$v->goods_attr_list) !!}
@@ -353,11 +361,19 @@
 								<input value="{{$v->sku_id}}" name="sku_id[]" type="checkbox" checked="checked" class="goods_checked gc">
 							</div>
 							<div class="col-xs-4">
-                                <a href="/{{$v->goods_id}}.html">
-									<img src="{{'/upload/'.$v->mid_pic}}">
-									{{$v->goods_name}}
-								</a>
-							</div>
+                                    @if($v->is_on_sale=='n')
+                                    <a style="text-decoration:line-through;" href="/{{$v->goods_id}}.html">
+                                        <img src="{{'/upload/'.$v->mid_pic}}">
+                                        {{$v->goods_name}}
+                                    </a>
+                                    <span class="warning" style="color:red;">该商品已下架</span>
+                                    @else
+                                    <a  href="/{{$v->goods_id}}.html">
+                                        <img src="{{'/upload/'.$v->mid_pic}}">
+                                        {{$v->goods_name}}
+                                    </a>
+                                    @endif
+                            </div>
 							<div class="col-xs-2">
 								{!! str_replace(['|','@'],[':','<br>'],$v->goods_attr_list) !!}
 							</div>

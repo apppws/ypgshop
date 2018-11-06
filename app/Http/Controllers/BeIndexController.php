@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\AdPos;
 use App\Models\Blog;
 use App\Models\Floor;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Storage;
 class BeIndexController extends Controller
 {
@@ -26,11 +27,16 @@ class BeIndexController extends Controller
         $floor = new Floor;
         $floors = $floor->floor();
         // dd($floors);
+        // 取出购物车数据
+        $cart = new Cart;
+        $cartdata = $cart->data();
+        // dd($cartdata);
         return view('index/index',[
             'cat'=>$cat,
             'adpo'=>$ad,
             'blogs'=>$blogs,
-            'floor'=>$floors
+            'floor'=>$floors,
+            'cartdata'=>$cartdata
         ]);
     }
     //显示文章内容
