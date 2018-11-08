@@ -300,7 +300,7 @@
                             <input type="radio" name="pay_method" value="货到付款" checked> 货到付款<b></b>
                         </a>
                         <a href="javascript:void(0);"  class="pay_method borderd-a">
-                            <input type="radio" name="pay_method" value="微信支付"> 微信支付<b></b>
+                            <input type="radio" name="pay_method" value="微信"> 微信<b></b>
                         </a>
                         <a href="javascript:void(0);"  class="pay_method borderd-a">
                             <input type="radio" name="pay_method" value="支付宝"> 支付宝<b></b>
@@ -312,6 +312,10 @@
                 $(".pay_method.active").removeClass('active');
                 $(this).addClass('active');
                 $(this).find(":radio").prop("checked",true);
+
+                var a = document.querySelector(".btSubOrder1").setAttribute('is_wx','yes');
+
+
             });
         </script>
          {{-- 支付方式 --}}
@@ -363,7 +367,7 @@
         {{-- 结算 S --}}
         <div data-tpa="STATISTICS_INFO" class="mallsettelment">
             <div class="payTotal" id="statisticsUI">
-                <p class="fr">商品金额<label>{{ $tp }}</label>元 + 运费<label>10</label>元 </p>
+                <p class="fr">商品金额<label>{{ $tp }}</label>元 + 运费<label>0</label>元 </p>
                 <p>包裹(个)：1&#12288;&#12288;重量(kg)：0.682 </p> <strong>您需为订单支付<b>{{ $tp+10 }}</b>元</strong>
                 <div class="userPrivilege clearfix"></div>
                 <div class="mallsettelment_address"> {{ $address_list.' '.$phones.' '.$names }} <a data-tpa="EDIT_ADDRESS_SUBMITORDER"

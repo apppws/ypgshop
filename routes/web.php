@@ -278,5 +278,27 @@ Route::post('/checkout','CartController@checkout')->name('checkout');
 // 生成订单页面
 Route::post('/order_pay', 'CartController@order_pay')->name('order_pay');
 
-// 支付
-Route::get('/pay/{orderid}','PayController@pay')->name('pay');
+/**
+ *支付宝支付
+ *  */
+Route::get('/pay/{orderid}/{countprice}','PayController@pay')->name('pay');
+// 前端回调
+Route::get('/pay/alipayReturn','PayController@alipayReturn')->name('alipayReturn');
+// 后端回调
+Route::post('/pay/alipayNotify','PayController@alipayNotify')->name('alipayNotify');
+// 测试
+// Route::get('/alipay', function() {
+//     return app('alipay')->web([
+//         'out_trade_no' => time(),
+//         'total_amount' => '1',
+//         'subject' => 'test subject - 测试',
+//     ]);
+// });
+
+/**
+ * 微信支付
+ */
+Route::get('/payByWechat/{orderid}/{countprice}','PayController@payByWechat')->name('payByWechat');
+Route::get('/payimg/{orderid}/{countprice}','PayController@payimg')->name('payimg');
+//服务器回调
+Route::post('/payByWechat/wechatNotify', 'PayController@wechatNotify')->name('wechatNotify');

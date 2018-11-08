@@ -58,7 +58,7 @@ class CartController extends Controller
     // 生成订单
     public function order_pay(Request $req){
         $order = new Order;
-        // dd($req->all());
+        $paymethods = $req->get('pay_method');
         // 判断是否登录
         $id = session('userid');
         if(!$id){
@@ -95,7 +95,7 @@ class CartController extends Controller
             // 勾选了商品
             $xuangoods = true;
             // 邮费
-            $youfei = 10;
+            $youfei = 0;
             // 累加总价（有规格价格使用规格价格，否则使用本店价）
             $countPirce += $v->goods_count * ($v->price>0?$v->price:$v->shprice)+$youfei;
             // dd($countPirce);
@@ -105,7 +105,10 @@ class CartController extends Controller
         if(!$xuangoods)
             return redirect('/cart');
 
-            /******************** 下订单 ******************/
+
+        /**
+         * 下订单
+         */
        // 开启事务
        DB::beginTransaction();
 
@@ -121,7 +124,7 @@ class CartController extends Controller
                     'city' => $address[0]->city,
                     'area' => $address[0]->area,
                     'address' => $address[0]->address,
-                    'pay_method' => $req->get('pay_method'),
+                    'pay_method' => $paymethods,
                 ]);
         // dd($orderId);
         if($orderId)
@@ -142,7 +145,7 @@ class CartController extends Controller
                                 'goods_attr_list' => $v->goods_attr_list,
                                 'goods_id' => $v->goods_id,
                                 'goods_name' => $v->goods_name,
-                                'goods_pic' => $v->goods->sm_pic,
+                                'goods_pic' => $v->sm_pic,
                                 'sku_id' => $v->sku_id,
                                 'cat_id1' => $v->cat_id1,
                                 'cat_id2' => $v->cat_id2,
@@ -155,7 +158,7 @@ class CartController extends Controller
                     return redirect('/cart');
                 }
 
-                $cart_sku_id[] = $v->sku_id;
+                $cartsku[] = $v->sku_id;
                 // 减库存量
                 $dindan = GoodsStock::where('sku_id',$v->sku_id)->decrement('stock',$v->goods_count);
                 // 如果出错就回滚事务
@@ -168,16 +171,21 @@ class CartController extends Controller
             // 如果都成功就提交整个事务
             DB::commit();
             // 从购物车中删除已下单商品
-            Cart::whereIn('sku_id',$cart_sku_id)->delete();
+            Cart::whereIn('sku_id',$cartsku)->delete();
         }
         else
         {
             DB::rollback();
             return redirect()->route('cart');
         }
-
+        // dd($req->get('pay_method') );
         // 跳转去支付
-        return redirect('/pay/'.$orderId);
+        if($paymethods == '支付宝' ){
+             return redirect('/pay/'.$orID.'/'.$countPirce);
+        }elseif($paymethods == '微信'){
+            return redirect('/payByWechat/'.$orID.'/'.$countPirce);
+        }
+
      }
 
 
