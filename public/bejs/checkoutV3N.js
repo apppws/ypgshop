@@ -1094,7 +1094,7 @@ function loadAD() {
 var map_load = 0;
 var google_timeout = false;
 function checkoutInit() {
-    
+
       $(".mask_tcdiv,.loadingA").hide();
                 $(".mask_tcdiv,.loadingA").remove();
 }
@@ -1880,6 +1880,7 @@ function addMobileEvent() {
         }
     })
 }
+// 添加地址
 var settlementFed = {idForSaveAddressBtnFlag: false, isDelAddressPop: 0, timeoutIdForSelectSave: "", oldLiBoxIndex: -1, isEditFlag: 0, initFourNewAddress: function() {
         YHDPlaceSelector.initDefaultCheckedStatus()
     }, callSaveMapNewaddress: function() {

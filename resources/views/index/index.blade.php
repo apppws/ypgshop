@@ -163,9 +163,14 @@
                     <div data-tpa="YHD_GLOBAl_TOP_UNLOGIN" id="global_unlogin" data-addclass="hd_unlogin_hover" class="hd_unlogin_wrap">
                         <div class="hd_login clearfix">
                             <span class="hd_hi">Hi,</span>
+                            @if(session('username'))
+                                {{ session('username') }}
+                                <a rel="nofollow" data-ref="YHD_TOP_register" href="{{ route('logout') }}" class="blue_link">&nbsp;退出</a>
+                            @else
                             请<a rel="nofollow" id="global_top_bar_loginLink" data-ref="YHD_TOP_login" href="{{ route('belogin') }}"
-                                class="blue_link">&nbsp;登录&nbsp;</a>/
+                            class="blue_link">&nbsp;登录&nbsp;</a>/
                             <a rel="nofollow" data-ref="YHD_TOP_register" href="{{ route('register') }}" class="blue_link">&nbsp;注册</a>
+                            @endif
                         </div>
                         <div class="hd_user_center">
                             <div class="clearfix">

@@ -310,7 +310,8 @@
 					</div>
 				</div>
 
-			<form action="/order-confirm">
+            <form action="{{ route('checkout') }}" method="POST">
+                @csrf
 			<ul class="cart-body">
 				@if(session('userid'))
 					@foreach($cartData as $v)

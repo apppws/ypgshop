@@ -13,6 +13,36 @@ class Cart extends Model
     protected $fillable = ['user_id','sku_id','goods_count'];
     public $timestamps = false;
 
+     // 把COOKIE中的购物车数据移动到数据库中
+     public static function hebin()
+     {
+         // 只有登录了才可以执行这个操作
+         if($id = session('userid'))
+         {
+             $cart = Cookie::get('cart');
+            //  dd($cart);
+             if($cart)
+             {
+                 $data = [];
+                // 取出反序列化的值
+                 $cart = unserialize($cart);
+                //  循环的到  在给字段赋值
+                 foreach($cart as $k => $v)
+                 {
+                     $data[] = [
+                         'user_id' => $id,
+                         'sku_id' => $k,
+                         'goods_count' => $v,
+                     ];
+                 }
+                //  插入到cart 这个表中
+                 self::insert($data);
+                 // 删除COOKIE中购物车数据
+                 Cookie::queue('cart', 'value', -1);
+             }
+         }
+     }
+
     public function add($skuid,$gocount){
         // dd($skuid);
         $cartsku = self::get();
@@ -37,15 +67,12 @@ class Cart extends Model
                 // dd($skuid,$gocount,$user_id);
                 // 保存
             $this->save();
-
-
         }else{
             // 如果没有登录
             // 1 数据暂时放到cookie中
             $cart = Cookie::get('cart');
-            // 判断是否里面有值  否则为空
-            $cart = $cart ? unserialize($cart)  : [];
-    		$cart[$skuid] = $gocount;
+            $cart[$skuid] = $gocount;
+            // dd($gocount);
     		// 保存一个月
     		Cookie::queue('cart', serialize($cart), 43200);
         }
@@ -62,7 +89,6 @@ class Cart extends Model
                     ->leftJoin('goods','goods_stock.goods_id','=','goods.id')
                     ->leftJoin('goods_pic','goods_pic.goods_id','=','goods.id')
                     ->where('user_id',$user_id)
-                    // ->groupBy('cart.sku_id')
                     ->get();
             return $db;
         }else{
@@ -72,11 +98,17 @@ class Cart extends Model
             // dd($cart);
             // 2 判断 cookie 是否有cart这个数据
             if($cart){
+                // 取出反序列化
                 $cart = unserialize($cart);
-                // dd(explode(',',$cart));
-                $skuids = array_keys(explode(',',$cart)); //返回数组所有键名的一个新数组
+                $skuids = array_keys($cart); //返回数组所有键名的一个新数组
                 // dd($skuids);
-                $gsData = GoodsStock::whereIn('sku_id',$skuids)->get();
+                $gsData = DB::table('cart')
+                            ->select('*')
+                            ->leftJoin('goods_stock','cart.sku_id','=','goods_stock.sku_id')
+                            ->leftJoin('goods','goods_stock.goods_id','=','goods.id')
+                            ->leftJoin('goods_pic','goods_pic.goods_id','=','goods.id')
+                            ->where('goods_stock.sku_id',$skuids)
+                            ->get();
                 // dd($gsData);
                 $gsData->goods_count = $cart;
                 // dd($gsData);

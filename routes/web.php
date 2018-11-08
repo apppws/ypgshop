@@ -260,6 +260,8 @@ Route::get('/sendmobilecode', 'RegisterController@sendmobilecode')->name('sendph
 // 登录页面
 Route::get('/belogin','BeLoginController@belogin')->name('belogin');
 Route::post('/belogin','BeLoginController@dobelogin')->name('dobelogin');
+// 退出
+Route::get('/logout','BeLoginController@logout')->name('logout');
 
 
 // 购物车
@@ -271,3 +273,10 @@ Route::get('/begoods/{id}','BeGoodsController@index')->name('begoods');
 Route::get('/sku/{gid}/{skustr}','BeGoodsController@sku')->name('sku');
 // 加入购物车   skuid   商品数量
 Route::get('/addtocart/{skuid}/{gocount}','CartController@addcatr')->name('addcart');
+// 显示结算页面
+Route::post('/checkout','CartController@checkout')->name('checkout');
+// 生成订单页面
+Route::post('/order_pay', 'CartController@order_pay')->name('order_pay');
+
+// 支付
+Route::get('/pay/{orderid}','PayController@pay')->name('pay');

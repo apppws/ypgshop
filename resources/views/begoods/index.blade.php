@@ -1109,7 +1109,8 @@
                                 <div class="col-xs-2">{{$k}}：</div><br>
                                 <div class="col-xs-10">
                                     @foreach($v as $k1 => $v1)
-                                    <a attr_id="{{$v1[0]}}" href="javascript:void(0);" @if($k1==0)class="active"@endif>{{$v1[1]}}</a>
+                                    <a attr_id="{{$v1[0]}}" href="javascript:void(0);"
+                                     @if($k1==0)class="active"@endif>{{$v1[1]}}</a>
                                     @endforeach
                                 </div>
                             </div>
@@ -1672,7 +1673,7 @@
         var skuid;
         // 获取这个 商品规格a标签
         $(".goods-spec a").click(function(){
-            //获取这个第一个a父类  并移除
+            //获取这个所有父类a标签  并移除
             $(this).parent().find('a').removeClass('active');
             // 添加这个样式
             $(this).addClass('active');
