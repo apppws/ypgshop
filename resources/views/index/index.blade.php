@@ -175,13 +175,13 @@
                         <div class="hd_user_center">
                             <div class="clearfix">
                                 <div class="fl">
-                                    <a data-ref="YHD_TOP_userpic_nonlogin" target="_blank" href="member_index.html"
-                                        class="hd_avata_box"></a>
+                                    {{-- <a data-ref="YHD_TOP_userpic_nonlogin" target="_blank" href="member_index.html"
+                                        class="hd_avata_box"></a> --}}
                                 </div>
                                 <div class="hd_growth_box">
                                     <a data-ref="YHD_TOP_vip_nonlogin" target="_blank" href="http://vip.yhd.com" class="hd_vip_earn">会员专享价，V3免费购</a>
                                     <p class="hd_my_yhd"><a data-ref="YHD_TOP_myyihaodian_nonlogin" target="_blank"
-                                            href="member_index.html">欢迎进入我的1号店</a></p>
+                                            href="{{ route('bemember') }}">欢迎进入我的1号店</a></p>
                                 </div>
                             </div>
                             <div class="hd_message">
@@ -417,7 +417,7 @@
                                     class="hd_no_pic">
                                     <h3 class="hd_gray_bg">
                                         <i class="hd_iconfont"></i>
-                                        <a href="#" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137555.1"
+                                        <a href="/begoods/{{$c->id}}" target="_blank" data-tc="0.0.TRACKER_CODE.CatMenu_Search_100000024_137555.1"
                                             data-ref="CatMenu_Search_100000024_137555_104293" title="进口食品">{{ $c->name
                                             }}</a>
                                     </h3>
@@ -564,7 +564,7 @@
                     data-inited="1">
                     {{-- 轮播图 --}}
                     <ol class="clearfix" id="slider">
-                        {!! $adpo->showad(3) !!}
+                        {!! $adpo->showad(2) !!}
                     </ol>
                 </div>
                 <div class="mod_promonum_show">
@@ -896,13 +896,13 @@
                         <div class="slider_index_ad" id="sxSliderIndexAd">
                             <ul class="img_box clearfix" data-tpc="5">
                                 <a title="{{ $v->goods_id2 }}" data-advId="16076" data-ajax="0" data-ctpa="INDEX2_FLOORSX_LUNBO_PIC1" target="_blank" href="http://cms.yhd.com/sale/frvPooaPjto" data-recordTracker="1" data-tc="ad.0.0.16076-30914813.1" data-ref="16076_30914813_1" data-nsf="">
-                                    <img width="330" height="360" data-advId="16076" data-ajax="0" src="{!! $adpo->showad(1) !!}" original="" alt="1号洋气女人节 2.29-3.8" >
+                                    <img width="330" height="360" data-advId="16076" data-ajax="0" src="{!! $adpo->showad(2) !!}" original="" alt="1号洋气女人节 2.29-3.8" >
                                 </a>
                                 <a title="{{ $v->goods_id3 }}" data-advId="16077" data-ajax="1" data-ctpa="INDEX2_FLOORSX_LUNBO_PIC2" target="_blank" href="http://cms.yhd.com/sale/rtoovvAUjtr" data-recordTracker="1" data-tc="ad.0.0.16077-29138476.1" data-ref="16077_29138476_1" data-nsf="">
                                     <img width="330" height="360" data-advId="16077" data-ajax="1" src="{{$v->ad_img }}" original="" alt="1号酒会所" >
                                 </a>
                                 <a title="{{ $v->goods_id4 }}" data-advId="16078" data-ajax="0" data-ctpa="INDEX2_FLOORSX_LUNBO_PIC3" target="_blank" href="http://cms.yhd.com/sale/WsgBsBFbuj" data-recordTracker="1" data-tc="ad.0.0.16078-23537060.1" data-ref="16078_23537060_1" data-nsf="">
-                                    <img width="330" height="360" data-advId="16078" data-ajax="0" src="{{$v->ad_img }}" original="" alt="进口牛奶品类中心" >
+                                    <img width="330" height="360" data-advId="16078" data-ajax="0" src="{!!$adpo->showad(2) !!}" original="" alt="进口牛奶品类中心" >
                                 </a>
                             </ul>
                             <ul class="trig_box">

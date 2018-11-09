@@ -302,3 +302,7 @@ Route::get('/payByWechat/{orderid}/{countprice}','PayController@payByWechat')->n
 Route::get('/payimg/{orderid}/{countprice}','PayController@payimg')->name('payimg');
 //服务器回调
 Route::post('/payByWechat/wechatNotify', 'PayController@wechatNotify')->name('wechatNotify');
+
+// 个人信息页面
+Route::get('/bemember','BeMemberController@bemember')->name('bemember');
+Route::post('/bemember/{id}','BeMemberController@dobemember')->name('dobemember');
